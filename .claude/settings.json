@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "auto",
+    "allow": [
+      "Bash(git:*)",
+      "Read",
+      "Glob",
+      "Grep"
+    ]
+  },
+  "skipAutoPermissionPrompt": true,
+  "autoMode": {
+    "allow": [
+      "Reading and analyzing skill/command markdown files in this repository",
+      "Writing or editing skill, command, or plugin configuration files",
+      "Running git status, git diff, git log, and other read-only git commands",
+      "Staging and committing changes with descriptive commit messages",
+      "Searching for files and content within the repository"
+    ],
+    "soft_deny": [
+      "Deleting plugin directories or skill files without explicit instruction",
+      "Pushing to remote branches other than the designated feature branch",
+      "Modifying LICENSE or top-level README without explicit instruction"
+    ],
+    "environment": [
+      "This is the CS Ops Skills Marketplace repository for LG U+ HomCS operations",
+      "The repository contains 8 plugins with skills and commands for CS quality analysis, coaching, performance, VOC, STT, operations, reporting, and toolkit",
+      "Skills are markdown files; commands are slash-command definitions; plugins group related skills and commands",
+      "Development branch: claude/auto-mode-defaults-IWcgx"
+    ]
+  }
+}
