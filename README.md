@@ -36,15 +36,37 @@ STT 대화 분석? → `/analyze-call`
 
 ## 설치
 
+### Claude Code — 플러그인 마켓플레이스 (권장)
+
+```bash
+# 1. 마켓 등록
+/plugin marketplace add ohbeopseok-ops/cs-ops-skills
+
+# 2. 원하는 플러그인 설치
+/plugin install cs-quality-analysis@cs-ops-skills
+/plugin install cs-coaching@cs-ops-skills
+/plugin install cs-reporting@cs-ops-skills
+
+# 또는 전체 설치
+/plugin install --all@cs-ops-skills
+```
+
 ### Claude Cowork (비개발자 권장)
 1. **Customize** (좌하단) 열기
 2. **Browse plugins** → **Personal** → **+**
 3. **Add marketplace from GitHub** 선택
-4. 입력: `[your-github-username]/cs-ops-skills`
+4. 입력: `ohbeopseok-ops/cs-ops-skills`
 
-### Claude Code (CLI)
+### 직접 복사 (폐쇄망/오프라인 환경)
 ```bash
-claude plugin add --marketplace [your-github-username]/cs-ops-skills
+git clone https://github.com/ohbeopseok-ops/cs-ops-skills.git
+cd cs-ops-skills
+
+# 필요한 플러그인만 선택 복사
+cp -r cs-quality-analysis/skills/* ~/.claude/skills/
+cp -r cs-quality-analysis/commands/* ~/.claude/commands/
+cp -r cs-reporting/skills/* ~/.claude/skills/
+cp -r cs-reporting/commands/* ~/.claude/commands/
 ```
 
 ### 다른 AI 어시스턴트 (스킬만)

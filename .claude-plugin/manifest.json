@@ -34,7 +34,7 @@
     },
     {
       "name": "cs-toolkit",
-      "description": "HTML 도구 명세서, 테스트 데이터 생성, 한국어 문서 교정"
+      "description": "HTML 도구 명세서, 테스트 데이터 생성, 한국어 문서 교정, 플러그인 마켓플레이스 관리"
     }
   ]
 }
