@@ -39,6 +39,8 @@ CS 운영 도구 개발 및 테스트를 위한 현실적 가상 데이터 생�
 
 ## 출력 형식
 
+ALWAYS use this exact template:
+
 요청 유형에 따라 CSV 또는 구조화 텍스트로 출력:
 
 ```

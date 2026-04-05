@@ -47,7 +47,7 @@ STT 대화 텍스트의 개인정보를 탐지하고 안전하게 마스킹하�
 
 ## 출력 형식
 
-ALWAYS use this exact template (마스킹 텍스트를 주 출력으로):
+ALWAYS use this exact template:
 
 ```
 ## PII 탐지 및 마스킹 결과
