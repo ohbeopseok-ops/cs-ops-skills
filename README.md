@@ -15,6 +15,7 @@ T-NPS 예측 분석? → `/predict-tnps`
 VOC 분석 리포트? → `/analyze-voc`  
 STT 대화 분석? → `/analyze-call`  
 주간 보고서 작성? → `/weekly-report`  
+PDF/Excel 파일 분석? → `/convert-doc`  
 
 ---
 
@@ -46,6 +47,17 @@ STT 대화 분석? → `/analyze-call`
 ```bash
 claude plugin add --marketplace [your-github-username]/cs-ops-skills
 ```
+
+### markitdown 설치 (문서 변환 기능 사용 시)
+
+PDF, Excel, Word, 오디오 파일을 AI 분석용 마크다운으로 변환하려면:
+
+```bash
+pip install 'markitdown[all]'
+```
+
+변환 후 `/convert-doc` 커맨드로 CS 분석 파이프라인에 바로 연계.  
+자세한 사용법: `cs-toolkit/skills/markitdown-converter/SKILL.md`
 
 ### 다른 AI 어시스턴트 (스킬만)
 ```bash
@@ -147,13 +159,14 @@ STT 대화 분석, 스크립트 준수율 분석, 개인정보 탐지/마스킹
 ---
 
 ### 8. cs-toolkit — 유틸리티
-HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정
+HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정, markitdown 문서 변환
 
-**Skills (3):** `html-tool-spec` · `data-mock` · `ko-grammar-check`
+**Skills (4):** `html-tool-spec` · `data-mock` · `ko-grammar-check` · `markitdown-converter`
 
-**Commands (2):**
+**Commands (3):**
 - `/spec-tool` — HTML 도구 요구사항 명세서 작성
 - `/mock-data` — CS 운영 테스트 데이터 생성
+- `/convert-doc` — PDF/Excel/Word/오디오 → 마크다운 변환 후 CS 분석 파이프라인 실행
 
 ---
 
@@ -168,6 +181,9 @@ HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 �
 - `/evaluate 다음 STT 텍스트를 평가해줘 [텍스트]`
 - `/analyze-voc 이번 주 접수된 VOC 목록 [데이터]`
 - `/weekly-report 이번 주 KPI 데이터 [데이터]`
+- `/convert-doc qa QA평가표.xlsx`
+- `/convert-doc voc VOC목록.xlsx`
+- `/convert-doc stt 상담녹음.mp3`
 
 ---
 
