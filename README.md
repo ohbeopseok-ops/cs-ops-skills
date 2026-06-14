@@ -62,7 +62,7 @@ done
 ### 1. cs-quality-analysis — 상담 품질 분석
 상담 품질 평가, AutoQA 트렌드, 고령자 상담 기준, 스크립트 준수, 품질 추이
 
-**Skills (5):** `qa-scoring` · `autoqa-analysis` · `elderly-customer-qa` · `compliance-check` · `quality-trend`
+**Skills (4):** `qa-scoring` · `elderly-customer-qa` · `compliance-check` · `quality-trend`
 
 **Commands (4):**
 - `/evaluate` — 상담 녹취/STT 품질 평가 전체 사이클
@@ -112,7 +112,7 @@ VOC 유형 분류, 불만 원인 분석, 감성 분석, 넛지 마케팅 분석
 ### 5. cs-stt — STT 대화 분석
 STT 대화 분석, 스크립트 준수율 분석, 개인정보 탐지/마스킹
 
-**Skills (3):** `conversation-analysis` · `script-compliance` · `pii-detection`
+**Skills (2):** `conversation-analysis` · `pii-detection`
 
 **Commands (3):**
 - `/analyze-call` — STT 텍스트 전체 분석 (품질+감성+준수율)
