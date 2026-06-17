@@ -25,6 +25,22 @@
 
 ---
 
+## 2026-06-17 (2차)
+
+**schema.md 업데이트 — 2단계 CoT 인제스트 + 모순 처리 규칙 추가**
+- Ingest를 분석(1단계) → 생성(2단계)로 분리
+- 모순 감지 시 `⚠️ 충돌` 태그 규칙 추가
+- Lint 항목을 6개로 세분화 + 심각도 분류
+- 소스 캐싱 원칙 추가 (중복 인제스트 방지)
+
+**신규 커맨드 추가**
+- `cs-toolkit/commands/wiki-lint.md` — `/wiki-lint` 커맨드
+- `cs-toolkit/commands/wiki-ingest.md` — `/wiki-ingest` 커맨드
+
+**소스:** nashsu/llm_wiki 패턴 분석 결과
+
+---
+
 <!-- 새 항목 형식:
 ## YYYY-MM-DD
 **[작업 유형: 추가/수정/삭제/lint]**
