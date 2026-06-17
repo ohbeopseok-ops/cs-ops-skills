@@ -141,7 +141,111 @@ ALWAYS use this exact template:
 
 ---
 
-### 8. 참고 자료
+### 8. 다이얼로그 모션 (Dialog Motion)
+
+HTML 도구에 모달/다이얼로그를 사용할 때 아래 CSS + JS 패턴을 적용한다.  
+외부 라이브러리 불필요 — 인라인 CSS/JS로 완결된다.
+
+**CSS (전역 한 번만 추가)**
+
+```css
+/* Dialog motion — no external deps */
+:root {
+  --modal-open-dur: 250ms;
+  --modal-close-dur: 150ms;
+  --modal-scale: 0.96;
+  --modal-scale-close: 0.96;
+  --modal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Overlay */
+.t-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity var(--modal-close-dur) ease;
+}
+.t-modal-overlay[data-open] {
+  opacity: 1;
+  transition: opacity var(--modal-open-dur) ease;
+}
+
+/* Dialog box */
+.t-modal {
+  transform: scale(var(--modal-scale));
+  opacity: 0;
+  transition:
+    transform var(--modal-close-dur) var(--modal-ease),
+    opacity    var(--modal-close-dur) ease;
+}
+.t-modal-overlay[data-open] .t-modal {
+  transform: scale(1);
+  opacity: 1;
+  transition:
+    transform var(--modal-open-dur) var(--modal-ease),
+    opacity    var(--modal-open-dur) ease;
+}
+
+/* Closing state — scale back down, then hide */
+.t-modal-overlay.is-closing .t-modal {
+  transform: scale(var(--modal-scale-close));
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-modal, .t-modal-overlay {
+    transition: none !important;
+  }
+}
+```
+
+**HTML 구조**
+
+```html
+<div class="t-modal-overlay" id="myModal" role="dialog" aria-modal="true" hidden>
+  <div class="t-modal">
+    <h2>제목</h2>
+    <p>내용</p>
+    <button onclick="closeModal('myModal')">닫기</button>
+  </div>
+</div>
+```
+
+**JS 오케스트레이션**
+
+```js
+function openModal(id) {
+  const overlay = document.getElementById(id);
+  overlay.hidden = false;
+  // reflow → animate in
+  void overlay.offsetWidth;
+  overlay.setAttribute('data-open', '');
+}
+
+function closeModal(id) {
+  const overlay = document.getElementById(id);
+  const dur = parseFloat(
+    getComputedStyle(overlay).getPropertyValue('--modal-close-dur')
+  ) * 1000;
+  overlay.classList.add('is-closing');
+  overlay.removeAttribute('data-open');
+  setTimeout(() => {
+    overlay.classList.remove('is-closing');
+    overlay.hidden = true;
+  }, dur);
+}
+```
+
+**주의사항**
+
+- `.is-closing` 제거를 `setTimeout` 없이 즉시 하면 다음 열기 시 닫힘 scale에서 시작함
+- 애니메이션 재생 보장을 위해 `hidden` 제거 후 `void el.offsetWidth` reflow 필수
+- `prefers-reduced-motion` 블록은 항상 포함 (접근성 감사 통과 조건)
+
+---
+
+### 9. 참고 자료
 
 - 참고 도구: [기존 유사 도구]
 - 관련 문서: [관련 자료]
