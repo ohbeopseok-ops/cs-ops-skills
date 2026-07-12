@@ -1,0 +1,8 @@
+{
+  "name": "cs-operations",
+  "version": "1.1.1",
+  "description": "인력 배치, 프로세스 개선, 회의록, OKR 수립",
+  "author": {
+    "name": "JoyLab"
+  }
+}

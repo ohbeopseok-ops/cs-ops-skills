@@ -1,3 +1,8 @@
+---
+description: 마케팅 시안을 12인의 가상 심의위원회에 피칭
+argument-hint: [마케팅 시안/스크립트]
+---
+
 # /marketing-council — 마케팅 카운슬 심의
 
 **실행:** marketing-council

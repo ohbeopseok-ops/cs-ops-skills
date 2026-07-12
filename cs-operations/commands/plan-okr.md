@@ -1,3 +1,8 @@
+---
+description: CS 운영 OKR 수립
+argument-hint: [현재 실적 + 분기 방향]
+---
+
 # /plan-okr — CS 운영 OKR 수립
 
 **실행:** kpi-analysis (현황 파악) → target-setting → okr-cs

@@ -1,6 +1,6 @@
 # CS Ops Skills Marketplace
 
-> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 31개 스킬, 21개 체인 워크플로우.  
+> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 30개 스킬, 27개 커맨드 워크플로우.  
 > 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
 
 Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 호환.
@@ -44,7 +44,11 @@ STT 대화 분석? → `/analyze-call`
 
 ### Claude Code (CLI)
 ```bash
-claude plugin add --marketplace [your-github-username]/cs-ops-skills
+# 마켓플레이스 등록
+/plugin marketplace add [your-github-username]/cs-ops-skills
+
+# 원하는 플러그인 설치 (예: 품질 분석)
+/plugin install cs-quality-analysis@cs-ops-skills
 ```
 
 ### 다른 AI 어시스턴트 (스킬만)

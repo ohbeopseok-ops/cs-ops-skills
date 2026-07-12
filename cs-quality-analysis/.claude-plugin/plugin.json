@@ -1,0 +1,8 @@
+{
+  "name": "cs-quality-analysis",
+  "version": "1.1.1",
+  "description": "상담 품질 평가, AutoQA 트렌드, 고령자 상담, 스크립트 준수, 품질 추이 분석",
+  "author": {
+    "name": "JoyLab"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "cs-performance",
+  "version": "1.1.1",
+  "description": "KPI 분석, T-NPS 예측, 상담사 벤치마킹, 목표 설정",
+  "author": {
+    "name": "JoyLab"
+  }
+}
