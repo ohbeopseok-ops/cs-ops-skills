@@ -1,6 +1,6 @@
 # CS Ops Skills Marketplace
 
-> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 30개 스킬, 20개 체인 워크플로우.  
+> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 31개 스킬, 21개 체인 워크플로우.  
 > 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
 
 Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 호환.
@@ -98,14 +98,15 @@ KPI 분석, T-NPS 예측, 상담사 벤치마킹, 목표 설정
 ---
 
 ### 4. cs-voc — VOC 및 고객 분석
-VOC 유형 분류, 불만 원인 분석, 감성 분석, 넛지 마케팅 분석
+VOC 유형 분류, 불만 원인 분석, 감성 분석, 넛지 마케팅 분석, 마케팅 카운슬 심의
 
-**Skills (4):** `voc-categorization` · `complaint-root-cause` · `sentiment-analysis` · `nudge-analysis`
+**Skills (5):** `voc-categorization` · `complaint-root-cause` · `sentiment-analysis` · `nudge-analysis` · `marketing-council`
 
-**Commands (3):**
+**Commands (4):**
 - `/analyze-voc` — VOC 분류 → 원인 분석 → 개선 과제 도출
 - `/analyze-complaints` — 불만 콜 심층 분석
 - `/nudge-check` — 넛지 마케팅 효과 분석
+- `/marketing-council` — 마케팅 시안을 12인의 전설적 마케터 심의위원회에 피칭 (Seth Godin, David Ogilvy, Alex Hormozi, April Dunford 외 — 매 세션 지정 반대자 포함)
 
 ---
 
