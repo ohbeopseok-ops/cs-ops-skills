@@ -1,3 +1,8 @@
+---
+description: 불만 콜 심층 분석
+argument-hint: [불만 VOC 목록]
+---
+
 # /analyze-complaints — 불만 콜 심층 분석
 
 **실행:** sentiment-analysis → voc-categorization → complaint-root-cause

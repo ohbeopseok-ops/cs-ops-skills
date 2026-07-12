@@ -1,3 +1,8 @@
+---
+description: KPI 현황 분석 및 원인 진단
+argument-hint: [KPI 데이터]
+---
+
 # /analyze-kpi — KPI 현황 분석 및 원인 진단
 
 **실행:** kpi-analysis → tnps-prediction (T-NPS 미달 시) → quality-trend (QA 미달 시)

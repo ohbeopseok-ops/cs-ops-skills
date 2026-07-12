@@ -1,3 +1,8 @@
+---
+description: 주간 운영 보고서 자동 작성
+argument-hint: [주간 데이터]
+---
+
 # /weekly-report — 주간 운영 보고서
 
 **실행:** kpi-analysis → weekly-report

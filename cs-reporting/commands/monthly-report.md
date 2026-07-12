@@ -1,3 +1,8 @@
+---
+description: 월간 성과 보고서 작성
+argument-hint: [월간 데이터]
+---
+
 # /monthly-report — 월간 운영 보고서
 
 **실행:** kpi-analysis → quality-trend → voc-categorization → monthly-report

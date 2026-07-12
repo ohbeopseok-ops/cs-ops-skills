@@ -1,0 +1,8 @@
+{
+  "name": "cs-voc",
+  "version": "1.1.1",
+  "description": "VOC 유형 분류, 불만 원인 분석, 감성 분석, 넛지 마케팅 분석, 마케팅 카운슬 심의",
+  "author": {
+    "name": "JoyLab"
+  }
+}

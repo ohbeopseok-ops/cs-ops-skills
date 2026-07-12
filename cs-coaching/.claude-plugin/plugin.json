@@ -1,0 +1,8 @@
+{
+  "name": "cs-coaching",
+  "version": "1.1.1",
+  "description": "코칭 피드백 작성, 개선 계획 수립, 코칭 세션 스크립트",
+  "author": {
+    "name": "JoyLab"
+  }
+}
