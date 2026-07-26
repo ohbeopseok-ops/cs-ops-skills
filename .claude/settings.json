@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__PlayMCP__KakaotalkChat-MemoChat",
+      "mcp__44d928aa-8c8b-41aa-b2a9-1559f25ad853__KakaotalkChat-MemoChat",
+      "WebSearch"
+    ]
+  }
+}
