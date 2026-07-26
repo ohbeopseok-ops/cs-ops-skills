@@ -1,0 +1,314 @@
+<title>장마감 브리핑</title>
+<style>
+  :root {
+    --ground:        #f2f3f6;
+    --surface:       #ffffff;
+    --surface-sunk:  #e9ebf0;
+    --line:          #d5d9e2;
+    --line-soft:     #e4e7ee;
+    --text:          #161a24;
+    --text-dim:      #5a6376;
+    --text-faint:    #858da0;
+    --accent:        #a97724;
+    --up:            #d92d3a;
+    --down:          #2464ab;
+    --flat:          #6b7387;
+    --shadow:        0 1px 2px rgba(22, 26, 36, .06), 0 8px 24px -12px rgba(22, 26, 36, .18);
+
+    --sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard,
+            "Noto Sans KR", "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", "JetBrains Mono", Menlo,
+            Consolas, monospace;
+
+    --step-0: .9375rem;
+    --step-1: 1.0625rem;
+    --step-2: 1.375rem;
+    --step-3: 1.875rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:       #0e121b;
+      --surface:      #171c28;
+      --surface-sunk: #10141e;
+      --line:         #2a3140;
+      --line-soft:    #222836;
+      --text:         #eceef4;
+      --text-dim:     #9aa3b6;
+      --text-faint:   #6e7789;
+      --accent:       #d4a24c;
+      --up:           #ff6169;
+      --down:         #5b9cdf;
+      --flat:         #808999;
+      --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .7);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:       #0e121b; --surface: #171c28; --surface-sunk: #10141e;
+    --line: #2a3140; --line-soft: #222836; --text: #eceef4;
+    --text-dim: #9aa3b6; --text-faint: #6e7789; --accent: #d4a24c;
+    --up: #ff6169; --down: #5b9cdf; --flat: #808999;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.7);
+  }
+  :root[data-theme="light"] {
+    --ground: #f2f3f6; --surface: #ffffff; --surface-sunk: #e9ebf0;
+    --line: #d5d9e2; --line-soft: #e4e7ee; --text: #161a24;
+    --text-dim: #5a6376; --text-faint: #858da0; --accent: #a97724;
+    --up: #d92d3a; --down: #2464ab; --flat: #6b7387;
+    --shadow: 0 1px 2px rgba(22,26,36,.06), 0 8px 24px -12px rgba(22,26,36,.18);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 40rem; margin: 0 auto;
+    padding: 1.5rem 1.125rem 3.5rem;
+    display: flex; flex-direction: column; gap: 2rem;
+  }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .up   { color: var(--up); }
+  .down { color: var(--down); }
+  .flat { color: var(--flat); }
+
+  .masthead { display: flex; flex-direction: column; gap: .375rem; }
+  .eyebrow {
+    font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: .5rem;
+  }
+  .eyebrow::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--accent), transparent); opacity: .45;
+  }
+  h1 { font-size: var(--step-3); line-height: 1.2; letter-spacing: -.02em; font-weight: 800; text-wrap: balance; }
+  .dateline { color: var(--text-dim); font-size: .8125rem; }
+
+  section { display: flex; flex-direction: column; gap: .875rem; }
+  h2 {
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--text-faint); font-weight: 700; padding-bottom: .5rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .625rem; }
+  @media (max-width: 26rem) { .board { grid-template-columns: 1fr; } }
+  .tile {
+    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px;
+    box-shadow: var(--shadow); padding: .875rem 1rem;
+    display: flex; flex-direction: column; gap: .25rem; position: relative; overflow: hidden;
+  }
+  .tile::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: currentColor; }
+  .tile.is-up   { color: var(--up); }
+  .tile.is-down { color: var(--down); }
+  .tile-name { font-size: .75rem; color: var(--text-dim); font-weight: 600; letter-spacing: .02em; }
+  .tile-value { font-size: 1.5rem; font-weight: 700; letter-spacing: -.02em; color: var(--text); line-height: 1.15; }
+  .tile-delta { font-size: .8125rem; font-weight: 700; }
+
+  /* ── flow (investor-type net buy/sell) ───────────────── */
+  .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: .625rem; }
+  @media (max-width: 26rem) { .flow { grid-template-columns: 1fr; } }
+  .flow-item {
+    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px;
+    box-shadow: var(--shadow); padding: .75rem .875rem;
+    display: flex; flex-direction: column; gap: .25rem;
+  }
+  .flow-who { font-size: .75rem; color: var(--text-dim); font-weight: 600; }
+  .flow-amt { font-size: 1.125rem; font-weight: 700; letter-spacing: -.01em; }
+  .flow-tag { font-size: .6875rem; font-weight: 700; letter-spacing: .02em; }
+
+  .meta-row {
+    display: flex; justify-content: space-between; gap: 1rem;
+    font-size: .8125rem; color: var(--text-dim); flex-wrap: wrap;
+  }
+  .meta-row b { color: var(--text); font-weight: 700; }
+
+  /* ── sector bars ──────────────────────────────────────── */
+  .sectors { display: flex; flex-direction: column; gap: .625rem; }
+  .sector-row { display: grid; grid-template-columns: 5.25rem 1fr 3.5rem; align-items: center; gap: .625rem; }
+  .sector-name { font-size: .8125rem; font-weight: 600; color: var(--text-dim); }
+  .sector-track { height: .5rem; background: var(--surface-sunk); border-radius: 2px; overflow: hidden; }
+  .sector-fill { height: 100%; background: var(--down); border-radius: 2px; }
+  .sector-pct { font-size: .8125rem; font-weight: 700; text-align: right; }
+
+  .holding {
+    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .holding-head {
+    padding: 1rem 1.125rem; display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--line-soft);
+  }
+  .holding-name { font-size: var(--step-1); font-weight: 700; letter-spacing: -.01em; }
+  .holding-code { font-size: .75rem; color: var(--text-faint); margin-left: .375rem; font-weight: 500; }
+  .holding-price { text-align: right; }
+  .holding-price .p { font-size: 1.375rem; font-weight: 700; letter-spacing: -.02em; }
+  .holding-price .d { font-size: .8125rem; font-weight: 700; }
+  .holding-note { padding: .875rem 1.125rem; font-size: .875rem; color: var(--text-dim); background: var(--surface-sunk); }
+  .holding-note strong { color: var(--text); font-weight: 700; }
+
+  .news { display: flex; flex-direction: column; gap: .75rem; }
+  .news li { display: flex; gap: .75rem; align-items: baseline; font-size: .9375rem; }
+  .news li::before {
+    content: ""; flex: none; width: .3125rem; height: .3125rem; border-radius: 50%;
+    background: var(--accent); transform: translateY(-.15em); opacity: .8;
+  }
+  .news b { font-weight: 700; }
+
+  .sked { display: flex; flex-direction: column; }
+  .ev {
+    display: grid; grid-template-columns: 3.25rem 1fr; gap: .875rem;
+    padding: .8125rem 0; border-bottom: 1px dashed var(--line); position: relative;
+  }
+  .ev:last-child { border-bottom: 0; }
+  .ev-date { font-size: .8125rem; font-weight: 700; color: var(--accent); letter-spacing: -.01em; padding-top: .0625rem; }
+  .ev-body { display: flex; flex-direction: column; gap: .125rem; }
+  .ev-title { font-weight: 700; font-size: .9375rem; letter-spacing: -.01em; }
+  .ev-sub { font-size: .8125rem; color: var(--text-dim); }
+
+  .takeaway {
+    background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    border-radius: 3px; padding: 1.125rem 1.25rem; display: flex; flex-direction: column; gap: .625rem;
+  }
+  .takeaway p { font-size: .9375rem; }
+  .takeaway p + p { color: var(--text-dim); }
+
+  .callout {
+    font-size: .8125rem; color: var(--text-dim); background: var(--surface-sunk);
+    border: 1px solid var(--line-soft); border-radius: 3px; padding: .75rem .875rem;
+  }
+  .callout b { color: var(--text); }
+
+  footer {
+    font-size: .75rem; color: var(--text-faint); line-height: 1.6;
+    border-top: 1px solid var(--line-soft); padding-top: 1rem;
+    display: flex; flex-direction: column; gap: .5rem;
+  }
+  .legend { display: flex; gap: 1rem; flex-wrap: wrap; font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">장마감 브리핑</div>
+    <h1>외국인·기관 5.2조 팔 때, 개인이 받았다</h1>
+    <div class="dateline">지난 거래일(2026.07.24 금) 마감 기준 · 오늘 장마감 데이터로 자동 갱신 예정</div>
+  </header>
+
+  <div class="callout">
+    이 페이지는 <b>매 거래일 장마감 후(16:00 KST) 자동 갱신</b>됩니다. 지금 보이는 수치는 가장 최근 마감일인 7/24(금) 데이터이며, 오늘 장이 마감되면 실제 오늘 자 수치로 교체됩니다.
+  </div>
+
+  <section>
+    <h2>마감 지수</h2>
+    <div class="board">
+      <div class="tile is-down">
+        <div class="tile-name">코스피</div>
+        <div class="tile-value num">6,690.62</div>
+        <div class="tile-delta num">−406.27 (−5.72%)</div>
+      </div>
+      <div class="tile is-down">
+        <div class="tile-name">코스닥</div>
+        <div class="tile-value num">748.22</div>
+        <div class="tile-delta num">−42.06 (−5.32%)</div>
+      </div>
+    </div>
+    <div class="meta-row">
+      <span>거래량 <b class="num">3억 9,514만 주</b></span>
+      <span>거래대금 <b class="num">30조 8,964억 원</b></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>투자주체별 매매</h2>
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-who">개인</div>
+        <div class="flow-amt up num">+5조 1,783억</div>
+        <div class="flow-tag up">순매수</div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-who">외국인</div>
+        <div class="flow-amt down num">−3조 2,828억</div>
+        <div class="flow-tag down">순매도</div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-who">기관</div>
+        <div class="flow-amt down num">−1조 9,513억</div>
+        <div class="flow-tag down">순매도</div>
+      </div>
+    </div>
+    <div class="takeaway">
+      <p>외국인·기관이 던진 <b>5.2조 원</b>을 개인이 거의 그대로 받아냈습니다. 급락일에 개인이 대규모 순매수로 맞선 전형적인 패닉 매도–저가 매수 구도입니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>업종별 낙폭 (하위 6개)</h2>
+    <div class="sectors">
+      <div class="sector-row"><div class="sector-name">전기전자</div><div class="sector-track"><div class="sector-fill" style="width:100%"></div></div><div class="sector-pct down num">−7.86%</div></div>
+      <div class="sector-row"><div class="sector-name">제조</div><div class="sector-track"><div class="sector-fill" style="width:84%"></div></div><div class="sector-pct down num">−6.64%</div></div>
+      <div class="sector-row"><div class="sector-name">의료정밀</div><div class="sector-track"><div class="sector-fill" style="width:76%"></div></div><div class="sector-pct down num">−6.00%</div></div>
+      <div class="sector-row"><div class="sector-name">운송장비</div><div class="sector-track"><div class="sector-fill" style="width:68%"></div></div><div class="sector-pct down num">−5.35%</div></div>
+      <div class="sector-row"><div class="sector-name">증권</div><div class="sector-track"><div class="sector-fill" style="width:57%"></div></div><div class="sector-pct down num">−4.52%</div></div>
+      <div class="sector-row"><div class="sector-name">IT서비스</div><div class="sector-track"><div class="sector-fill" style="width:53%"></div></div><div class="sector-pct down num">−4.16%</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>보유 종목 마감</h2>
+    <div class="holding">
+      <div class="holding-head">
+        <div><span class="holding-name">삼성전자</span><span class="holding-code num">005930</span></div>
+        <div class="holding-price down">
+          <div class="p num">249,500</div>
+          <div class="d num">−20,500 (−7.59%)</div>
+        </div>
+      </div>
+      <div class="holding-note">
+        전기전자 업종 전체가 <strong>−7.86%</strong>로 가장 크게 밀린 가운데 개별 종목도 동반 하락. 7/30 확정 실적 콘퍼런스콜 전까지는 업종 전반의 수급이 종목 등락을 좌우할 가능성이 큽니다.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>오늘 밤 확인할 것</h2>
+    <div class="sked">
+      <div class="ev">
+        <div class="ev-date num">오늘밤</div>
+        <div class="ev-body">
+          <div class="ev-title">미국 증시 개장</div>
+          <div class="ev-sub">한국 급락이 미국 반도체·기술주에 옮겨붙는지가 첫 확인 포인트</div>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-date num">이번주</div>
+        <div class="ev-body">
+          <div class="ev-title">SK하이닉스·삼성전자 실적, FOMC</div>
+          <div class="ev-sub">7/29·7/30 실적 발표와 7/30 새벽 금리 결정이 이번 급락의 되돌림 여부를 가른다</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>내일 준비할 것</h2>
+    <div class="takeaway">
+      <p>개인 수급이 급락을 받아냈다는 건 <b>단기 반등 재료</b>는 될 수 있지만, 외국인·기관이 계속 팔고 있다는 추세 자체가 바뀐 건 아닙니다.</p>
+      <p>내일 개장 전 확인할 것: 미국 증시 마감 결과, 외국인·기관의 순매도 강도가 줄었는지 여부. 실적·FOMC 전까지는 추격매매보다 관찰이 우선입니다.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="legend"><span class="up">■ 상승·순매수</span><span class="down">■ 하락·순매도</span></div>
+    <div>수치는 마감 후 웹 검색으로 수집했으며 최종 확정치와 다를 수 있습니다.</div>
+    <div>본 페이지는 개인용 정보 정리이며 특정 종목의 매수·매도 추천이 아닙니다. 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</div>
+  </footer>
+
+</div>
