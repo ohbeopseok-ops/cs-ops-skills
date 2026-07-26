@@ -1,0 +1,462 @@
+<title>아침 주식 브리핑</title>
+<style>
+  :root {
+    --ground:        #f2f3f6;
+    --surface:       #ffffff;
+    --surface-sunk:  #e9ebf0;
+    --line:          #d5d9e2;
+    --line-soft:     #e4e7ee;
+    --text:          #161a24;
+    --text-dim:      #5a6376;
+    --text-faint:    #858da0;
+    --accent:        #a97724;
+    --up:            #d92d3a;
+    --down:          #2464ab;
+    --flat:          #6b7387;
+    --shadow:        0 1px 2px rgba(22, 26, 36, .06), 0 8px 24px -12px rgba(22, 26, 36, .18);
+
+    --sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard,
+            "Noto Sans KR", "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", "JetBrains Mono", Menlo,
+            Consolas, monospace;
+
+    --step-0: .9375rem;
+    --step-1: 1.0625rem;
+    --step-2: 1.375rem;
+    --step-3: 1.875rem;
+    --gap:    1.125rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:       #0e121b;
+      --surface:      #171c28;
+      --surface-sunk: #10141e;
+      --line:         #2a3140;
+      --line-soft:    #222836;
+      --text:         #eceef4;
+      --text-dim:     #9aa3b6;
+      --text-faint:   #6e7789;
+      --accent:       #d4a24c;
+      --up:           #ff6169;
+      --down:         #5b9cdf;
+      --flat:         #808999;
+      --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:       #0e121b;
+    --surface:      #171c28;
+    --surface-sunk: #10141e;
+    --line:         #2a3140;
+    --line-soft:    #222836;
+    --text:         #eceef4;
+    --text-dim:     #9aa3b6;
+    --text-faint:   #6e7789;
+    --accent:       #d4a24c;
+    --up:           #ff6169;
+    --down:         #5b9cdf;
+    --flat:         #808999;
+    --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .7);
+  }
+
+  :root[data-theme="light"] {
+    --ground:       #f2f3f6;
+    --surface:      #ffffff;
+    --surface-sunk: #e9ebf0;
+    --line:         #d5d9e2;
+    --line-soft:    #e4e7ee;
+    --text:         #161a24;
+    --text-dim:     #5a6376;
+    --text-faint:   #858da0;
+    --accent:       #a97724;
+    --up:           #d92d3a;
+    --down:         #2464ab;
+    --flat:         #6b7387;
+    --shadow:       0 1px 2px rgba(22, 26, 36, .06), 0 8px 24px -12px rgba(22, 26, 36, .18);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.125rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .up   { color: var(--up); }
+  .down { color: var(--down); }
+  .flat { color: var(--flat); }
+
+  /* ── masthead ─────────────────────────────── */
+  .masthead { display: flex; flex-direction: column; gap: .375rem; }
+
+  .eyebrow {
+    font-size: .6875rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--accent), transparent);
+    opacity: .45;
+  }
+
+  h1 {
+    font-size: var(--step-3);
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    font-weight: 800;
+    text-wrap: balance;
+  }
+  .dateline { color: var(--text-dim); font-size: .8125rem; }
+
+  /* ── section frame ────────────────────────── */
+  section { display: flex; flex-direction: column; gap: .875rem; }
+
+  h2 {
+    font-size: .75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 700;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  /* ── index board ──────────────────────────── */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .625rem;
+  }
+  @media (max-width: 26rem) { .board { grid-template-columns: 1fr; } }
+
+  .tile {
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: .875rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .tile::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: currentColor;
+  }
+  .tile.is-up   { color: var(--up); }
+  .tile.is-down { color: var(--down); }
+
+  .tile-name {
+    font-size: .75rem;
+    color: var(--text-dim);
+    font-weight: 600;
+    letter-spacing: .02em;
+  }
+  .tile-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    color: var(--text);
+    line-height: 1.15;
+  }
+  .tile-delta { font-size: .8125rem; font-weight: 700; }
+
+  /* ── holding ──────────────────────────────── */
+  .holding {
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .holding-head {
+    padding: 1rem 1.125rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .holding-name { font-size: var(--step-1); font-weight: 700; letter-spacing: -.01em; }
+  .holding-code { font-size: .75rem; color: var(--text-faint); margin-left: .375rem; font-weight: 500; }
+  .holding-price { text-align: right; }
+  .holding-price .p { font-size: 1.375rem; font-weight: 700; letter-spacing: -.02em; }
+  .holding-price .d { font-size: .8125rem; font-weight: 700; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .stat {
+    padding: .75rem 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+    border-right: 1px solid var(--line-soft);
+  }
+  .stat:last-child { border-right: 0; }
+  .stat dt { font-size: .6875rem; color: var(--text-faint); font-weight: 600; }
+  .stat dd { font-size: .875rem; font-weight: 700; letter-spacing: -.01em; }
+
+  .holding-note {
+    padding: .875rem 1.125rem;
+    font-size: .875rem;
+    color: var(--text-dim);
+    background: var(--surface-sunk);
+  }
+  .holding-note strong { color: var(--text); font-weight: 700; }
+
+  /* ── news ─────────────────────────────────── */
+  .news { display: flex; flex-direction: column; gap: .75rem; }
+  .news li {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+    font-size: .9375rem;
+  }
+  .news li::before {
+    content: "";
+    flex: none;
+    width: .3125rem;
+    height: .3125rem;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateY(-.15em);
+    opacity: .8;
+  }
+  .news b { font-weight: 700; }
+
+  /* ── schedule ─────────────────────────────── */
+  .sked { display: flex; flex-direction: column; }
+  .ev {
+    display: grid;
+    grid-template-columns: 3.25rem 1fr;
+    gap: .875rem;
+    padding: .8125rem 0;
+    border-bottom: 1px dashed var(--line);
+    position: relative;
+  }
+  .ev:last-child { border-bottom: 0; }
+  .ev-date {
+    font-size: .8125rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -.01em;
+    padding-top: .0625rem;
+  }
+  .ev-body { display: flex; flex-direction: column; gap: .125rem; }
+  .ev-title { font-weight: 700; font-size: .9375rem; letter-spacing: -.01em; }
+  .ev-sub { font-size: .8125rem; color: var(--text-dim); }
+  .ev.is-key .ev-title::after {
+    content: "핵심";
+    font-size: .625rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    color: var(--surface);
+    background: var(--accent);
+    padding: .0625rem .375rem;
+    border-radius: 2px;
+    margin-left: .5rem;
+    vertical-align: .1em;
+    white-space: nowrap;
+  }
+
+  /* ── takeaway ─────────────────────────────── */
+  .takeaway {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: 1.125rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+  }
+  .takeaway p { font-size: .9375rem; }
+  .takeaway p + p { color: var(--text-dim); }
+
+  footer {
+    font-size: .75rem;
+    color: var(--text-faint);
+    line-height: 1.6;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .legend { display: flex; gap: 1rem; flex-wrap: wrap; font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">아침 브리핑</div>
+    <h1>실적·FOMC가 몰린 한 주</h1>
+    <div class="dateline">2026년 7월 27일 월요일 · 직전 거래일(7/24) 마감 기준</div>
+  </header>
+
+  <section>
+    <h2>시장</h2>
+    <div class="board">
+      <div class="tile is-down">
+        <div class="tile-name">코스피</div>
+        <div class="tile-value num">6,690.62</div>
+        <div class="tile-delta num">−406.27 (−5.72%)</div>
+      </div>
+      <div class="tile is-down">
+        <div class="tile-name">코스닥</div>
+        <div class="tile-value num">748.22</div>
+        <div class="tile-delta num">−42.06 (−5.32%)</div>
+      </div>
+      <div class="tile is-up">
+        <div class="tile-name">S&amp;P 500</div>
+        <div class="tile-value num">7,411.98</div>
+        <div class="tile-delta num">+3.68 (+0.05%)</div>
+      </div>
+      <div class="tile is-down">
+        <div class="tile-name">나스닥</div>
+        <div class="tile-value num">24,975.82</div>
+        <div class="tile-delta num">−161.87 (−0.64%)</div>
+      </div>
+    </div>
+    <div class="takeaway">
+      <p>금요일 국내 증시는 <b>중동 지정학 긴장 재점화 · 국제유가 급등 · 미 기술주 약세</b>가 겹치며 양 지수 모두 5% 넘게 밀렸습니다. 장중 매도 사이드카가 발동했고 코스피는 7,000선이 무너졌습니다.</p>
+      <p>주간 기준으로는 −1.91%. 증권가가 제시한 이번 주 코스피 예상 밴드는 <span class="num">6,700~7,600</span>으로, 방향을 실적과 FOMC가 정할 것으로 보고 있습니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>보유 종목</h2>
+    <div class="holding">
+      <div class="holding-head">
+        <div>
+          <span class="holding-name">삼성전자</span><span class="holding-code num">005930</span>
+        </div>
+        <div class="holding-price down">
+          <div class="p num">249,500</div>
+          <div class="d num">−20,500 (−7.59%)</div>
+        </div>
+      </div>
+      <dl class="stats">
+        <div class="stat">
+          <dt>2Q 매출</dt>
+          <dd class="num">171조</dd>
+        </div>
+        <div class="stat">
+          <dt>2Q 영업이익</dt>
+          <dd class="num">89.4조</dd>
+        </div>
+        <div class="stat">
+          <dt>52주 범위</dt>
+          <dd class="num">6.6만~37.5만</dd>
+        </div>
+      </dl>
+      <div class="holding-note">
+        역대 최대 실적에도 주가가 빠진 건 <strong>기대치가 이미 그보다 높았기 때문</strong>입니다. 잠정 실적 발표일 기관 대량 매도가 나오며 차익실현이 몰렸습니다. 이번 주 <strong>7월 30일 확정 실적 콘퍼런스콜</strong>에서 HBM 매출 증가 속도와 파운드리 적자 축소 근거가 확인 포인트입니다.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>주요 뉴스</h2>
+    <ul class="news">
+      <li>미–이란 군사 충돌이 이어지며 <b>유가와 시중금리에 상방 압력</b>. 다만 유가 급등이 트럼프 대통령의 정치적 부담을 키우는 만큼 완화 국면으로 돌아설 수 있다는 분석도 나옵니다.</li>
+      <li>원/달러 환율 <b class="num">1,466.6원</b> 마감 (0.2원 하락). 장중 한때 1,475원대까지 올랐습니다.</li>
+      <li>애플이 <b>맥북·아이패드 가격 인상</b>을 발표하며 메모리·부품 원가 상승분을 소비자가로 전가. 애플 주가는 3.5% 넘게 올라 다우 상승을 이끌었습니다.</li>
+      <li>미 증시는 반도체 약세로 <b>나스닥만 하락</b>, 다우와 S&amp;P500은 반등에 성공했습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>이번 주 일정</h2>
+    <div class="sked">
+      <div class="ev">
+        <div class="ev-date num">7/29</div>
+        <div class="ev-body">
+          <div class="ev-title">SK하이닉스 실적</div>
+          <div class="ev-sub">HBM 중심 AI 반도체 수요를 먼저 확인할 수 있는 자리</div>
+        </div>
+      </div>
+      <div class="ev is-key">
+        <div class="ev-date num">7/30</div>
+        <div class="ev-body">
+          <div class="ev-title">삼성전자 확정 실적</div>
+          <div class="ev-sub">메모리 수익성 개선 · 파운드리 적자 축소 · 가이던스 · 주주환원</div>
+        </div>
+      </div>
+      <div class="ev is-key">
+        <div class="ev-date num">7/30</div>
+        <div class="ev-body">
+          <div class="ev-title">미국 FOMC (새벽)</div>
+          <div class="ev-sub">시장은 기준금리 3.75% 동결 전망 · 같은 날 2분기 GDP 발표</div>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-date num">주중</div>
+        <div class="ev-body">
+          <div class="ev-title">빅테크 실적</div>
+          <div class="ev-sub">마이크로소프트 · 메타 · 아마존 · 애플 — AI 설비투자 확대 기조 유지 여부</div>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-date num">8/1</div>
+        <div class="ev-body">
+          <div class="ev-title">한국 7월 수출</div>
+          <div class="ev-sub">반도체 수출 물량으로 업황을 교차 확인</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>오늘의 판단</h2>
+    <div class="takeaway">
+      <p>급락 직후이자 대형 이벤트 직전이라 <b>변동성이 가장 큰 구간</b>입니다. 이벤트 전 신규 진입은 최소화하고, 실적과 FOMC를 확인한 뒤 대응하는 편이 원칙에 맞습니다.</p>
+      <p>보유 중인 삼성전자는 7/30 콘퍼런스콜이 단기 방향을 가릅니다. HBM 성장 속도가 유지되면 보유 근거가 살아 있고, 근거가 훼손되면 비중 축소를 검토할 구간입니다. 확인 전 물타기는 보류.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="legend">
+      <span class="up">■ 상승</span>
+      <span class="down">■ 하락</span>
+    </div>
+    <div>수치는 직전 거래일 마감 기준이며 웹 검색으로 수집했습니다. 실시간 시세와 차이가 있을 수 있으니 매매 전 증권사 앱에서 확인하세요.</div>
+    <div>본 페이지는 개인용 정보 정리이며 특정 종목의 매수·매도 추천이 아닙니다. 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</div>
+  </footer>
+
+</div>
