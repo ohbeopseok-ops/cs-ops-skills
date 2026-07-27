@@ -23,28 +23,20 @@
     --step-0: .9375rem;
     --step-1: 1.0625rem;
     --step-2: 1.375rem;
-    --step-3: 1.875rem;
+    --step-3: 1.75rem;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground:       #0e121b;
-      --surface:      #171c28;
-      --surface-sunk: #10141e;
-      --line:         #2a3140;
-      --line-soft:    #222836;
-      --text:         #eceef4;
-      --text-dim:     #9aa3b6;
-      --text-faint:   #6e7789;
-      --accent:       #d4a24c;
-      --up:           #ff6169;
-      --down:         #5b9cdf;
-      --flat:         #808999;
-      --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .7);
+      --ground: #0e121b; --surface: #171c28; --surface-sunk: #10141e;
+      --line: #2a3140; --line-soft: #222836; --text: #eceef4;
+      --text-dim: #9aa3b6; --text-faint: #6e7789; --accent: #d4a24c;
+      --up: #ff6169; --down: #5b9cdf; --flat: #808999;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.7);
     }
   }
   :root[data-theme="dark"] {
-    --ground:       #0e121b; --surface: #171c28; --surface-sunk: #10141e;
+    --ground: #0e121b; --surface: #171c28; --surface-sunk: #10141e;
     --line: #2a3140; --line-soft: #222836; --text: #eceef4;
     --text-dim: #9aa3b6; --text-faint: #6e7789; --accent: #d4a24c;
     --up: #ff6169; --down: #5b9cdf; --flat: #808999;
@@ -58,19 +50,8 @@
     --shadow: 0 1px 2px rgba(22,26,36,.06), 0 8px 24px -12px rgba(22,26,36,.18);
   }
 
-  body {
-    background: var(--ground);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: var(--step-0);
-    line-height: 1.65;
-    -webkit-text-size-adjust: 100%;
-  }
-  .wrap {
-    max-width: 40rem; margin: 0 auto;
-    padding: 1.5rem 1.125rem 3.5rem;
-    display: flex; flex-direction: column; gap: 2rem;
-  }
+  body { background: var(--ground); color: var(--text); font-family: var(--sans); font-size: var(--step-0); line-height: 1.65; -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 40rem; margin: 0 auto; padding: 1.5rem 1.125rem 3.5rem; display: flex; flex-direction: column; gap: 2rem; }
   .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
   .up   { color: var(--up); }
   .down { color: var(--down); }
@@ -81,20 +62,41 @@
     font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase;
     color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: .5rem;
   }
-  .eyebrow::after {
-    content: ""; flex: 1; height: 1px;
-    background: linear-gradient(to right, var(--accent), transparent); opacity: .45;
-  }
-  h1 { font-size: var(--step-3); line-height: 1.2; letter-spacing: -.02em; font-weight: 800; text-wrap: balance; }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: linear-gradient(to right, var(--accent), transparent); opacity: .45; }
+  h1 { font-size: var(--step-3); line-height: 1.25; letter-spacing: -.02em; font-weight: 800; text-wrap: balance; }
   .dateline { color: var(--text-dim); font-size: .8125rem; }
 
   section { display: flex; flex-direction: column; gap: .875rem; }
   h2 {
-    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
-    color: var(--text-faint); font-weight: 700; padding-bottom: .5rem;
-    border-bottom: 1px solid var(--line-soft);
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint);
+    font-weight: 700; padding-bottom: .5rem; border-bottom: 1px solid var(--line-soft);
+    display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
   }
+  h2 .h2-note { text-transform: none; letter-spacing: 0; font-weight: 500; font-size: .6875rem; }
 
+  /* ── evidence tags (fact / interpretation / inference) ── */
+  .tag {
+    display: inline-flex; align-items: center; font-size: .625rem; font-weight: 700;
+    letter-spacing: .02em; padding: .0625rem .375rem; border-radius: 2px;
+    margin-right: .375rem; white-space: nowrap; vertical-align: .05em;
+  }
+  .tag-fact   { background: var(--text); color: var(--surface); }
+  .tag-interp { background: transparent; border: 1px solid var(--text-dim); color: var(--text-dim); }
+  .tag-infer  { background: transparent; border: 1px dashed var(--text-faint); color: var(--text-faint); font-style: italic; }
+  .tag-legend { display: flex; flex-wrap: wrap; gap: .625rem .875rem; font-size: .75rem; color: var(--text-dim); align-items: center; }
+  .tag-legend span { display: inline-flex; align-items: center; }
+
+  .callout {
+    font-size: .8125rem; color: var(--text-dim); background: var(--surface-sunk);
+    border: 1px solid var(--line-soft); border-radius: 3px; padding: .75rem .875rem;
+  }
+  .callout b { color: var(--text); }
+
+  /* ── headline (핵심 3문장) ─────────────────────────── */
+  .headline { display: flex; flex-direction: column; gap: .625rem; background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px; box-shadow: var(--shadow); padding: 1.125rem 1.25rem; }
+  .headline p { font-size: .9375rem; }
+
+  /* ── index + macro board ──────────────────────────── */
   .board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .625rem; }
   @media (max-width: 26rem) { .board { grid-template-columns: 1fr; } }
   .tile {
@@ -105,90 +107,82 @@
   .tile::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: currentColor; }
   .tile.is-up   { color: var(--up); }
   .tile.is-down { color: var(--down); }
+  .tile.is-flat { color: var(--flat); }
   .tile-name { font-size: .75rem; color: var(--text-dim); font-weight: 600; letter-spacing: .02em; }
-  .tile-value { font-size: 1.5rem; font-weight: 700; letter-spacing: -.02em; color: var(--text); line-height: 1.15; }
+  .tile-value { font-size: 1.375rem; font-weight: 700; letter-spacing: -.02em; color: var(--text); line-height: 1.15; }
   .tile-delta { font-size: .8125rem; font-weight: 700; }
 
-  /* ── flow (investor-type net buy/sell) ───────────────── */
   .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: .625rem; }
   @media (max-width: 26rem) { .flow { grid-template-columns: 1fr; } }
-  .flow-item {
-    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px;
-    box-shadow: var(--shadow); padding: .75rem .875rem;
-    display: flex; flex-direction: column; gap: .25rem;
-  }
+  .flow-item { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px; box-shadow: var(--shadow); padding: .75rem .875rem; display: flex; flex-direction: column; gap: .25rem; }
   .flow-who { font-size: .75rem; color: var(--text-dim); font-weight: 600; }
-  .flow-amt { font-size: 1.125rem; font-weight: 700; letter-spacing: -.01em; }
+  .flow-amt { font-size: 1.0625rem; font-weight: 700; letter-spacing: -.01em; }
   .flow-tag { font-size: .6875rem; font-weight: 700; letter-spacing: .02em; }
 
-  .meta-row {
-    display: flex; justify-content: space-between; gap: 1rem;
-    font-size: .8125rem; color: var(--text-dim); flex-wrap: wrap;
-  }
+  .meta-row { display: flex; justify-content: space-between; gap: 1rem; font-size: .8125rem; color: var(--text-dim); flex-wrap: wrap; }
   .meta-row b { color: var(--text); font-weight: 700; }
 
-  /* ── sector bars ──────────────────────────────────────── */
-  .sectors { display: flex; flex-direction: column; gap: .625rem; }
-  .sector-row { display: grid; grid-template-columns: 5.25rem 1fr 3.5rem; align-items: center; gap: .625rem; }
-  .sector-name { font-size: .8125rem; font-weight: 600; color: var(--text-dim); }
-  .sector-track { height: .5rem; background: var(--surface-sunk); border-radius: 2px; overflow: hidden; }
-  .sector-fill { height: 100%; background: var(--down); border-radius: 2px; }
-  .sector-pct { font-size: .8125rem; font-weight: 700; text-align: right; }
-
-  .holding {
+  /* ── watchlist grid ───────────────────────────────── */
+  .watchlist { display: flex; flex-direction: column; gap: .625rem; }
+  .stock {
     background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px;
     box-shadow: var(--shadow); overflow: hidden;
   }
-  .holding-head {
-    padding: 1rem 1.125rem; display: flex; align-items: baseline; justify-content: space-between;
-    gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--line-soft);
-  }
-  .holding-name { font-size: var(--step-1); font-weight: 700; letter-spacing: -.01em; }
-  .holding-code { font-size: .75rem; color: var(--text-faint); margin-left: .375rem; font-weight: 500; }
-  .holding-price { text-align: right; }
-  .holding-price .p { font-size: 1.375rem; font-weight: 700; letter-spacing: -.02em; }
-  .holding-price .d { font-size: .8125rem; font-weight: 700; }
-  .holding-note { padding: .875rem 1.125rem; font-size: .875rem; color: var(--text-dim); background: var(--surface-sunk); }
-  .holding-note strong { color: var(--text); font-weight: 700; }
+  .stock-head { padding: .8125rem 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--line-soft); }
+  .stock-name { font-size: 1rem; font-weight: 700; letter-spacing: -.01em; }
+  .stock-code { font-size: .6875rem; color: var(--text-faint); margin-left: .375rem; font-weight: 500; }
+  .stock-price { text-align: right; }
+  .stock-price .p { font-size: 1.1875rem; font-weight: 700; letter-spacing: -.02em; }
+  .stock-price .d { font-size: .75rem; font-weight: 700; }
+  .stock-cause { padding: .75rem 1rem; font-size: .8125rem; color: var(--text-dim); background: var(--surface-sunk); }
+  .stock-cause strong { color: var(--text); font-weight: 700; }
+  .stock-unknown .p { color: var(--text-faint); font-style: italic; font-size: 1rem; }
 
+  /* ── sector news ──────────────────────────────────── */
   .news { display: flex; flex-direction: column; gap: .75rem; }
-  .news li { display: flex; gap: .75rem; align-items: baseline; font-size: .9375rem; }
-  .news li::before {
-    content: ""; flex: none; width: .3125rem; height: .3125rem; border-radius: 50%;
-    background: var(--accent); transform: translateY(-.15em); opacity: .8;
-  }
+  .news li { display: flex; gap: .625rem; align-items: baseline; font-size: .9375rem; flex-wrap: wrap; }
+  .news li::before { content: ""; flex: none; width: .3125rem; height: .3125rem; border-radius: 50%; background: var(--accent); transform: translateY(-.15em); opacity: .8; align-self: center; }
   .news b { font-weight: 700; }
 
+  /* ── risk / counter two-column ───────────────────── */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  @media (max-width: 30rem) { .duo { grid-template-columns: 1fr; } }
+  .duo-col { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px; box-shadow: var(--shadow); padding: .875rem 1rem; display: flex; flex-direction: column; gap: .625rem; }
+  .duo-col h3 { font-size: .8125rem; font-weight: 700; }
+  .duo-col.risk h3 { color: var(--down); }
+  .duo-col.counter h3 { color: var(--up); }
+  .duo-col ul { display: flex; flex-direction: column; gap: .5rem; padding-left: 1rem; font-size: .875rem; color: var(--text-dim); }
+  .duo-col li { list-style: disc; }
+
+  /* ── checkpoint timeline ──────────────────────────── */
   .sked { display: flex; flex-direction: column; }
-  .ev {
-    display: grid; grid-template-columns: 3.25rem 1fr; gap: .875rem;
-    padding: .8125rem 0; border-bottom: 1px dashed var(--line); position: relative;
-  }
+  .ev { display: grid; grid-template-columns: 3.25rem 1fr; gap: .875rem; padding: .8125rem 0; border-bottom: 1px dashed var(--line); position: relative; }
   .ev:last-child { border-bottom: 0; }
   .ev-date { font-size: .8125rem; font-weight: 700; color: var(--accent); letter-spacing: -.01em; padding-top: .0625rem; }
   .ev-body { display: flex; flex-direction: column; gap: .125rem; }
   .ev-title { font-weight: 700; font-size: .9375rem; letter-spacing: -.01em; }
   .ev-sub { font-size: .8125rem; color: var(--text-dim); }
 
-  .takeaway {
-    background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent);
-    border-radius: 3px; padding: 1.125rem 1.25rem; display: flex; flex-direction: column; gap: .625rem;
+  /* ── blog idea box (visually fenced off from analysis) ── */
+  .blogbox {
+    background: repeating-linear-gradient(135deg, var(--surface-sunk), var(--surface-sunk) 10px, var(--surface) 10px, var(--surface) 20px);
+    border: 1px dashed var(--line);
+    border-radius: 3px; padding: 1rem 1.125rem; display: flex; flex-direction: column; gap: .75rem;
   }
+  .blogbox-flag { font-size: .6875rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); }
+  .blog-item { display: flex; flex-direction: column; gap: .125rem; background: var(--surface); border: 1px solid var(--line-soft); border-radius: 3px; padding: .625rem .75rem; }
+  .blog-kind { font-size: .6875rem; color: var(--accent); font-weight: 700; }
+  .blog-title { font-size: .9375rem; font-weight: 700; letter-spacing: -.01em; }
+  .blog-pick { font-size: .8125rem; color: var(--text-dim); }
+  .blog-pick b { color: var(--text); }
+
+  .takeaway { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 3px; padding: 1.125rem 1.25rem; display: flex; flex-direction: column; gap: .625rem; }
   .takeaway p { font-size: .9375rem; }
   .takeaway p + p { color: var(--text-dim); }
 
-  .callout {
-    font-size: .8125rem; color: var(--text-dim); background: var(--surface-sunk);
-    border: 1px solid var(--line-soft); border-radius: 3px; padding: .75rem .875rem;
-  }
-  .callout b { color: var(--text); }
+  .conclusion { font-size: 1.0625rem; font-weight: 700; letter-spacing: -.01em; text-wrap: balance; padding: 1rem 0; border-top: 2px solid var(--text); border-bottom: 2px solid var(--text); }
 
-  footer {
-    font-size: .75rem; color: var(--text-faint); line-height: 1.6;
-    border-top: 1px solid var(--line-soft); padding-top: 1rem;
-    display: flex; flex-direction: column; gap: .5rem;
-  }
-  .legend { display: flex; gap: 1rem; flex-wrap: wrap; font-weight: 600; }
+  footer { font-size: .75rem; color: var(--text-faint); line-height: 1.6; border-top: 1px solid var(--line-soft); padding-top: 1rem; display: flex; flex-direction: column; gap: .5rem; }
 
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
@@ -205,8 +199,23 @@
     이 페이지는 <b>매 거래일 장마감 후(16:00 KST) 자동 갱신</b>됩니다. 지금 보이는 수치는 가장 최근 마감일인 7/24(금) 데이터이며, 오늘 장이 마감되면 실제 오늘 자 수치로 교체됩니다.
   </div>
 
+  <div class="tag-legend">
+    <span><span class="tag tag-fact">사실</span>확인된 수치·공시</span>
+    <span><span class="tag tag-interp">해석</span>시장 반응에 대한 설명</span>
+    <span><span class="tag tag-infer">추론</span>원자료 미확보, 정황상 추정</span>
+  </div>
+
   <section>
-    <h2>마감 지수</h2>
+    <h2>장 마감 핵심 3문장</h2>
+    <div class="headline">
+      <p><span class="tag tag-fact">사실</span>코스피는 전일 대비 5.72% 급락한 6,690.62에, 코스닥은 5.32% 하락한 748.22에 마감했다.</p>
+      <p><span class="tag tag-fact">사실</span>외국인과 기관이 각각 3조 2,828억 원, 1조 9,513억 원을 순매도했고 개인이 5조 1,783억 원을 순매수하며 매도 물량을 받아냈다.</p>
+      <p><span class="tag tag-interp">해석</span>중동 지정학 리스크와 국제유가 급등이 촉발한 시장 전반의 위험회피 심리가 급락의 배경으로 지목되며, 개인의 대규모 순매수는 패닉 매도에 대한 저가매수 대응으로 읽힌다.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>지수 · 수급 · 환율 · 금리</h2>
     <div class="board">
       <div class="tile is-down">
         <div class="tile-name">코스피</div>
@@ -218,96 +227,156 @@
         <div class="tile-value num">748.22</div>
         <div class="tile-delta num">−42.06 (−5.32%)</div>
       </div>
+      <div class="tile is-down">
+        <div class="tile-name">원/달러 환율</div>
+        <div class="tile-value num">1,466.6</div>
+        <div class="tile-delta num">−0.2원 · 장중 1,475원대 터치</div>
+      </div>
+      <div class="tile is-flat">
+        <div class="tile-name">기준금리</div>
+        <div class="tile-value num">2.75%</div>
+        <div class="tile-delta">7/16 0.25%p 인상 · 3년 6개월만</div>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="flow-item"><div class="flow-who">개인</div><div class="flow-amt up num">+5조 1,783억</div><div class="flow-tag up">순매수</div></div>
+      <div class="flow-item"><div class="flow-who">외국인</div><div class="flow-amt down num">−3조 2,828억</div><div class="flow-tag down">순매도</div></div>
+      <div class="flow-item"><div class="flow-who">기관</div><div class="flow-amt down num">−1조 9,513억</div><div class="flow-tag down">순매도</div></div>
     </div>
     <div class="meta-row">
       <span>거래량 <b class="num">3억 9,514만 주</b></span>
       <span>거래대금 <b class="num">30조 8,964억 원</b></span>
     </div>
-  </section>
-
-  <section>
-    <h2>투자주체별 매매</h2>
-    <div class="flow">
-      <div class="flow-item">
-        <div class="flow-who">개인</div>
-        <div class="flow-amt up num">+5조 1,783억</div>
-        <div class="flow-tag up">순매수</div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-who">외국인</div>
-        <div class="flow-amt down num">−3조 2,828억</div>
-        <div class="flow-tag down">순매도</div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-who">기관</div>
-        <div class="flow-amt down num">−1조 9,513억</div>
-        <div class="flow-tag down">순매도</div>
-      </div>
-    </div>
-    <div class="takeaway">
-      <p>외국인·기관이 던진 <b>5.2조 원</b>을 개인이 거의 그대로 받아냈습니다. 급락일에 개인이 대규모 순매수로 맞선 전형적인 패닉 매도–저가 매수 구도입니다.</p>
+    <div class="callout">
+      <span class="tag tag-interp">해석</span>6월 소비자물가 3.2%로 2년 6개월 만에 최고치를 찍자 한국은행이 7/16 기준금리를 2.50%→2.75%로 올렸다. 급락 당일 금리 인상 자체가 직접 원인은 아니지만, 긴축 전환 국면이라는 배경은 위험자산 회피 심리를 거들었을 가능성이 있다.
     </div>
   </section>
 
   <section>
-    <h2>업종별 낙폭 (하위 6개)</h2>
-    <div class="sectors">
-      <div class="sector-row"><div class="sector-name">전기전자</div><div class="sector-track"><div class="sector-fill" style="width:100%"></div></div><div class="sector-pct down num">−7.86%</div></div>
-      <div class="sector-row"><div class="sector-name">제조</div><div class="sector-track"><div class="sector-fill" style="width:84%"></div></div><div class="sector-pct down num">−6.64%</div></div>
-      <div class="sector-row"><div class="sector-name">의료정밀</div><div class="sector-track"><div class="sector-fill" style="width:76%"></div></div><div class="sector-pct down num">−6.00%</div></div>
-      <div class="sector-row"><div class="sector-name">운송장비</div><div class="sector-track"><div class="sector-fill" style="width:68%"></div></div><div class="sector-pct down num">−5.35%</div></div>
-      <div class="sector-row"><div class="sector-name">증권</div><div class="sector-track"><div class="sector-fill" style="width:57%"></div></div><div class="sector-pct down num">−4.52%</div></div>
-      <div class="sector-row"><div class="sector-name">IT서비스</div><div class="sector-track"><div class="sector-fill" style="width:53%"></div></div><div class="sector-pct down num">−4.16%</div></div>
-    </div>
-  </section>
+    <h2>관심 종목별 변화와 원인</h2>
+    <div class="watchlist">
 
-  <section>
-    <h2>보유 종목 마감</h2>
-    <div class="holding">
-      <div class="holding-head">
-        <div><span class="holding-name">삼성전자</span><span class="holding-code num">005930</span></div>
-        <div class="holding-price down">
-          <div class="p num">249,500</div>
-          <div class="d num">−20,500 (−7.59%)</div>
+      <div class="stock">
+        <div class="stock-head">
+          <div><span class="stock-name">삼성전자</span><span class="stock-code num">005930</span></div>
+          <div class="stock-price down"><div class="p num">249,500</div><div class="d num">−20,500 (−7.59%)</div></div>
         </div>
+        <div class="stock-cause"><span class="tag tag-fact">사실</span>전기전자 업종 전체가 <strong>−7.86%</strong>로 가장 크게 밀린 가운데 동반 하락. <span class="tag tag-interp">해석</span>역대 최대 2분기 실적에도 눈높이를 못 넘겨 차익실현이 겹친 것으로 풀이된다.</div>
       </div>
-      <div class="holding-note">
-        전기전자 업종 전체가 <strong>−7.86%</strong>로 가장 크게 밀린 가운데 개별 종목도 동반 하락. 7/30 확정 실적 콘퍼런스콜 전까지는 업종 전반의 수급이 종목 등락을 좌우할 가능성이 큽니다.
+
+      <div class="stock">
+        <div class="stock-head">
+          <div><span class="stock-name">SK하이닉스</span><span class="stock-code num">000660</span></div>
+          <div class="stock-price down"><div class="p num">확인 불가</div><div class="d num">장중 −3.60% (사실)</div></div>
+        </div>
+        <div class="stock-cause"><span class="tag tag-infer">추론</span>정규장 최종 종가는 원자료로 확인되지 않았다. 장중 한때 1,850,000원까지 낙폭이 확대됐던 점(사실)을 볼 때 삼성전자와 유사한 낙폭으로 마감했을 가능성이 있으나 단정할 수 없다.</div>
+      </div>
+
+      <div class="stock">
+        <div class="stock-head">
+          <div><span class="stock-name">한미반도체</span><span class="stock-code num">042700</span></div>
+          <div class="stock-price down"><div class="p num">200,000</div><div class="d num">−16,000 (−7.41%)</div></div>
+        </div>
+        <div class="stock-cause"><span class="tag tag-fact">사실</span>20만 원 심리적 지지선에 턱걸이하며 마감. 애프터마켓(NXT)에서는 −6.94%로 낙폭이 일부 축소됐다. <span class="tag tag-interp">해석</span>7월 마지막 주 20만 원 방어 여부가 다음 관심사로 꼽힌다.</div>
+      </div>
+
+      <div class="stock">
+        <div class="stock-head">
+          <div><span class="stock-name">한화오션</span><span class="stock-code num">042660</span></div>
+          <div class="stock-price down"><div class="p num">확인 불가</div><div class="d num">개장 직후 −1.22% (사실)</div></div>
+        </div>
+        <div class="stock-cause"><span class="tag tag-infer">추론</span>종가는 확인되지 않았다. 운송장비 업종 전체가 <strong>−5.35%</strong> 하락한 점(사실)을 감안하면 비슷한 수준에서 마감했을 가능성이 있다. <span class="tag tag-interp">해석</span>7/7 대형 수주 불발로 하루 −22% 급락한 이력이 있어 수주 뉴스에 대한 주가 민감도가 높은 종목이다.</div>
+      </div>
+
+      <div class="stock">
+        <div class="stock-head">
+          <div><span class="stock-name">현대차</span><span class="stock-code num">005380</span></div>
+          <div class="stock-price down"><div class="p num">401,500</div><div class="d num">−30,500 (−7.06%)</div></div>
+        </div>
+        <div class="stock-cause"><span class="tag tag-fact">사실</span>자기주식 처분 결정 발표 직후 급락. <span class="tag tag-interp">해석</span>연초 이후 급등에 따른 밸류에이션 부담이 자사주 처분 뉴스를 계기로 차익실현 매물로 이어진 것으로 보인다.</div>
+      </div>
+
+      <div class="stock">
+        <div class="stock-head">
+          <div><span class="stock-name">TIGER 200IT레버리지</span><span class="stock-code num">243880</span></div>
+          <div class="stock-price down stock-unknown"><div class="p">확인 불가</div><div class="d">—</div></div>
+        </div>
+        <div class="stock-cause"><span class="tag tag-infer">추론</span>기준가 원자료를 확보하지 못했다. 2배 레버리지 구조상 추적지수(코스피200 정보기술)가 전기전자 업종과 유사하게 움직였다면 이론적으로 −7.86%의 약 두 배권 하락이 있었을 것으로 추정되나, <strong>확인된 수치가 아니므로 매매 판단 근거로 쓰지 말 것.</strong></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>핵심 뉴스 <span class="h2-note">— 해외 이슈는 삼성전자·SK하이닉스 직접 영향分만</span></h2>
+    <ul class="news">
+      <li><span class="tag tag-fact">사실</span>중국 D램 업체 <b>CXMT</b>가 상하이 IPO로 6.5조 원을 조달하겠다고 밝힌 7/16, 삼성전자 −7%·SK하이닉스 −10%·마이크론 −8%가 동반 급락했다. <span class="tag tag-interp">해석</span>HBM 영향은 제한적이나 범용 D램에서 중장기 경쟁 압박 요인으로 지목된다.</li>
+      <li><span class="tag tag-fact">사실</span>한화오션은 사우디 K9자주포·천무 패키지 수출 협상, 스페인 자주포 MOU 등 방산 수주 이벤트를 다수 앞두고 있다. <span class="tag tag-infer">추론</span>하반기 중 계약이 성사되면 주가 반등 트리거가 될 수 있다.</li>
+      <li><span class="tag tag-fact">사실</span>현대차는 자기주식 처분 결정을 발표했다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>리스크와 반대 시나리오</h2>
+    <div class="duo">
+      <div class="duo-col risk">
+        <h3>▾ 리스크</h3>
+        <ul>
+          <li><span class="tag tag-infer">추론</span>중동 확전이 이어지면 유가 추가 상승 → 조선·자동차 원가 부담 확대</li>
+          <li><span class="tag tag-infer">추론</span>FOMC(7/30)가 매파적으로 해석되면 미 증시발 재급락이 국내로 전이될 가능성</li>
+          <li><span class="tag tag-interp">해석</span>CXMT발 범용 D램 경쟁 심화는 이번 주 실적 발표의 가이던스에 부담 요인</li>
+        </ul>
+      </div>
+      <div class="duo-col counter">
+        <h3>▴ 반대 시나리오</h3>
+        <ul>
+          <li><span class="tag tag-fact">사실</span>개인이 5.2조 원을 순매수해 낙폭을 방어 — 저가매수 유입이 이미 진행 중</li>
+          <li><span class="tag tag-interp">해석</span>유가 급등은 트럼프 대통령에게도 정치적 부담이라 완화 국면 전환 여지</li>
+          <li><span class="tag tag-infer">추론</span>SK하이닉스·삼성전자 실적에서 HBM 매출이 컨센서스를 상회하면 반도체주 반등 트리거 가능</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>오늘 밤 확인할 것</h2>
+    <h2>내일 확인할 체크포인트</h2>
     <div class="sked">
-      <div class="ev">
-        <div class="ev-date num">오늘밤</div>
-        <div class="ev-body">
-          <div class="ev-title">미국 증시 개장</div>
-          <div class="ev-sub">한국 급락이 미국 반도체·기술주에 옮겨붙는지가 첫 확인 포인트</div>
-        </div>
-      </div>
-      <div class="ev">
-        <div class="ev-date num">이번주</div>
-        <div class="ev-body">
-          <div class="ev-title">SK하이닉스·삼성전자 실적, FOMC</div>
-          <div class="ev-sub">7/29·7/30 실적 발표와 7/30 새벽 금리 결정이 이번 급락의 되돌림 여부를 가른다</div>
-        </div>
-      </div>
+      <div class="ev"><div class="ev-date num">오늘밤</div><div class="ev-body"><div class="ev-title">미국 증시 개장</div><div class="ev-sub">한국발 급락이 미국 반도체·기술주로 옮겨붙는지 확인</div></div></div>
+      <div class="ev"><div class="ev-date num">7/29</div><div class="ev-body"><div class="ev-title">SK하이닉스 실적</div><div class="ev-sub">HBM 매출 증가 속도가 컨센서스를 웃도는지</div></div></div>
+      <div class="ev"><div class="ev-date num">7/30</div><div class="ev-body"><div class="ev-title">삼성전자 실적 · 美 FOMC(새벽)</div><div class="ev-sub">파운드리 적자 축소 근거, 기준금리 3.75% 동결 여부</div></div></div>
+      <div class="ev"><div class="ev-date num">8/1</div><div class="ev-body"><div class="ev-title">한국 7월 수출</div><div class="ev-sub">반도체 수출 물량으로 업황 교차 확인</div></div></div>
     </div>
   </section>
 
   <section>
-    <h2>내일 준비할 것</h2>
-    <div class="takeaway">
-      <p>개인 수급이 급락을 받아냈다는 건 <b>단기 반등 재료</b>는 될 수 있지만, 외국인·기관이 계속 팔고 있다는 추세 자체가 바뀐 건 아닙니다.</p>
-      <p>내일 개장 전 확인할 것: 미국 증시 마감 결과, 외국인·기관의 순매도 강도가 줄었는지 여부. 실적·FOMC 전까지는 추격매매보다 관찰이 우선입니다.</p>
+    <h2>오늘의 블로그 후보</h2>
+    <div class="blogbox">
+      <div class="blogbox-flag">콘텐츠 아이디어 · 위 분석과 별개 · 투자 판단 아님</div>
+      <div class="blog-item">
+        <div class="blog-kind">검색 유입형</div>
+        <div class="blog-title">"코스피 6700 붕괴, 지금 사도 될까? 검은 금요일 급락 원인과 대응법"</div>
+      </div>
+      <div class="blog-item">
+        <div class="blog-kind">투자 분석형</div>
+        <div class="blog-title">"외국인·기관이 5.2조 던질 때 개인은 왜 샀나 — 수급으로 읽는 이번 급락"</div>
+      </div>
+      <div class="blog-pick"><b>추천 우선순위: 검색 유입형 우선.</b> 급락 직후는 관련 키워드 검색량이 단기 급증하는 구간이라 트래픽 확보에 유리하다. 다만 본문에 매수 권유성 표현은 넣지 않는다.</div>
     </div>
   </section>
+
+  <div class="conclusion">
+    급락은 사실이고 반등 근거는 아직 해석 수준이다 — 실적(7/29·7/30)과 FOMC(7/30) 확인 전까지는 관찰이 우선이다.
+  </div>
 
   <footer>
-    <div class="legend"><span class="up">■ 상승·순매수</span><span class="down">■ 하락·순매도</span></div>
-    <div>수치는 마감 후 웹 검색으로 수집했으며 최종 확정치와 다를 수 있습니다.</div>
+    <div class="tag-legend">
+      <span class="up">■ 상승·순매수</span>
+      <span class="down">■ 하락·순매도</span>
+      <span><span class="tag tag-fact">사실</span></span>
+      <span><span class="tag tag-interp">해석</span></span>
+      <span><span class="tag tag-infer">추론</span></span>
+    </div>
+    <div>수치는 마감 후 웹 검색으로 수집했으며 최종 확정치와 다를 수 있습니다. 원자료를 확보하지 못한 항목은 "확인 불가"로 표기했고 추정치를 사실처럼 적지 않았습니다.</div>
     <div>본 페이지는 개인용 정보 정리이며 특정 종목의 매수·매도 추천이 아닙니다. 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</div>
   </footer>
 
