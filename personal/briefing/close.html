@@ -83,6 +83,7 @@
   .tag-fact   { background: var(--text); color: var(--surface); }
   .tag-interp { background: transparent; border: 1px solid var(--text-dim); color: var(--text-dim); }
   .tag-infer  { background: transparent; border: 1px dashed var(--text-faint); color: var(--text-faint); font-style: italic; }
+  .tag-unknown{ background: transparent; border: 1px dotted var(--down); color: var(--down); }
   .tag-legend { display: flex; flex-wrap: wrap; gap: .625rem .875rem; font-size: .75rem; color: var(--text-dim); align-items: center; }
   .tag-legend span { display: inline-flex; align-items: center; }
 
@@ -111,6 +112,7 @@
   .tile-name { font-size: .75rem; color: var(--text-dim); font-weight: 600; letter-spacing: .02em; }
   .tile-value { font-size: 1.375rem; font-weight: 700; letter-spacing: -.02em; color: var(--text); line-height: 1.15; }
   .tile-delta { font-size: .8125rem; font-weight: 700; }
+  .tile-sub { font-size: .6875rem; color: var(--text-faint); font-weight: 600; }
 
   .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: .625rem; }
   @media (max-width: 26rem) { .flow { grid-template-columns: 1fr; } }
@@ -191,64 +193,67 @@
 
   <header class="masthead">
     <div class="eyebrow">장마감 브리핑</div>
-    <h1>외국인·기관 5.2조 팔 때, 개인이 받았다</h1>
-    <div class="dateline">지난 거래일(2026.07.24 금) 마감 기준 · 오늘 장마감 데이터로 자동 갱신 예정</div>
+    <h1>반도체 랠리로 열고, 오후엔 상승분 반납</h1>
+    <div class="dateline">2026.07.27(월) 장중 데이터 기준 · 정규장 최종 마감치는 원자료 미확보</div>
   </header>
 
   <div class="callout">
-    이 페이지는 <b>매 거래일 장마감 후(16:00 KST) 자동 갱신</b>됩니다. 지금 보이는 수치는 가장 최근 마감일인 7/24(금) 데이터이며, 오늘 장이 마감되면 실제 오늘 자 수치로 교체됩니다.
+    <b>오늘은 장 마감 직후(16:05 KST) 수집분입니다.</b> 코스피·코스닥 최종 확정 지수와 개별 종목 마감가는 아직 뉴스로 집계되지 않아 <span class="tag tag-unknown">확인 불가</span>로 표기했습니다. 확보된 장중 스냅샷과 방향성만 구분해서 전달합니다. 더 정확한 마감치가 필요하면 증권사 앱에서 직접 확인하세요.
   </div>
 
   <div class="tag-legend">
     <span><span class="tag tag-fact">사실</span>확인된 수치·공시</span>
     <span><span class="tag tag-interp">해석</span>시장 반응에 대한 설명</span>
     <span><span class="tag tag-infer">추론</span>원자료 미확보, 정황상 추정</span>
+    <span><span class="tag tag-unknown">확인 불가</span>원자료 미확보, 추정도 어려움</span>
   </div>
 
   <section>
     <h2>장 마감 핵심 3문장</h2>
     <div class="headline">
-      <p><span class="tag tag-fact">사실</span>코스피는 전일 대비 5.72% 급락한 6,690.62에, 코스닥은 5.32% 하락한 748.22에 마감했다.</p>
-      <p><span class="tag tag-fact">사실</span>외국인과 기관이 각각 3조 2,828억 원, 1조 9,513억 원을 순매도했고 개인이 5조 1,783억 원을 순매수하며 매도 물량을 받아냈다.</p>
-      <p><span class="tag tag-interp">해석</span>중동 지정학 리스크와 국제유가 급등이 촉발한 시장 전반의 위험회피 심리가 급락의 배경으로 지목되며, 개인의 대규모 순매수는 패닉 매도에 대한 저가매수 대응으로 읽힌다.</p>
+      <p><span class="tag tag-fact">사실</span>코스피는 오전 9시 50분경 전일 대비 1.73% 오른 6,806.27로 강하게 출발했으나, 오전 10시 25분에는 −1.52%(6,589.22)까지 밀렸고 오후 1시 기준으로는 −1.03%(6,621.51)를 나타냈다.</p>
+      <p><span class="tag tag-unknown">확인 불가</span>정규장 최종 마감 지수는 원자료로 확인되지 않았다. 코스닥도 개장(+1.65%, 760.54) 이후 흐름과 마감치가 확인되지 않았다.</p>
+      <p><span class="tag tag-interp">해석</span>반도체·IT 대형주 강세로 출발했다가 상승분 상당 부분을 반납한 흐름은, 지난주(7/24) 급락에 대한 반등 심리가 아직 완전히 자리잡지 못했음을 시사한다.</p>
     </div>
   </section>
 
   <section>
     <h2>지수 · 수급 · 환율 · 금리</h2>
     <div class="board">
-      <div class="tile is-down">
+      <div class="tile is-flat">
         <div class="tile-name">코스피</div>
-        <div class="tile-value num">6,690.62</div>
-        <div class="tile-delta num">−406.27 (−5.72%)</div>
+        <div class="tile-value num">6,621.51</div>
+        <div class="tile-delta num">−1.03% (오후 1시 기준)</div>
+        <div class="tile-sub">최종 마감 확인 불가</div>
       </div>
-      <div class="tile is-down">
+      <div class="tile is-up">
         <div class="tile-name">코스닥</div>
-        <div class="tile-value num">748.22</div>
-        <div class="tile-delta num">−42.06 (−5.32%)</div>
+        <div class="tile-value num">760.54</div>
+        <div class="tile-delta num">+1.65% (개장 기준)</div>
+        <div class="tile-sub">이후 흐름·마감 확인 불가</div>
       </div>
-      <div class="tile is-down">
+      <div class="tile is-flat">
         <div class="tile-name">원/달러 환율</div>
-        <div class="tile-value num">1,466.6</div>
-        <div class="tile-delta num">−0.2원 · 장중 1,475원대 터치</div>
+        <div class="tile-value num">1,459.0</div>
+        <div class="tile-delta">오전 9시 기준 · 1,450원대 후반 등락</div>
+        <div class="tile-sub">종가 확인 불가</div>
       </div>
       <div class="tile is-flat">
         <div class="tile-name">기준금리</div>
         <div class="tile-value num">2.75%</div>
-        <div class="tile-delta">7/16 0.25%p 인상 · 3년 6개월만</div>
+        <div class="tile-delta">7/16 인상 이후 동결 유지</div>
       </div>
     </div>
     <div class="flow">
-      <div class="flow-item"><div class="flow-who">개인</div><div class="flow-amt up num">+5조 1,783억</div><div class="flow-tag up">순매수</div></div>
-      <div class="flow-item"><div class="flow-who">외국인</div><div class="flow-amt down num">−3조 2,828억</div><div class="flow-tag down">순매도</div></div>
-      <div class="flow-item"><div class="flow-who">기관</div><div class="flow-amt down num">−1조 9,513억</div><div class="flow-tag down">순매도</div></div>
+      <div class="flow-item"><div class="flow-who">개인</div><div class="flow-amt up num">+1조 1,712억</div><div class="flow-tag up">순매수 (장중)</div></div>
+      <div class="flow-item"><div class="flow-who">외국인</div><div class="flow-amt down num">−1조 1,921억</div><div class="flow-tag down">순매도 (장중)</div></div>
+      <div class="flow-item"><div class="flow-who">기관</div><div class="flow-amt down num">−433억</div><div class="flow-tag down">순매도 (장중)</div></div>
     </div>
     <div class="meta-row">
-      <span>거래량 <b class="num">3억 9,514만 주</b></span>
-      <span>거래대금 <b class="num">30조 8,964억 원</b></span>
+      <span><span class="tag tag-unknown">확인 불가</span>거래량·거래대금 최종치</span>
     </div>
     <div class="callout">
-      <span class="tag tag-interp">해석</span>6월 소비자물가 3.2%로 2년 6개월 만에 최고치를 찍자 한국은행이 7/16 기준금리를 2.50%→2.75%로 올렸다. 급락 당일 금리 인상 자체가 직접 원인은 아니지만, 긴축 전환 국면이라는 배경은 위험자산 회피 심리를 거들었을 가능성이 있다.
+      <span class="tag tag-interp">해석</span>위 수급 수치는 정규장 중 특정 시점 스냅샷이며 최종 마감 기준이 아니다. 개인이 순매수, 외국인·기관이 순매도라는 방향성 자체는 확인됐지만 금액은 마감 시 달라질 수 있다.
     </div>
   </section>
 
@@ -259,49 +264,49 @@
       <div class="stock">
         <div class="stock-head">
           <div><span class="stock-name">삼성전자</span><span class="stock-code num">005930</span></div>
-          <div class="stock-price down"><div class="p num">249,500</div><div class="d num">−20,500 (−7.59%)</div></div>
+          <div class="stock-price stock-unknown"><div class="p">확인 불가</div><div class="d">—</div></div>
         </div>
-        <div class="stock-cause"><span class="tag tag-fact">사실</span>전기전자 업종 전체가 <strong>−7.86%</strong>로 가장 크게 밀린 가운데 동반 하락. <span class="tag tag-interp">해석</span>역대 최대 2분기 실적에도 눈높이를 못 넘겨 차익실현이 겹친 것으로 풀이된다.</div>
+        <div class="stock-cause"><span class="tag tag-unknown">확인 불가</span>오늘자 개별 수치를 확보하지 못했다. <span class="tag tag-infer">추론</span>반도체 업종 전반이 개장 강세 후 상승분을 반납한 흐름(사실)을 감안하면 유사하게 움직였을 가능성이 있으나 단정할 수 없다.</div>
       </div>
 
       <div class="stock">
         <div class="stock-head">
           <div><span class="stock-name">SK하이닉스</span><span class="stock-code num">000660</span></div>
-          <div class="stock-price down"><div class="p num">확인 불가</div><div class="d num">장중 −3.60% (사실)</div></div>
+          <div class="stock-price stock-unknown"><div class="p">확인 불가</div><div class="d">—</div></div>
         </div>
-        <div class="stock-cause"><span class="tag tag-infer">추론</span>정규장 최종 종가는 원자료로 확인되지 않았다. 장중 한때 1,850,000원까지 낙폭이 확대됐던 점(사실)을 볼 때 삼성전자와 유사한 낙폭으로 마감했을 가능성이 있으나 단정할 수 없다.</div>
+        <div class="stock-cause"><span class="tag tag-unknown">확인 불가</span>오늘자 종가를 확보하지 못했다. 검색에서 나온 "1,747,186원"은 예측 사이트의 전망치일 뿐 실제 시세가 아니므로 반영하지 않았다.</div>
       </div>
 
       <div class="stock">
         <div class="stock-head">
           <div><span class="stock-name">한미반도체</span><span class="stock-code num">042700</span></div>
-          <div class="stock-price down"><div class="p num">200,000</div><div class="d num">−16,000 (−7.41%)</div></div>
+          <div class="stock-price up"><div class="p num">+17.42%</div><div class="d">시점·마감 여부 확인 불가</div></div>
         </div>
-        <div class="stock-cause"><span class="tag tag-fact">사실</span>20만 원 심리적 지지선에 턱걸이하며 마감. 애프터마켓(NXT)에서는 −6.94%로 낙폭이 일부 축소됐다. <span class="tag tag-interp">해석</span>7월 마지막 주 20만 원 방어 여부가 다음 관심사로 꼽힌다.</div>
+        <div class="stock-cause"><span class="tag tag-fact">사실</span>고성능 메모리 장비 "BOC COB 본더"를 세계 최초로 출시했다고 발표하며 급등. <span class="tag tag-interp">해석</span>업황 전반보다 자체 신제품 호재가 상승을 주도한 개별 종목 장세로 보인다.</div>
       </div>
 
       <div class="stock">
         <div class="stock-head">
           <div><span class="stock-name">한화오션</span><span class="stock-code num">042660</span></div>
-          <div class="stock-price down"><div class="p num">확인 불가</div><div class="d num">개장 직후 −1.22% (사실)</div></div>
+          <div class="stock-price up"><div class="p num">+0.86%</div><div class="d">시점·마감 여부 확인 불가</div></div>
         </div>
-        <div class="stock-cause"><span class="tag tag-infer">추론</span>종가는 확인되지 않았다. 운송장비 업종 전체가 <strong>−5.35%</strong> 하락한 점(사실)을 감안하면 비슷한 수준에서 마감했을 가능성이 있다. <span class="tag tag-interp">해석</span>7/7 대형 수주 불발로 하루 −22% 급락한 이력이 있어 수주 뉴스에 대한 주가 민감도가 높은 종목이다.</div>
+        <div class="stock-cause"><span class="tag tag-infer">추론</span>특별한 개별 재료 없이 소폭 상승 — 지수 전반의 반등 시도에 동조한 수준으로 보인다. 방산 수주 관련 뉴스는 오늘자로 확인되지 않았다.</div>
       </div>
 
       <div class="stock">
         <div class="stock-head">
           <div><span class="stock-name">현대차</span><span class="stock-code num">005380</span></div>
-          <div class="stock-price down"><div class="p num">401,500</div><div class="d num">−30,500 (−7.06%)</div></div>
+          <div class="stock-price up"><div class="p num">+10.67%</div><div class="d">시점·마감 여부 확인 불가</div></div>
         </div>
-        <div class="stock-cause"><span class="tag tag-fact">사실</span>자기주식 처분 결정 발표 직후 급락. <span class="tag tag-interp">해석</span>연초 이후 급등에 따른 밸류에이션 부담이 자사주 처분 뉴스를 계기로 차익실현 매물로 이어진 것으로 보인다.</div>
+        <div class="stock-cause"><span class="tag tag-fact">사실</span>현대차그룹이 새만금에 9조 원 규모 AI·로봇·수소 미래 거점을 구축한다고 발표. <span class="tag tag-interp">해석</span>대규모 투자 발표가 자사주 처분 이슈로 눌려있던 주가의 반등 재료로 작용한 것으로 보인다.</div>
       </div>
 
       <div class="stock">
         <div class="stock-head">
           <div><span class="stock-name">TIGER 200IT레버리지</span><span class="stock-code num">243880</span></div>
-          <div class="stock-price down stock-unknown"><div class="p">확인 불가</div><div class="d">—</div></div>
+          <div class="stock-price stock-unknown"><div class="p">확인 불가</div><div class="d">—</div></div>
         </div>
-        <div class="stock-cause"><span class="tag tag-infer">추론</span>기준가 원자료를 확보하지 못했다. 2배 레버리지 구조상 추적지수(코스피200 정보기술)가 전기전자 업종과 유사하게 움직였다면 이론적으로 −7.86%의 약 두 배권 하락이 있었을 것으로 추정되나, <strong>확인된 수치가 아니므로 매매 판단 근거로 쓰지 말 것.</strong></div>
+        <div class="stock-cause"><span class="tag tag-unknown">확인 불가</span>기준가 원자료를 확보하지 못했다. <span class="tag tag-infer">추론</span>2배 레버리지 구조상 코스피200 정보기술 업종이 오늘 겪은 급등 후 반납 흐름이 있었다면 그 변동폭이 더 크게 나타났을 것으로 추정되나, <strong>확인된 수치가 아니므로 매매 판단 근거로 쓰지 말 것.</strong></div>
       </div>
 
     </div>
@@ -310,9 +315,9 @@
   <section>
     <h2>핵심 뉴스 <span class="h2-note">— 해외 이슈는 삼성전자·SK하이닉스 직접 영향分만</span></h2>
     <ul class="news">
-      <li><span class="tag tag-fact">사실</span>중국 D램 업체 <b>CXMT</b>가 상하이 IPO로 6.5조 원을 조달하겠다고 밝힌 7/16, 삼성전자 −7%·SK하이닉스 −10%·마이크론 −8%가 동반 급락했다. <span class="tag tag-interp">해석</span>HBM 영향은 제한적이나 범용 D램에서 중장기 경쟁 압박 요인으로 지목된다.</li>
-      <li><span class="tag tag-fact">사실</span>한화오션은 사우디 K9자주포·천무 패키지 수출 협상, 스페인 자주포 MOU 등 방산 수주 이벤트를 다수 앞두고 있다. <span class="tag tag-infer">추론</span>하반기 중 계약이 성사되면 주가 반등 트리거가 될 수 있다.</li>
-      <li><span class="tag tag-fact">사실</span>현대차는 자기주식 처분 결정을 발표했다.</li>
+      <li><span class="tag tag-interp">해석</span>최근 미국 반도체주(마이크론 등) 강세가 오늘 국내 반도체·IT 업종의 개장 강세를 이끈 배경으로 지목된다. <span class="tag tag-unknown">확인 불가</span>다만 정확히 어느 거래일의 미국 증시 이벤트가 오늘 개장에 반영된 것인지는 자료로 특정되지 않았다 — 삼성전자·SK하이닉스 관련 이슈이므로 규칙에 따라 포함하되 날짜 불확실성을 명시한다.</li>
+      <li><span class="tag tag-fact">사실</span>한미반도체가 "BOC COB 본더"를 세계 최초 출시했다고 발표했다.</li>
+      <li><span class="tag tag-fact">사실</span>현대차그룹이 새만금 9조 원 규모 AI·로봇·수소 미래 거점 구축 계획을 발표했다.</li>
     </ul>
   </section>
 
@@ -322,17 +327,17 @@
       <div class="duo-col risk">
         <h3>▾ 리스크</h3>
         <ul>
-          <li><span class="tag tag-infer">추론</span>중동 확전이 이어지면 유가 추가 상승 → 조선·자동차 원가 부담 확대</li>
-          <li><span class="tag tag-infer">추론</span>FOMC(7/30)가 매파적으로 해석되면 미 증시발 재급락이 국내로 전이될 가능성</li>
-          <li><span class="tag tag-interp">해석</span>CXMT발 범용 D램 경쟁 심화는 이번 주 실적 발표의 가이던스에 부담 요인</li>
+          <li><span class="tag tag-fact">사실</span>코스피가 개장 후 상승분 대부분을 반납 — 반등의 지속성에 의문 부호</li>
+          <li><span class="tag tag-infer">추론</span>외국인이 장중 기준 1.19조 원을 순매도 — 저가매수보다는 관망·차익실현 성향일 가능성</li>
+          <li><span class="tag tag-interp">해석</span>지난주 급락의 배경(중동 리스크·유가)이 해소된 게 아니라면 변동성이 다시 커질 수 있음</li>
         </ul>
       </div>
       <div class="duo-col counter">
         <h3>▴ 반대 시나리오</h3>
         <ul>
-          <li><span class="tag tag-fact">사실</span>개인이 5.2조 원을 순매수해 낙폭을 방어 — 저가매수 유입이 이미 진행 중</li>
-          <li><span class="tag tag-interp">해석</span>유가 급등은 트럼프 대통령에게도 정치적 부담이라 완화 국면 전환 여지</li>
-          <li><span class="tag tag-infer">추론</span>SK하이닉스·삼성전자 실적에서 HBM 매출이 컨센서스를 상회하면 반도체주 반등 트리거 가능</li>
+          <li><span class="tag tag-fact">사실</span>개인이 장중 기준 1.17조 원 순매수 — 저가매수세 유입은 계속되고 있음</li>
+          <li><span class="tag tag-fact">사실</span>한미반도체·현대차처럼 개별 호재로 두 자릿수 상승한 종목이 있음 — 종목 장세 가능성</li>
+          <li><span class="tag tag-interp">해석</span>미국 반도체주 강세가 이어진다면 이번 주 실적 시즌(7/29·7/30) 전 투자심리 개선의 발판이 될 수 있음</li>
         </ul>
       </div>
     </div>
@@ -341,9 +346,9 @@
   <section>
     <h2>내일 확인할 체크포인트</h2>
     <div class="sked">
-      <div class="ev"><div class="ev-date num">오늘밤</div><div class="ev-body"><div class="ev-title">미국 증시 개장</div><div class="ev-sub">한국발 급락이 미국 반도체·기술주로 옮겨붙는지 확인</div></div></div>
+      <div class="ev"><div class="ev-date num">오늘밤</div><div class="ev-body"><div class="ev-title">미국 증시 개장</div><div class="ev-sub">반도체주 강세가 실제로 이어지는지, 국내 시장 되돌림의 재료가 되는지 확인</div></div></div>
       <div class="ev"><div class="ev-date num">7/29</div><div class="ev-body"><div class="ev-title">SK하이닉스 실적</div><div class="ev-sub">HBM 매출 증가 속도가 컨센서스를 웃도는지</div></div></div>
-      <div class="ev"><div class="ev-date num">7/30</div><div class="ev-body"><div class="ev-title">삼성전자 실적 · 美 FOMC(새벽)</div><div class="ev-sub">파운드리 적자 축소 근거, 기준금리 3.75% 동결 여부</div></div></div>
+      <div class="ev"><div class="ev-date num">7/30</div><div class="ev-body"><div class="ev-title">삼성전자 실적 · 美 FOMC(새벽)</div><div class="ev-sub">파운드리 적자 축소 근거, 기준금리 동결 여부</div></div></div>
       <div class="ev"><div class="ev-date num">8/1</div><div class="ev-body"><div class="ev-title">한국 7월 수출</div><div class="ev-sub">반도체 수출 물량으로 업황 교차 확인</div></div></div>
     </div>
   </section>
@@ -354,18 +359,18 @@
       <div class="blogbox-flag">콘텐츠 아이디어 · 위 분석과 별개 · 투자 판단 아님</div>
       <div class="blog-item">
         <div class="blog-kind">검색 유입형</div>
-        <div class="blog-title">"코스피 6700 붕괴, 지금 사도 될까? 검은 금요일 급락 원인과 대응법"</div>
+        <div class="blog-title">"코스피 6800 찍고 후퇴, 반등 진짜일까? 오늘 급등락 이유 총정리"</div>
       </div>
       <div class="blog-item">
         <div class="blog-kind">투자 분석형</div>
-        <div class="blog-title">"외국인·기관이 5.2조 던질 때 개인은 왜 샀나 — 수급으로 읽는 이번 급락"</div>
+        <div class="blog-title">"개장은 화려했는데 오후는 왜 조용해졌나 — 반도체 랠리 지속가능성 점검"</div>
       </div>
-      <div class="blog-pick"><b>추천 우선순위: 검색 유입형 우선.</b> 급락 직후는 관련 키워드 검색량이 단기 급증하는 구간이라 트래픽 확보에 유리하다. 다만 본문에 매수 권유성 표현은 넣지 않는다.</div>
+      <div class="blog-pick"><b>추천 우선순위: 검색 유입형 우선.</b> "급등 후 반납"이라는 반전 스토리는 당일 검색 트래픽을 끌기 좋다. 다만 본문에 매수 권유성 표현은 넣지 않는다.</div>
     </div>
   </section>
 
   <div class="conclusion">
-    급락은 사실이고 반등 근거는 아직 해석 수준이다 — 실적(7/29·7/30)과 FOMC(7/30) 확인 전까지는 관찰이 우선이다.
+    오늘 마감 확정치는 아직 확인되지 않았다 — 확인된 장중 흐름만 보면 반등 시도는 있었지만 상승분 대부분을 반납했다. 확정 마감가와 이번 주 실적·FOMC 확인 전까지는 판단을 유보하는 편이 합리적이다.
   </div>
 
   <footer>
@@ -375,8 +380,9 @@
       <span><span class="tag tag-fact">사실</span></span>
       <span><span class="tag tag-interp">해석</span></span>
       <span><span class="tag tag-infer">추론</span></span>
+      <span><span class="tag tag-unknown">확인 불가</span></span>
     </div>
-    <div>수치는 마감 후 웹 검색으로 수집했으며 최종 확정치와 다를 수 있습니다. 원자료를 확보하지 못한 항목은 "확인 불가"로 표기했고 추정치를 사실처럼 적지 않았습니다.</div>
+    <div>이 브리핑은 장 마감 직후(16:05 KST) 수집됐습니다. 최종 마감 지수·거래량·일부 종목 종가는 뉴스 집계 지연으로 원자료를 확보하지 못해 "확인 불가"로 표기했으며, 추정치를 사실처럼 적지 않았습니다. 정확한 마감 수치는 증권사 앱에서 확인하세요.</div>
     <div>본 페이지는 개인용 정보 정리이며 특정 종목의 매수·매도 추천이 아닙니다. 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</div>
   </footer>
 
