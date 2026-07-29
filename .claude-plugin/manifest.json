@@ -35,6 +35,10 @@
     {
       "name": "cs-toolkit",
       "description": "HTML 도구 명세서, 테스트 데이터 생성, 한국어 문서 교정"
+    },
+    {
+      "name": "cs-decision-audit",
+      "description": "원자료를 판단 추적형 노트로 구조화, 지식베이스 모순·반복 실수·폐기 후보 감사"
     }
   ]
 }
