@@ -11,8 +11,8 @@
 | 트리거 | `trig_01JTCzGgYqGaaBKR3JXhF6P4` | `trig_01UkKZaUomWT4mZ5FHfrcaYb` |
 | 페이지 | [personal/briefing/index.html](briefing/index.html) | [personal/briefing/close.html](briefing/close.html) |
 | URL | https://claude.ai/code/artifact/7b609ba4-5b8d-4507-957c-628d13d61105 | https://claude.ai/code/artifact/5d0217cc-311f-4818-9252-b65b45e9f965 |
-| 관심 종목 | 삼성전자(005930) | 삼성전자·SK하이닉스·한미반도체·한화오션·현대차·TIGER 200IT레버리지 (6종목 고정) |
-| 다루는 내용 | 지수 현황·보유종목·뉴스·이번 주 일정·오늘의 판단 | 핵심 3문장·지수/수급/환율/금리·6종목별 원인·리스크/반대 시나리오·체크포인트·블로그 후보·한 줄 결론 |
+| 관심 종목 | 삼성전자(005930) | 삼성전자·SK하이닉스·한미반도체·한화오션·현대차·TIGER 200IT레버리지·삼성전기·알테오젠 (8종목 고정, 2026-08-05 삼성전기·알테오젠 추가) |
+| 다루는 내용 | 지수 현황·보유종목·뉴스·이번 주 일정·오늘의 판단 | 핵심 3문장·지수/수급/환율/금리·종목별 원인·리스크/반대 시나리오·체크포인트·블로그 후보·한 줄 결론 |
 
 - **데이터 수집**: Claude 내장 WebSearch (컨테이너 네트워크 정책상 yahoo/네이버 등 직접 접근 차단)
 - **산출물**: 상세 브리핑 웹페이지(Artifact, URL 고정) + 카카오톡 요약 1건 + 링크
