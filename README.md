@@ -1,7 +1,7 @@
 # CS Ops Skills Marketplace
 
-> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 30개 스킬, 20개 체인 워크플로우.  
-> 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
+> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 9개 플러그인, 35개 스킬, 21개 체인 워크플로우.  
+> 문제 정의 → 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
 
 Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 호환.
 
@@ -9,6 +9,7 @@ Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 
 
 ## Quick Start
 
+막연한 요청을 실행 프로젝트로? → `/solve`  
 상담사 품질 평가? → `/evaluate`  
 코칭 피드백 작성? → `/coach`  
 T-NPS 예측 분석? → `/predict-tnps`  
@@ -157,6 +158,16 @@ HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 �
 
 ---
 
+### 9. cs-problem-solving — 문제 구조화 및 실행 전환
+막연한 운영 이슈를 Intent 파악부터 Action 전환까지 구조화하는 JOYLAB 문제 해결 프레임워크. 다른 8개 플러그인의 스킬/커맨드를 실행 엔진으로 라우팅한다.
+
+**Skills (5):** `intent-classify` · `joylab-interview` · `project-spec` · `critic-review` · `action-conversion`
+
+**Commands (1):**
+- `/solve` — Intent → Interview → Spec → 실행 라우팅 → Critic → Action 전체 사이클
+
+---
+
 ## 주요 사용 예시
 
 **스킬 직접 활용:**
@@ -168,6 +179,7 @@ HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 �
 - `/evaluate 다음 STT 텍스트를 평가해줘 [텍스트]`
 - `/analyze-voc 이번 주 접수된 VOC 목록 [데이터]`
 - `/weekly-report 이번 주 KPI 데이터 [데이터]`
+- `/solve 상담 품질이 요즘 안 좋아진 것 같은데 뭐부터 봐야 할지 모르겠어요`
 
 ---
 

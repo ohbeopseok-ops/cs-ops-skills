@@ -35,6 +35,10 @@
     {
       "name": "cs-toolkit",
       "description": "HTML 도구 명세서, 테스트 데이터 생성, 한국어 문서 교정"
+    },
+    {
+      "name": "cs-problem-solving",
+      "description": "막연한 CS 운영 요청을 Intent → Interview → Spec → Execution → Critic → Action으로 구조화하는 JOYLAB 문제 해결 프레임워크"
     }
   ]
 }
