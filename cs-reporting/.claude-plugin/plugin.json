@@ -1,0 +1,21 @@
+{
+  "name": "cs-reporting",
+  "version": "1.0.0",
+  "description": "보고서 작성 — 주간 운영 보고서, 월간 성과 보고서, 경영진 보고용 요약. 보고서에 들어가는 모든 수치는 입력 데이터에서만 인용하고, 누락된 지표는 빈칸으로 남겨 추정치로 채우지 않는다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-reporting",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "reporting",
+    "weekly-report",
+    "monthly-report",
+    "executive-summary",
+    "korean"
+  ]
+}

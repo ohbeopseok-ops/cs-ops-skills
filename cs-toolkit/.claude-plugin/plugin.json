@@ -1,0 +1,22 @@
+{
+  "name": "cs-toolkit",
+  "version": "1.0.0",
+  "description": "운영 유틸리티 — HTML 도구 요구사항 명세서 작성, CS 운영 테스트 데이터 생성, 한국어 문서 교정. 생성 데이터는 전부 가상값이며 실제 고객·상담사 정보를 포함하지 않는다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-toolkit",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "html-tool-spec",
+    "mock-data",
+    "test-data",
+    "korean-grammar",
+    "proofreading",
+    "korean"
+  ]
+}

@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 표준 라이브러리만 사용 — 설치 단계 없음
+      - name: 검증 게이트 (매니페스트 · 프론트매터 · 하네스 · R3)
+        run: python3 scripts/validate.py

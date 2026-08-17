@@ -1,0 +1,23 @@
+{
+  "name": "cs-stt",
+  "version": "1.0.0",
+  "description": "STT 대화 분석 — 상담 전사 텍스트의 구조/감성 분석, 스크립트 준수율 산출, 개인정보 탐지 및 마스킹. 개인정보 마스킹은 다른 분석보다 먼저 수행하며, 마스킹 결과는 완전성을 보장하지 않으므로 반출 전 사람이 검수한다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-stt",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "stt",
+    "speech-to-text",
+    "conversation-analysis",
+    "script-compliance",
+    "pii-detection",
+    "pii-masking",
+    "korean"
+  ]
+}

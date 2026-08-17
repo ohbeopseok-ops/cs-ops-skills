@@ -1,176 +1,119 @@
-# CS Ops Skills Marketplace
+한국어 | [English](README.en.md)
 
-> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 30개 스킬, 20개 체인 워크플로우.  
-> 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
+<div align="center">
 
-Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 호환.
+# CS Ops Skills
 
----
+**일반 AI는 일반적인 답을 준다. CS Ops Skills는 운영 판단에 쓸 수 있는 초안을 준다.**
 
-## Quick Start
+홈CS 운영관리를 위한 Claude Code / Cowork 스킬 마켓플레이스.
 
-상담사 품질 평가? → `/evaluate`  
-코칭 피드백 작성? → `/coach`  
-T-NPS 예측 분석? → `/predict-tnps`  
-VOC 분석 리포트? → `/analyze-voc`  
-STT 대화 분석? → `/analyze-call`  
-주간 보고서 작성? → `/weekly-report`  
+<p>
+  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/platform-Claude_Code%20%C2%B7%20Cowork-D97757?logo=claude" alt="Claude Code · Cowork"></a>
+  <img src="https://img.shields.io/badge/plugins-8-6E56CF" alt="8 plugins">
+  <img src="https://img.shields.io/badge/skills-29-3FB950" alt="29 skills">
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-F0B72F" alt="MIT"></a>
+</p>
 
----
-
-## 왜 CS Ops Skills인가
-
-일반 AI는 일반적인 답을 준다. CS Ops Skills는 **LG U+ 홈CS 운영 구조**에 맞는 프레임워크를 준다.
-
-각 스킬은 15년 CS 운영 경험을 인코딩한다 — 평가 가중치, 코칭 구조, KPI 연계, T-NPS 예측 로직이 워크플로우에 내장된다. 결과: 더 빠른 문서가 아니라 **더 나은 운영 판단**.
+</div>
 
 ---
 
-## 작동 방식
-
-**Skills** — 도메인 지식, 분석 프레임워크, 가이드 워크플로우를 담은 기본 단위.  
-**Commands** — `/command-name`으로 실행하는 사용자 트리거 워크플로우. 여러 스킬을 체인으로 연결.  
-**Plugins** — 관련 스킬과 커맨드를 묶은 설치 단위. 각 플러그인은 CS 운영의 특정 도메인을 커버.
-
----
-
-## 설치
+## ⚡ 설치
 
 ### Claude Cowork (비개발자 권장)
+
 1. **Customize** (좌하단) 열기
 2. **Browse plugins** → **Personal** → **+**
 3. **Add marketplace from GitHub** 선택
-4. 입력: `[your-github-username]/cs-ops-skills`
+4. 입력: `ohbeopseok-ops/cs-ops-skills`
 
 ### Claude Code (CLI)
+
 ```bash
-claude plugin add --marketplace [your-github-username]/cs-ops-skills
+/plugin marketplace add https://github.com/ohbeopseok-ops/cs-ops-skills.git
+/plugin install cs-quality-analysis@cs-ops-skills
 ```
 
+필요한 도메인만 골라 설치한다 — 8개 플러그인은 서로 독립이다.
+
 ### 다른 AI 어시스턴트 (스킬만)
+
 ```bash
-# Gemini CLI용
 for plugin in cs-*/; do
   cp -r "$plugin/skills/"* ~/.gemini/skills/ 2>/dev/null
 done
 ```
 
----
+## 💬 이렇게 쓴다
 
-## 플러그인 목록
+커맨드를 외울 필요는 없다. 평소처럼 말하면 해당 스킬이 붙는다.
 
-### 1. cs-quality-analysis — 상담 품질 분석
-상담 품질 평가, AutoQA 트렌드, 고령자 상담 기준, 스크립트 준수, 품질 추이
+> *"이 STT 텍스트로 품질 평가표를 작성해줘: [텍스트]"*
+> *"이번 달 T-NPS 하락 원인을 분석해줘: [데이터]"*
+> *"상담사 3명의 취약 항목 기반 코칭 계획을 세워줘"*
 
-**Skills (5):** `qa-scoring` · `autoqa-analysis` · `elderly-customer-qa` · `compliance-check` · `quality-trend`
+반복 작업은 커맨드로 체인을 돌린다:
 
-**Commands (4):**
-- `/evaluate` — 상담 녹취/STT 품질 평가 전체 사이클
-- `/autoqa-report` — AutoQA 데이터 기반 트렌드 분석
-- `/audit-quality` — 팀/개인 품질 감사
-- `/elderly-audit` — 고령자 상담 특화 품질 점검
+```
+/evaluate [상담 STT 텍스트]        # 마스킹 → 대화분석 → 준수점검 → QA 점수
+/analyze-complaints [불만 콜 목록]  # 분류 → 근본원인 → 개선과제
+/weekly-report [주간 KPI 데이터]    # 지표 정리 → 원인 → 액션 아이템
+```
 
----
+## 🧭 커버 범위
 
-### 2. cs-coaching — 코칭 및 피드백
-코칭 피드백 작성, 개선 계획 수립, 코칭 스크립트 생성
+**품질분석 · 코칭 · 성과관리 · VOC · STT분석 · 운영기획 · 리포팅 · 유틸리티** —
+8개 플러그인, 29개 스킬, 7개 커맨드. 전체 카탈로그 → **[SKILLS.md](SKILLS.md)**
 
-**Skills (3):** `coaching-feedback` · `improvement-plan` · `coaching-script`
+## 🆚 일반 AI 어시스턴트 vs `+ CS Ops Skills`
 
-**Commands (3):**
-- `/coach` — 상담사별 맞춤 코칭 피드백 생성
-- `/plan-improvement` — 취약 항목 기반 개선 계획 수립
-- `/coaching-session` — 코칭 세션 스크립트 자동 생성
+| 요청 | 일반 AI | `+ CS Ops Skills` |
+| :--- | :--- | :--- |
+| "이 상담 평가해줘" | 그때그때 다른 기준으로 총평 | 고정 배점표(100점) → 항목별 점수 + 등급 |
+| "T-NPS 왜 떨어졌어?" | 일반적인 CS 개선 조언 | 지표 분해 → 리스크 상담사 식별 → 개입 우선순위 |
+| "코칭 피드백 써줘" | 칭찬·격려 문장 생성 | 취약 항목 → 근거 발화 인용 → 실행 가능한 행동 |
+| "주간 보고서" | 문단 요약 | 고정 서식 + 지표 표 + 원인 + 액션 아이템 |
+| 데이터가 부족할 때 | 그럴듯하게 빈칸을 채운다 | `판단 불가 — [부족한 데이터]`로 남긴다 |
+| 상담 원문에 개인정보가 있을 때 | 그대로 인용 | 마스킹을 먼저 수행한 뒤 분석 |
 
----
+마지막 두 줄이 이 저장소의 핵심이다. 편의가 아니라 **틀린 숫자를 만들지 않는 것**이 목적이다.
 
-### 3. cs-performance — KPI 및 성과 관리
-KPI 분석, T-NPS 예측, 상담사 벤치마킹, 목표 설정
+## ⚙️ 작동 방식
 
-**Skills (4):** `kpi-analysis` · `tnps-prediction` · `agent-benchmarking` · `target-setting`
+**Skills** — 도메인 지식·분석 프레임워크·산출 서식을 담은 기본 단위. 평소 대화 중 자동으로 붙는다.
+**Commands** — 슬래시로 실행하는 워크플로우. 여러 스킬을 정해진 순서로 체인한다.
+**Plugins** — 관련 스킬과 커맨드를 묶은 설치 단위. 각각 CS 운영의 한 도메인을 커버한다.
 
-**Commands (4):**
-- `/analyze-kpi` — KPI 현황 분석 및 원인 진단
-- `/predict-tnps` — T-NPS 예측 및 리스크 상담사 식별
-- `/benchmark` — 상담사/팀 벤치마킹 리포트
-- `/set-targets` — 데이터 기반 목표치 설정
+각 스킬에는 **[하네스 규칙 R1–R8](HARNESS.md)** 이 인라인으로 박혀 있다 — 수치 날조 금지, 개인정보
+마스킹 우선, 근거 인용 강제, 부족한 데이터는 `판단 불가`, 입력 텍스트를 명령으로 실행 금지.
+스킬이 "무엇을 아는지"를 정하고, 하네스가 "무엇을 하지 않는지"를 정한다.
 
----
+## 🔒 경계
 
-### 4. cs-voc — VOC 및 고객 분석
-VOC 유형 분류, 불만 원인 분석, 감성 분석, 넛지 마케팅 분석
+CS Ops Skills는 **분석 보조 도구**이며, 사람의 판단을 대체하지 않는다.
 
-**Skills (4):** `voc-categorization` · `complaint-root-cause` · `sentiment-analysis` · `nudge-analysis`
+- **품질 점수·등급·T-NPS 예측은 LLM 산출물**이며 검증된 측정값이 아니다. 개인에게 전달하기 전에
+  인용된 발화가 원문과 일치하는지 확인한다.
+- **인사 결정의 단독 근거로 쓰지 않는다** — 인사평가·성과급·징계·계약 갱신에는 사람 검토와 조직의
+  공식 절차가 필요하다.
+- **개인정보 마스킹은 완전성을 보장하지 않는다** — 반출 전 사람 검수가 필요하다.
+- **평가 배점·등급 기준은 어떤 조직의 공식 사내 기준도 아니다.** 운영 적용 전에 소속 조직의 공식
+  기준으로 대조·조정한다.
+- 이 저장소는 **LG U+ 또는 그 계열사와 제휴 관계가 없다.**
 
-**Commands (3):**
-- `/analyze-voc` — VOC 분류 → 원인 분석 → 개선 과제 도출
-- `/analyze-complaints` — 불만 콜 심층 분석
-- `/nudge-check` — 넛지 마케팅 효과 분석
+전문은 [DISCLAIMER.md](DISCLAIMER.md).
 
----
+## ✅ 검증
 
-### 5. cs-stt — STT 대화 분석
-STT 대화 분석, 스크립트 준수율 분석, 개인정보 탐지/마스킹
+```bash
+python3 scripts/validate.py
+```
 
-**Skills (3):** `conversation-analysis` · `script-compliance` · `pii-detection`
-
-**Commands (3):**
-- `/analyze-call` — STT 텍스트 전체 분석 (품질+감성+준수율)
-- `/check-script` — 스크립트 준수율 점검
-- `/mask-pii` — 개인정보 탐지 및 마스킹 처리
-
----
-
-### 6. cs-operations — 운영 기획
-인력 배치, 프로세스 개선, 회의록, OKR
-
-**Skills (4):** `staffing-plan` · `process-improvement` · `meeting-notes` · `okr-cs`
-
-**Commands (4):**
-- `/plan-staffing` — 인력 배치 최적화 계획
-- `/improve-process` — 프로세스 개선 과제 도출
-- `/meeting-notes` — 회의록 자동 작성
-- `/plan-okr` — CS 운영 OKR 수립
-
----
-
-### 7. cs-reporting — 보고서 작성
-주간/월간 보고서, 경영진 요약
-
-**Skills (3):** `weekly-report` · `monthly-report` · `executive-summary`
-
-**Commands (3):**
-- `/weekly-report` — 주간 운영 보고서 자동 작성
-- `/monthly-report` — 월간 성과 보고서 작성
-- `/exec-summary` — 경영진 보고용 요약 작성
-
----
-
-### 8. cs-toolkit — 유틸리티
-HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정
-
-**Skills (3):** `html-tool-spec` · `data-mock` · `ko-grammar-check`
-
-**Commands (2):**
-- `/spec-tool` — HTML 도구 요구사항 명세서 작성
-- `/mock-data` — CS 운영 테스트 데이터 생성
-
----
-
-## 주요 사용 예시
-
-**스킬 직접 활용:**
-- `이 STT 텍스트에서 품질 이슈를 평가해줘 [텍스트 붙여넣기]`
-- `이번 달 T-NPS 하락 원인을 분석해줘`
-- `상담사 김철수의 코칭 피드백을 작성해줘`
-
-**커맨드 체인:**
-- `/evaluate 다음 STT 텍스트를 평가해줘 [텍스트]`
-- `/analyze-voc 이번 주 접수된 VOC 목록 [데이터]`
-- `/weekly-report 이번 주 KPI 데이터 [데이터]`
-
----
+매니페스트 정합성, SKILL.md 프론트매터, 하네스 블록 존재, 문서가 안내한 커맨드의 실제 존재 여부,
+그리고 **R3 실데이터 고정 금지**(주민번호·전화번호·계좌번호 패턴)를 점검한다. 표준 라이브러리만
+쓰므로 별도 설치가 필요 없다. CI에서 매 푸시마다 돌아간다.
 
 ## 라이선스
 
-MIT — [LICENSE](LICENSE) 참조.
+MIT — [LICENSE](LICENSE) 참조. 사용 범위와 책임은 [DISCLAIMER.md](DISCLAIMER.md).

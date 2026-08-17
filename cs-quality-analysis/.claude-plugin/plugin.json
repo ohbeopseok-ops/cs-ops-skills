@@ -1,0 +1,23 @@
+{
+  "name": "cs-quality-analysis",
+  "version": "1.0.0",
+  "description": "상담 품질 분석 — 가중 배점 QA 평가표, AutoQA 트렌드 해석, 고령자 상담 특화 기준, 스크립트/규정 준수 점검, 기간별 품질 추이. 모든 점수는 상담 원문 발화 인용을 근거로 산출하며, 데이터가 없는 항목은 추정하지 않고 '판단 불가'로 보고한다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-quality-analysis",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "quality-assurance",
+    "qa-scoring",
+    "autoqa",
+    "compliance",
+    "elderly-customer",
+    "quality-trend",
+    "korean"
+  ]
+}

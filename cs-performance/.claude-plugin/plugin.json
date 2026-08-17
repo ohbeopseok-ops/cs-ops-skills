@@ -1,0 +1,22 @@
+{
+  "name": "cs-performance",
+  "version": "1.0.0",
+  "description": "성과 관리 — KPI 현황 분석과 원인 진단, T-NPS 예측 및 리스크 상담사 식별, 상담사/팀 벤치마킹, 데이터 기반 목표치 설정. 예측값은 입력 데이터 구간 안에서만 유효하며 신뢰 구간과 가정을 함께 명시한다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-performance",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "kpi",
+    "tnps",
+    "nps-prediction",
+    "benchmarking",
+    "target-setting",
+    "korean"
+  ]
+}

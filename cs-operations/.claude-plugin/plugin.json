@@ -1,0 +1,22 @@
+{
+  "name": "cs-operations",
+  "version": "1.0.0",
+  "description": "운영 기획 — 콜량 기반 인력 배치 계획, 프로세스 개선 과제 도출, 회의록 작성, CS 운영 OKR 수립. 인력·비용 산출은 입력된 실적 데이터에서만 도출하며 가정값은 별도 표기한다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-operations",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "workforce-management",
+    "staffing",
+    "process-improvement",
+    "meeting-notes",
+    "okr",
+    "korean"
+  ]
+}

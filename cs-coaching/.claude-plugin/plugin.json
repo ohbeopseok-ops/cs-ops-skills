@@ -1,0 +1,21 @@
+{
+  "name": "cs-coaching",
+  "version": "1.0.0",
+  "description": "상담사 코칭 — 평가 결과를 근거로 한 피드백 작성, 취약 항목 기반 개선 계획 수립, 1:1 코칭 세션 스크립트 생성. 코칭 산출물은 인사 평가·징계 근거가 아니라 육성 참고 자료다.",
+  "author": {
+    "name": "JoyLab",
+    "url": "https://github.com/ohbeopseok-ops"
+  },
+  "homepage": "https://github.com/ohbeopseok-ops/cs-ops-skills/tree/main/cs-coaching",
+  "repository": "https://github.com/ohbeopseok-ops/cs-ops-skills",
+  "license": "MIT",
+  "keywords": [
+    "cs",
+    "contact-center",
+    "coaching",
+    "feedback",
+    "improvement-plan",
+    "agent-development",
+    "korean"
+  ]
+}
