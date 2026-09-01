@@ -147,9 +147,9 @@ STT 대화 분석, 스크립트 준수율 분석, 개인정보 탐지/마스킹
 ---
 
 ### 8. cs-toolkit — 유틸리티
-HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정
+HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정, 문서 Markdown 변환
 
-**Skills (3):** `html-tool-spec` · `data-mock` · `ko-grammar-check`
+**Skills (4):** `html-tool-spec` · `data-mock` · `ko-grammar-check` · `convert-documents-to-markdown`
 
 **Commands (2):**
 - `/spec-tool` — HTML 도구 요구사항 명세서 작성
