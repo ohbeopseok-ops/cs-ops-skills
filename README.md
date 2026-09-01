@@ -1,6 +1,6 @@
 # CS Ops Skills Marketplace
 
-> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 30개 스킬, 20개 체인 워크플로우.  
+> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 31개 스킬, 20개 체인 워크플로우.  
 > 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
 
 Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 호환.
@@ -147,9 +147,9 @@ STT 대화 분석, 스크립트 준수율 분석, 개인정보 탐지/마스킹
 ---
 
 ### 8. cs-toolkit — 유틸리티
-HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정
+HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정, 문서 Markdown 변환
 
-**Skills (3):** `html-tool-spec` · `data-mock` · `ko-grammar-check`
+**Skills (4):** `html-tool-spec` · `data-mock` · `ko-grammar-check` · `convert-documents-to-markdown`
 
 **Commands (2):**
 - `/spec-tool` — HTML 도구 요구사항 명세서 작성
