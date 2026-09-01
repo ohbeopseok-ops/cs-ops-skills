@@ -1,6 +1,6 @@
 # CS Ops Skills Marketplace
 
-> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 31개 스킬, 20개 체인 워크플로우.  
+> LG U+ 홈CS 운영관리를 위한 AI 운영 시스템. 8개 플러그인, 30개 스킬, 20개 체인 워크플로우.  
 > 품질분석 → 코칭 → 성과관리 → VOC → STT분석 → 운영기획 → 리포팅 전 영역 커버.
 
 Claude Code, Cowork 전용 설계. Skills는 범용 AI 어시스턴트에서도 호환.
