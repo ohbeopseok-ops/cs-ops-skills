@@ -147,13 +147,15 @@ STT 대화 분석, 스크립트 준수율 분석, 개인정보 탐지/마스킹
 ---
 
 ### 8. cs-toolkit — 유틸리티
-HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정
+HTML 도구 요구사항 정의, 테스트 데이터 생성, 한국어 문서 교정, 스킬 개발/개선, 한국어 AI체 교정
 
-**Skills (3):** `html-tool-spec` · `data-mock` · `ko-grammar-check`
+**Skills (5):** `html-tool-spec` · `data-mock` · `ko-grammar-check` · `skill-creator` · `ko-humanizer`
 
-**Commands (2):**
+**Commands (4):**
 - `/spec-tool` — HTML 도구 요구사항 명세서 작성
 - `/mock-data` — CS 운영 테스트 데이터 생성
+- `/create-skill` — 새 SKILL.md 작성/개선 및 트리거링 최적화 ([anthropics/skills](https://github.com/anthropics/skills) 포팅, Apache 2.0)
+- `/humanize-ko` — 한국어 글의 AI체 표현 제거 ([blader/humanizer](https://github.com/blader/humanizer) 패턴을 한국어로 재구성, MIT)
 
 ---
 
