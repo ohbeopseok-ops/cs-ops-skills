@@ -186,8 +186,8 @@
   <div class="masthead">
     <div class="eyebrow">Weekly Open-Source Research</div>
     <h1>주간 오픈소스 블로그 리서치</h1>
-    <div class="dateline">2026-10-31 (토) · GitHub 리서치 기반 · 네이버 블로그 글감 기획</div>
-    <p class="lede">이번 주는 "AI 에이전트가 사람 대신 화면을 조작한다"는 흐름이 두드러졌습니다. 터미널·브라우저를 직접 운전하는 에이전트 도구부터 셀프호스팅 개인 AI OS, 마크다운 노트, 대시보드 플랫폼까지 실제 GitHub 저장소가 존재함을 확인한 10개를 선별했습니다. 최근 다룬 프로젝트와는 겹치지 않는 새 후보로만 구성했습니다.</p>
+    <div class="dateline">2026-11-07 (토) · GitHub 리서치 기반 · 네이버 블로그 글감 기획</div>
+    <p class="lede">이번 주는 "AI 에이전트가 쓰는 전용 인프라"가 눈에 띄었습니다. 에이전트 전용 헤드리스 브라우저, 서버 없이 GitHub Actions에서만 사는 AI 비서, 금융시장 전용 파운데이션 모델부터 셀프호스팅 이메일·구직 도구까지, 실제 GitHub 저장소가 존재함을 확인한 10개를 선별했습니다. 최근 다룬 프로젝트와는 겹치지 않는 새 후보로만 구성했습니다.</p>
   </div>
 
   <section>
@@ -195,32 +195,32 @@
     <div class="top3">
       <div class="top3-card">
         <div class="top3-rank">RANK 1</div>
-        <div class="top3-name">CORE</div>
-        <div class="top3-repo">github.com/RedPlanetHQ/core</div>
-        <div class="top3-body">할 일을 평범한 텍스트로 던지면 GitHub와 과거 기억에서 맥락을 끌어와 계획을 세우고, 승인을 받은 뒤 실제로 Claude Code 세션을 돌려 PR까지 만들어주는 셀프호스팅 "개인 AI OS". 기억은 시간이 흐르는 지식 그래프로 저장됩니다(AGPL-3.0).</div>
+        <div class="top3-name">Lightpanda</div>
+        <div class="top3-repo">github.com/lightpanda-io/browser</div>
+        <div class="top3-body">크롬 기반이 아니라 Zig 언어로 밑바닥부터 새로 만든, AI 에이전트·자동화 전용 초경량 헤드리스 브라우저. Puppeteer·Playwright가 그대로 붙는 CDP 서버를 제공합니다(약 2.9만 스타, AGPL-3.0).</div>
         <div class="top3-why">
-          <b>왜 지금 써야 하는가</b> — "AI 비서에게 일을 맡기고 결과만 승인한다"는 완결된 워크플로를 보여줄 수 있는 흔치 않은 프로젝트입니다.<br>
-          <b>네이버에서 먹힐 이유</b> — "셀프호스팅 AI 비서", "개인 AI OS" 키워드는 아직 국내에 제대로 소개된 글이 적어 선점 효과가 큽니다.
+          <b>왜 지금 써야 하는가</b> — "크롬을 통째로 띄우지 않고도 AI가 웹을 쓸 수 있다"는 자원 효율 소재가 명확하고 실측 비교가 쉽습니다.<br>
+          <b>네이버에서 먹힐 이유</b> — "AI 브라우저 자동화 가볍게", "크롤링 서버 자원 절약" 키워드는 실무 개발자 블로그 검색에서 꾸준한 수요가 있습니다.
         </div>
       </div>
       <div class="top3-card">
         <div class="top3-rank">RANK 2</div>
-        <div class="top3-name">tui-use</div>
-        <div class="top3-repo">github.com/onesuper/tui-use</div>
-        <div class="top3-body">vim, lazygit, htop처럼 사람이 키보드 앞에 있어야 하는 터미널 프로그램을, AI 에이전트가 가상 터미널(PTY)로 직접 조작하게 해주는 CLI. "BrowserUse의 터미널 버전"을 자처합니다(MIT).</div>
+        <div class="top3-name">GitClaw</div>
+        <div class="top3-repo">github.com/SawyerHood/gitclaw</div>
+        <div class="top3-body">서버나 별도 인프라 없이, GitHub 이슈를 열면 그 자체로 세션이 시작되고 댓글로 대화가 이어지는 개인 AI 비서. OpenClaw를 본떠 만들었지만 "GitHub Actions 안에서만 산다"는 점이 독특합니다(MIT).</div>
         <div class="top3-why">
-          <b>왜 지금 써야 하는가</b> — "AI 에이전트가 멈춰버리는 지점"을 정확히 짚어주는 문제-해결 구조라 개발자 공감을 바로 얻습니다.<br>
-          <b>네이버에서 먹힐 이유</b> — "코딩 에이전트 터미널 조작", "AI가 vim 쓰게 하기" 같은 구체적 실전 세팅 검색과 바로 맞물립니다.
+          <b>왜 지금 써야 하는가</b> — "서버 하나 없이 AI 비서를 운영한다"는 극단적으로 가벼운 설계가 신선한 화제성을 가집니다.<br>
+          <b>네이버에서 먹힐 이유</b> — "깃허브 이슈로 AI 비서 쓰기", "서버 없는 AI 자동화" 검색과 바로 맞물리는 실험적 소재입니다.
         </div>
       </div>
       <div class="top3-card">
         <div class="top3-rank">RANK 3</div>
-        <div class="top3-name">Safari MCP</div>
-        <div class="top3-repo">github.com/achiya-automation/safari-mcp</div>
-        <div class="top3-body">크롬·Puppeteer 없이, macOS 네이티브 사파리를 애플스크립트와 스위프트 헬퍼로 직접 조작하는 80여 개 도구를 제공하는 MCP 서버. 기존 로그인 상태를 그대로 쓸 수 있다는 점이 특징입니다(MIT).</div>
+        <div class="top3-name">Kronos</div>
+        <div class="top3-repo">github.com/shiyu-coder/Kronos</div>
+        <div class="top3-body">일반 언어가 아니라 "금융시장의 언어"(캔들스틱·가격 흐름)를 학습한 오픈소스 파운데이션 모델. 금융 데이터를 토큰처럼 다뤄 예측·분석에 활용합니다(약 3만 7천 스타).</div>
         <div class="top3-why">
-          <b>왜 지금 써야 하는가</b> — 맥 사용자에게 "크롬 없이도 AI가 웹을 쓸 수 있다"는 가볍고 실용적인 대안을 제시합니다.<br>
-          <b>네이버에서 먹힐 이유</b> — "맥에서 AI 브라우저 자동화", "클로드 사파리 연동" 검색은 국내 맥 개발자 커뮤니티에서 수요가 꾸준합니다.
+          <b>왜 지금 써야 하는가</b> — "AI가 주가 캔들을 언어처럼 이해한다"는 설정 자체가 투자·개발 양쪽 독자의 호기심을 자극합니다.<br>
+          <b>네이버에서 먹힐 이유</b> — "AI 주가 예측 오픈소스", "금융 파운데이션 모델" 키워드는 투자 관심층 검색량이 꾸준합니다.
         </div>
       </div>
     </div>
@@ -231,34 +231,88 @@
     <div class="board">
 
       <div class="card">
-        <div class="card-head"><span class="card-name">1. CORE</span><span class="card-repo">RedPlanetHQ/core</span></div>
-        <div class="card-oneliner">텍스트로 맡긴 할 일을 GitHub·기억에서 맥락을 끌어와 계획하고, 승인 후 Claude Code로 실행까지 하는 셀프호스팅 개인 AI OS.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"AI 비서에게 일을 통째로 맡긴다"는 완결된 워크플로 데모가 가능해 임팩트가 큽니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>시간이 흐르는 지식 그래프(temporal knowledge graph)로 기억을 저장하는 구조, 사람 승인이 들어가는 태스크 플래닝 흐름.</dd></div>
+        <div class="card-head"><span class="card-name">1. Lightpanda</span><span class="card-repo">lightpanda-io/browser</span></div>
+        <div class="card-oneliner">Zig로 밑바닥부터 만든 AI 에이전트·자동화 전용 초경량 헤드리스 브라우저. CDP로 Puppeteer·Playwright가 그대로 붙습니다.</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"크롬 없이도 자동화가 된다"는 자원 효율 소재로 실측 비교 콘텐츠가 쉽게 나옵니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>크로미움 기반이 아닌 브라우저 엔진을 처음부터 구현하는 접근, CDP(Chrome DevTools Protocol) 호환이 왜 중요한지.</dd></div>
         <ul class="titles">
-          <li>"할 일 텍스트로 던졌더니 AI가 PR까지 만들었습니다"</li>
-          <li>"셀프호스팅 개인 AI OS, 직접 설치해봤습니다"</li>
-          <li>"AI 비서가 기억하는 방식이 다르다? 지식 그래프 메모리"</li>
+          <li>"크롬 대신 이 가벼운 브라우저로 자동화해봤습니다"</li>
+          <li>"AI 크롤링 서버 자원, 이렇게 줄여봤습니다"</li>
+          <li>"Zig로 만든 브라우저? 직접 돌려보니"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 개발자·AI 자동화 관심층</span><span class="pill">난이도: 상</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 개발자·웹 자동화 실무자</span><span class="pill">난이도: 중~상</span></div>
         <div class="scores">
-          <div class="score"><span class="score-val">8</span><span class="score-lbl">정보성</span></div>
+          <div class="score"><span class="score-val">7</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">7</span><span class="score-lbl">확장성</span></div>
           <div class="score"><span class="score-val">7</span><span class="score-lbl">검색성</span></div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-head"><span class="card-name">2. tui-use</span><span class="card-repo">onesuper/tui-use</span></div>
-        <div class="card-oneliner">vim·lazygit·htop 같은 풀스크린 터미널 프로그램을 AI 에이전트가 가상 터미널로 직접 조작하게 해주는 CLI.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"AI 에이전트가 멈추는 지점"이라는 구체적 문제와 해결책을 보여줘 개발자 공감대가 큽니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>PTY(가상 터미널)에 프로그램을 띄워 화면을 텍스트로 읽고 키 입력을 보내는 구조, start·type·press 등 핵심 명령어.</dd></div>
+        <div class="card-head"><span class="card-name">2. GitClaw</span><span class="card-repo">SawyerHood/gitclaw</span></div>
+        <div class="card-oneliner">서버 없이 GitHub 이슈·Actions만으로 동작하는 개인 AI 비서. 이슈를 열면 세션이 시작되고 댓글로 대화가 이어집니다.</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"서버 하나 없이 AI 비서를 운영한다"는 극단적으로 가벼운 설계가 실험적이고 화제성이 있습니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>GitHub Actions를 "서버"처럼 활용하는 아이디어, 이슈·댓글 흐름이 대화 세션으로 이어지는 구조.</dd></div>
         <ul class="titles">
-          <li>"AI가 vim을 직접 쓰게 만들어봤습니다"</li>
-          <li>"브라우저용 AI 도구의 터미널 버전이 나왔다"</li>
-          <li>"코딩 에이전트가 멈추는 순간, 이 도구로 해결"</li>
+          <li>"서버 없이 AI 비서 운영하는 법, 깃허브로 해봤습니다"</li>
+          <li>"이슈 하나 열었더니 AI가 대답한다? 직접 테스트"</li>
+          <li>"OpenClaw 따라 만든 이 오픈소스, 뭐가 다를까"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 개발자·CLI 자동화 실험자</span><span class="pill">난이도: 상</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 개발자·AI 자동화 실험자</span><span class="pill">난이도: 중</span></div>
+        <div class="scores">
+          <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
+          <div class="score"><span class="score-val">7</span><span class="score-lbl">확장성</span></div>
+          <div class="score"><span class="score-val">7</span><span class="score-lbl">검색성</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="card-name">3. Kronos</span><span class="card-repo">shiyu-coder/Kronos</span></div>
+        <div class="card-oneliner">캔들스틱·가격 흐름 같은 "금융시장의 언어"를 학습한 오픈소스 파운데이션 모델(약 3만 7천 스타).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"AI가 주가 캔들을 언어처럼 이해한다"는 설정이 투자·개발 독자 모두의 호기심을 자극합니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>가격 데이터를 토큰 시퀀스로 바꿔 언어모델처럼 학습시키는 접근, 투자 자문이 아닌 "패턴 분석 도구"라는 역할 범위.</dd></div>
+        <ul class="titles">
+          <li>"AI가 주가 캔들을 언어처럼 배운다? 직접 써봤습니다"</li>
+          <li>"3만 스타 받은 금융 전용 파운데이션 모델 리뷰"</li>
+          <li>"주식 예측 AI, 오픈소스로 돌려보니"</li>
+        </ul>
+        <div class="meta-line"><span class="pill">예상 독자: 투자 관심층·데이터 분석가</span><span class="pill">난이도: 상</span></div>
+        <div class="scores">
+          <div class="score"><span class="score-val">7</span><span class="score-lbl">정보성</span></div>
+          <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
+          <div class="score"><span class="score-val">8</span><span class="score-lbl">검색성</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="card-name">4. open-slide</span><span class="card-repo">1weiho/open-slide</span></div>
+        <div class="card-oneliner">발표 슬라이드를 고정 템플릿이 아니라 AI 코딩 에이전트가 직접 리액트 컴포넌트로 작성하게 만드는 슬라이드 프레임워크(약 5천 스타, MIT).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"슬라이드도 AI 코딩 에이전트가 만든다"는 신선한 접근으로 발표 자료 제작 독자층을 바로 끌어올 수 있습니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>1920×1080 고정 캔버스에 컴포넌트를 렌더링하는 구조, 한 명령으로 정적 HTML·PDF로 내보내는 흐름.</dd></div>
+        <ul class="titles">
+          <li>"발표 슬라이드, AI 코딩 에이전트에게 맡겨봤습니다"</li>
+          <li>"파워포인트 대신 코드로 만드는 슬라이드 프레임워크"</li>
+          <li>"클로드 코드로 발표자료 만들기, 직접 해보니"</li>
+        </ul>
+        <div class="meta-line"><span class="pill">예상 독자: 개발자·발표자료 제작자</span><span class="pill">난이도: 중</span></div>
+        <div class="scores">
+          <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
+          <div class="score"><span class="score-val">7</span><span class="score-lbl">확장성</span></div>
+          <div class="score"><span class="score-val">7</span><span class="score-lbl">검색성</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="card-name">5. Colibri</span><span class="card-repo">JustVugg/colibri</span></div>
+        <div class="card-oneliner">초대형 MoE 모델의 가중치를 디스크에서 스트리밍해, 평범한 개인 PC에서도 돌릴 수 있게 해주는 순수 C 로컬 추론 엔진(약 2만 6천 스타).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"내 PC로 거대 모델을 돌린다"는 하드웨어 한계를 넘는 소재가 로컬 AI 독자층에게 강하게 어필합니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>MoE(전문가 혼합) 모델의 가중치를 전부 메모리에 올리지 않고 디스크에서 스트리밍하는 원리.</dd></div>
+        <ul class="titles">
+          <li>"초대형 AI 모델, 제 노트북으로 돌려봤습니다"</li>
+          <li>"그래픽카드 없이도 되는 로컬 AI 추론 엔진"</li>
+          <li>"디스크에서 모델을 스트리밍한다? 이 오픈소스 리뷰"</li>
+        </ul>
+        <div class="meta-line"><span class="pill">예상 독자: 로컬 AI 얼리어답터</span><span class="pill">난이도: 상</span></div>
         <div class="scores">
           <div class="score"><span class="score-val">7</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
@@ -267,16 +321,16 @@
       </div>
 
       <div class="card">
-        <div class="card-head"><span class="card-name">3. Safari MCP</span><span class="card-repo">achiya-automation/safari-mcp</span></div>
-        <div class="card-oneliner">크롬 없이 macOS 네이티브 사파리를 직접 조작하는 80여 개 도구를 제공하는 MCP 서버. 기존 로그인 상태를 그대로 활용합니다.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>맥 사용자에게 "크롬 설치 없이도 AI가 웹을 쓸 수 있다"는 가볍고 실용적인 대안을 제시합니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>애플스크립트와 스위프트 헬퍼 프로세스로 사파리를 제어하는 원리, Chrome 기반 자동화와의 리소스 사용량 차이.</dd></div>
+        <div class="card-head"><span class="card-name">6. JustHireMe</span><span class="card-repo">vasu-devs/JustHireMe</span></div>
+        <div class="card-oneliner">채용 공고를 긁어와 내 이력서와의 적합도를 매기고, 맞춤 자기소개서까지 전부 로컬에서 생성하는 구직 워크벤치(약 2천 스타, AGPL-3.0).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"구직 과정을 AI로 자동화하되 데이터는 내 컴퓨터에만 둔다"는 실용성과 프라이버시를 동시에 챙긴 소재입니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>채용 공고 스크래핑부터 적합도 평가, 맞춤 지원서 생성까지 이어지는 파이프라인 구조.</dd></div>
         <ul class="titles">
-          <li>"크롬 없이 맥북에서 AI 브라우저 자동화, 해봤습니다"</li>
-          <li>"클로드한테 사파리 맡겨봤습니다, 80개 도구 리뷰"</li>
-          <li>"맥 전용 MCP 서버, 설치부터 사용까지"</li>
+          <li>"구직 자동화 도구, 제 이력서로 직접 돌려봤습니다"</li>
+          <li>"채용 공고 긁어서 자기소개서까지, 이 오픈소스로"</li>
+          <li>"이력서 데이터 안 뺏기는 구직 AI, 써보니"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 맥 사용 개발자</span><span class="pill">난이도: 중</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 구직자·커리어 전환 준비생</span><span class="pill">난이도: 중</span></div>
         <div class="scores">
           <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
@@ -285,16 +339,16 @@
       </div>
 
       <div class="card">
-        <div class="card-head"><span class="card-name">4. OpenYak</span><span class="card-repo">openyak/openyak</span></div>
-        <div class="card-oneliner">문서·파일·일상 업무를 내 컴퓨터에서 로컬로 처리하는 데스크톱 AI 에이전트. 모델은 자유롭게 바꿔 쓸 수 있습니다(AGPL-3.0).</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"내 파일을 클라우드에 안 보내고 AI 비서를 쓴다"는 프라이버시 중심 소재가 명확합니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>대화·기억이 전부 로컬에 저장되는 구조, 필요할 때만 OpenRouter 같은 외부 API로 확장하는 옵트인 설계.</dd></div>
+        <div class="card-head"><span class="card-name">7. Sure</span><span class="card-repo">we-promise/sure</span></div>
+        <div class="card-oneliner">서비스 종료된 Maybe Finance를 커뮤니티가 이어받아 계속 개발 중인 오픈소스 자산관리 앱(약 9천 스타, AGPL-3.0).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"서비스가 사라져도 오픈소스는 커뮤니티가 살려낸다"는 스토리 자체가 신뢰감 있는 소재입니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>원작 서비스가 종료된 뒤 커뮤니티 포크가 유지보수를 이어가는 거버넌스 구조.</dd></div>
         <ul class="titles">
-          <li>"내 파일 다루는 AI 비서, 로컬에만 두고 써봤습니다"</li>
-          <li>"데스크톱 AI 에이전트, 클라우드 없이 되는지 테스트"</li>
-          <li>"어떤 모델이든 끼워 쓰는 로컬 AI 에이전트 써보니"</li>
+          <li>"서비스 종료된 자산관리 앱, 오픈소스로 되살아났다"</li>
+          <li>"Maybe Finance 커뮤니티 포크, 직접 써봤습니다"</li>
+          <li>"회사가 접어도 오픈소스는 계속된다, 그 사례"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 프라이버시 중시 개발자</span><span class="pill">난이도: 중</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 재테크 관심층</span><span class="pill">난이도: 중</span></div>
         <div class="scores">
           <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
@@ -303,34 +357,16 @@
       </div>
 
       <div class="card">
-        <div class="card-head"><span class="card-name">5. Files.md</span><span class="card-repo">zakirullin/files.md</span></div>
-        <div class="card-oneliner">순수 마크다운 파일로 노트를 저장하는, 설치도 플러그인도 없는 미니멀한 오픈소스 옵시디언 대안.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"옵시디언 대안"이라는 검증된 수요 키워드에 "코드가 작아서 한눈에 파악된다"는 신선한 차별점이 있습니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>브라우저만으로 동작하는 Go 서버+웹UI 구조, 플러그인 생태계 없이도 "충분한" 미니멀 노트 철학.</dd></div>
+        <div class="card-head"><span class="card-name">8. Zimi</span><span class="card-repo">epheterson/Zimi</span></div>
+        <div class="card-oneliner">위키백과·위키낱말사전·책·영상 등을 오프라인 ZIM 파일로 저장해 검색·열람할 수 있게 해주는 셀프호스팅 서버. AI 에이전트용 MCP 인터페이스도 제공합니다(MIT).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"인터넷 없이도 위키백과 전체를 쓸 수 있다"는 임팩트 있는 설정이 눈길을 끕니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>ZIM이라는 오프라인 아카이브 포맷의 개념, 완전 오프라인 모드(ZIMI_OFFLINE)로 외부 통신을 차단하는 설정.</dd></div>
         <ul class="titles">
-          <li>"옵시디언 대신 이 미니멀 오픈소스 써봤습니다"</li>
-          <li>"설치 없이 브라우저로 끝내는 마크다운 노트 앱"</li>
-          <li>"플러그인 하나도 없는 노트 앱, 그래도 될까?"</li>
+          <li>"인터넷 없이 위키백과 전체를 내 서버에 올려봤습니다"</li>
+          <li>"오프라인에서도 되는 AI 에이전트용 지식 서버"</li>
+          <li>"여행 가서도 되는 셀프호스팅 오프라인 위키 구축기"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: PKM 사용자·미니멀리스트</span><span class="pill">난이도: 하~중</span></div>
-        <div class="scores">
-          <div class="score"><span class="score-val">5</span><span class="score-lbl">정보성</span></div>
-          <div class="score"><span class="score-val">7</span><span class="score-lbl">확장성</span></div>
-          <div class="score"><span class="score-val">7</span><span class="score-lbl">검색성</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="card-name">6. Chartbrew</span><span class="card-repo">chartbrew/chartbrew</span></div>
-        <div class="card-oneliner">API·SQL·NoSQL 데이터베이스를 연결해 라이브 대시보드를 만들고 AI 어시스턴트까지 쓸 수 있는 오픈소스 리포팅 플랫폼.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"그라파나는 과하고 엑셀은 부족하다"는 중간 지점 수요에 정확히 들어맞는 실용 소재입니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>여러 데이터 소스를 하나의 대시보드로 묶는 커넥터 구조, 도커로 셀프호스팅하는 기본 흐름.</dd></div>
-        <ul class="titles">
-          <li>"내 서비스 데이터, 오픈소스 대시보드로 직접 시각화"</li>
-          <li>"그라파나 대신 써본 AI 내장 리포팅 도구"</li>
-          <li>"API만 연결하면 끝, 이 대시보드 도구 써보니"</li>
-        </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 개발자·데이터 분석 입문자</span><span class="pill">난이도: 중</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 셀프호스팅 관심층·오프라인 환경 사용자</span><span class="pill">난이도: 중</span></div>
         <div class="scores">
           <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
@@ -339,74 +375,38 @@
       </div>
 
       <div class="card">
-        <div class="card-head"><span class="card-name">7. Lifeforge</span><span class="card-repo">melvinchia3636/lifeforge</span></div>
-        <div class="card-oneliner">대시보드·태스크·프로젝트·플래시카드·독서 기록까지 모듈을 켜고 끄며 쓰는 셀프호스팅 올인원 라이프 관리 앱.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>여러 앱을 따로 쓰던 독자에게 "하나로 통합"이라는 명확한 가치 제안을 보여줄 수 있습니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>모듈을 선택적으로 켜고 끄는 구조, 비영리(CC BY-NC-SA 4.0) 라이선스가 셀프호스팅 도구에서 갖는 의미.</dd></div>
+        <div class="card-head"><span class="card-name">9. Artifact Keeper</span><span class="card-repo">artifact-keeper/artifact-keeper</span></div>
+        <div class="card-oneliner">JFrog Artifactory·Sonatype Nexus의 무료 대안을 자처하는, Rust 기반 셀프호스팅 패키지 레지스트리. Maven·npm·Docker 등 45개 이상 포맷을 지원합니다(MIT).</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"유료 엔터프라이즈 도구를 무료 오픈소스로 대체한다"는 명확한 비용 절감 소재가 있습니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>여러 패키지 포맷을 하나의 레지스트리로 통합하는 구조, WASM 플러그인으로 커스텀 포맷을 추가하는 방식.</dd></div>
         <ul class="titles">
-          <li>"할 일부터 독서 기록까지, 이 앱 하나로 정리해봤습니다"</li>
-          <li>"여러 생산성 앱을 하나로 합친 셀프호스팅 도구"</li>
-          <li>"무료지만 상업적 이용은 안 되는 이 오픈소스, 왜?"</li>
+          <li>"아티팩토리 대신 무료 오픈소스로 바꿔봤습니다"</li>
+          <li>"회사 패키지 레지스트리, 셀프호스팅으로 직접 구축"</li>
+          <li>"45개 포맷 지원한다는 이 레지스트리, 테스트해보니"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 셀프호스팅 관심층·생산성 덕후</span><span class="pill">난이도: 중~상</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 백엔드·플랫폼 엔지니어</span><span class="pill">난이도: 중~상</span></div>
         <div class="scores">
-          <div class="score"><span class="score-val">5</span><span class="score-lbl">정보성</span></div>
-          <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
-          <div class="score"><span class="score-val">6</span><span class="score-lbl">검색성</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="card-name">8. octo-agent</span><span class="card-repo">open-octo/octo-agent</span></div>
-        <div class="card-oneliner">모델과 데이터를 전부 내 컴퓨터에 두는, 설치가 단일 바이너리 하나로 끝나는 셀프호스팅 AI 에이전트(MIT).</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"복잡한 설정 없이 바이너리 하나로 끝난다"는 설치 난이도 낮추기 소재로 입문자에게 친절합니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>단일 바이너리 배포가 왜 셀프호스팅 진입장벽을 낮추는지, 로컬 데이터 보관 구조.</dd></div>
-        <ul class="titles">
-          <li>"바이너리 하나로 끝나는 셀프호스팅 AI 에이전트"</li>
-          <li>"복잡한 설정 없이 내 서버에 AI 에이전트 올려봤습니다"</li>
-          <li>"가벼운 오픈소스 AI 에이전트, 직접 비교해보니"</li>
-        </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 셀프호스팅 입문자</span><span class="pill">난이도: 중</span></div>
-        <div class="scores">
-          <div class="score"><span class="score-val">5</span><span class="score-lbl">정보성</span></div>
+          <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">5</span><span class="score-lbl">확장성</span></div>
           <div class="score"><span class="score-val">5</span><span class="score-lbl">검색성</span></div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-head"><span class="card-name">9. t3code</span><span class="card-repo">pingdotgg/t3code</span></div>
-        <div class="card-oneliner">Claude Code·Codex·Copilot 등 여러 AI 코딩 에이전트에 동일하게 적용할 수 있는 표준 코딩 규칙(config) 모음. 인기 오픈소스 제작자 T3가 공개했습니다.</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>업계에서 인지도 있는 제작자의 "코딩 에이전트 표준 설정"이라는 신뢰도 높은 소재입니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>여러 코딩 에이전트에 동일한 규칙을 동시에 적용하는 설정 구조, 바이브코딩 품질을 끌어올리는 공통 규칙의 역할.</dd></div>
+        <div class="card-head"><span class="card-name">10. Kurrier</span><span class="card-repo">kurrier-org/kurrier</span></div>
+        <div class="card-oneliner">이메일(IMAP/SMTP)·캘린더(CalDAV)·연락처(CardDAV)를 하나로 묶은 셀프호스팅 통합 커뮤니케이션 워크스페이스.</div>
+        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>구글·마이크로소프트에 묶이지 않고 "내 메일·일정을 직접 운영한다"는 데이터 주권 소재가 명확합니다.</dd></div>
+        <div class="card-row"><dt>학습 포인트</dt><dd>IMAP·CalDAV·CardDAV 같은 표준 프로토콜로 여러 기기와 동기화하는 구조.</dd></div>
         <ul class="titles">
-          <li>"유명 개발자가 공개한 AI 코딩 규칙, 적용해봤습니다"</li>
-          <li>"에이전트 여러 개에 같은 코딩 규칙 한 번에 심는 법"</li>
-          <li>"바이브코딩 품질, 이 설정 하나로 달라졌다"</li>
+          <li>"이메일도 캘린더도 내 서버에, 직접 구축해봤습니다"</li>
+          <li>"구글 없이 사는 법, 셀프호스팅 메일함으로"</li>
+          <li>"CalDAV·CardDAV가 뭔지 궁금했다면, 이 오픈소스로"</li>
         </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 개발자·바이브코딩 실험자</span><span class="pill">난이도: 중</span></div>
+        <div class="meta-line"><span class="pill">예상 독자: 셀프호스팅 관심층</span><span class="pill">난이도: 중~상</span></div>
         <div class="scores">
-          <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
+          <div class="score"><span class="score-val">5</span><span class="score-lbl">정보성</span></div>
           <div class="score"><span class="score-val">6</span><span class="score-lbl">확장성</span></div>
-          <div class="score"><span class="score-val">7</span><span class="score-lbl">검색성</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="card-name">10. Vizro</span><span class="card-repo">mckinsey/vizro</span></div>
-        <div class="card-oneliner">컨설팅사 맥킨지가 공개한, 파이썬 코드 몇 줄로 데이터 시각화 앱을 만드는 로우코드 툴킷(Apache-2.0, 약 3.7천 스타).</div>
-        <div class="card-row"><dt>왜 글감으로 좋은가</dt><dd>"맥킨지가 만든 오픈소스"라는 브랜드 신뢰도와 데이터 분석 입문자를 위한 실용성을 동시에 챙길 수 있습니다.</dd></div>
-        <div class="card-row"><dt>학습 포인트</dt><dd>Plotly 기반으로 선언형 코드만으로 대시보드를 구성하는 방식, Vizro-AI로 자연어 질문을 차트로 바꾸는 확장 기능.</dd></div>
-        <ul class="titles">
-          <li>"맥킨지가 만든 무료 데이터 시각화 도구 써봤습니다"</li>
-          <li>"파이썬 몇 줄로 끝나는 로우코드 대시보드 툴킷"</li>
-          <li>"데이터 분석 입문자가 직접 써본 시각화 오픈소스"</li>
-        </ul>
-        <div class="meta-line"><span class="pill">예상 독자: 데이터 분석 입문자·파이썬 개발자</span><span class="pill">난이도: 중</span></div>
-        <div class="scores">
-          <div class="score"><span class="score-val">6</span><span class="score-lbl">정보성</span></div>
-          <div class="score"><span class="score-val">5</span><span class="score-lbl">확장성</span></div>
-          <div class="score"><span class="score-val">6</span><span class="score-lbl">검색성</span></div>
+          <div class="score"><span class="score-val">5</span><span class="score-lbl">검색성</span></div>
         </div>
       </div>
 
@@ -417,122 +417,122 @@
     <h2>프로젝트별 블로그 글 구조 (펼쳐보기)</h2>
 
     <details class="blogstruct">
-      <summary><span>1. CORE</span><span class="card-repo">AI비서 · 상</span></summary>
+      <summary><span>1. Lightpanda</span><span class="card-repo">브라우저자동화 · 중~상</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“할 일을 텍스트로 던지기만 하면, AI가 끝까지 처리해줄까?”</div>
-        <div class="step"><b>핵심 개념</b>시간이 흐르는 지식 그래프 메모리 + 사람 승인이 들어가는 태스크 플래닝 + Claude Code 실행 연동 구조</div>
-        <div class="step"><b>실제 활용 사례</b>간단한 GitHub 이슈 하나를 맡겨 PR이 만들어지는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 작업 전체를 위임하는 완결된 경험 / 단점: 도커 compose·4vCPU 이상 서버가 필요해 진입장벽이 있음</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>AI가 바로 실행하는 게 아니라 "승인 단계"를 거친다는 안전장치가 있다는 점</div>
-        <div class="step"><b>마무리 메시지</b>AI 비서의 다음 단계는 "대화"가 아니라 "완료된 작업"이라는 결론</div>
+        <div class="step"><b>도입 훅</b>“크롬 통째로 안 띄우고도 AI 자동화가 될까?”</div>
+        <div class="step"><b>핵심 개념</b>크로미움이 아닌 Zig로 새로 만든 브라우저 엔진이 CDP 프로토콜로 기존 자동화 도구와 호환되는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>크롬 헤드리스와 Lightpanda로 같은 크롤링 작업을 돌려 자원 사용량을 비교</div>
+        <div class="step"><b>장단점</b>장점: 훨씬 가벼운 리소스 사용 / 단점: 웹 API 커버리지가 아직 크롬보다 좁음</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>"크롬을 빠르게 만든 것"이 아니라 "완전히 다른 엔진"이라는 점</div>
+        <div class="step"><b>마무리 메시지</b>AI 에이전트 시대에는 브라우저도 "에이전트 전용"으로 다시 설계될 수 있다는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>2. tui-use</span><span class="card-repo">AI코딩도구 · 상</span></summary>
+      <summary><span>2. GitClaw</span><span class="card-repo">AI비서 · 중</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“AI 에이전트가 vim 켜놓고 멈춰버린 경험, 있으신가요?”</div>
-        <div class="step"><b>핵심 개념</b>가상 터미널(PTY)에 프로그램을 띄워 화면을 텍스트로 읽고 키 입력을 흉내 내는 구조</div>
-        <div class="step"><b>실제 활용 사례</b>lazygit을 AI 에이전트가 직접 조작해 커밋을 만드는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 사람 개입 없이 TUI 프로그램 완전 제어 / 단점: 화면 레이아웃이 복잡한 프로그램에서는 인식 오류가 생길 수 있음</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>"브라우저 자동화(BrowserUse)"의 터미널 버전일 뿐, AI 모델 자체를 포함하지는 않는다는 점</div>
-        <div class="step"><b>마무리 메시지</b>AI 에이전트의 "손이 닿는 범위"가 터미널 안쪽까지 넓어지고 있다는 결론</div>
+        <div class="step"><b>도입 훅</b>“AI 비서를 운영하는데 서버가 하나도 필요 없다고?”</div>
+        <div class="step"><b>핵심 개념</b>GitHub 이슈가 세션을 열고, 댓글이 대화를 이어가며, Actions가 실행 엔진 역할을 하는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>본인 저장소를 포크해 이슈 하나를 열고 AI와 대화해보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 서버 비용 전혀 없음 / 단점: 퍼블릭 저장소에서는 대화 내용이 모두 공개됨</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>API 키를 저장소 시크릿에 등록해야 하므로 비용은 결국 AI API 사용량에 따라 발생한다는 점</div>
+        <div class="step"><b>마무리 메시지</b>"서버 없는 AI 비서"라는 아이디어가 실제로 동작한다는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>3. Safari MCP</span><span class="card-repo">브라우저자동화 · 중</span></summary>
+      <summary><span>3. Kronos</span><span class="card-repo">금융AI · 상</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“크롬 안 깔고도 맥에서 AI 브라우저 자동화가 될까?”</div>
-        <div class="step"><b>핵심 개념</b>애플스크립트와 스위프트 헬퍼 프로세스로 네이티브 사파리를 직접 조작하는 MCP 서버 구조</div>
-        <div class="step"><b>실제 활용 사례</b>Claude Code에 연결해 사파리로 간단한 웹 작업을 시켜보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 기존 로그인 상태 유지, 상대적으로 가벼운 리소스 사용 / 단점: macOS·Safari 환경에서만 동작</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>Puppeteer·Playwright 같은 "크롬 기반 자동화"와는 완전히 다른 네이티브 접근 방식이라는 점</div>
-        <div class="step"><b>마무리 메시지</b>맥 생태계에도 AI 에이전트용 네이티브 도구가 자리잡고 있다는 결론</div>
+        <div class="step"><b>도입 훅</b>“AI가 주가 캔들을 '언어'처럼 배운다면 어떨까?”</div>
+        <div class="step"><b>핵심 개념</b>가격·거래량 시퀀스를 토큰처럼 다뤄 언어모델 방식으로 학습시킨 금융 전용 파운데이션 모델</div>
+        <div class="step"><b>실제 활용 사례</b>공개 데이터셋으로 간단한 패턴 분석을 돌려보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 금융 데이터 특화 구조로 일반 LLM보다 특화된 패턴 포착 / 단점: 실제 투자 수익을 보장하지 않는 연구용 모델</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>이 모델이 "투자 자문"을 해주는 것이 아니라 "패턴을 분석하는 도구"라는 역할 범위</div>
+        <div class="step"><b>마무리 메시지</b>AI가 다루는 "언어"의 범위가 금융 데이터까지 넓어지고 있다는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>4. OpenYak</span><span class="card-repo">로컬AI · 중</span></summary>
+      <summary><span>4. open-slide</span><span class="card-repo">발표자료 · 중</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“내 파일을 다루는 AI 비서, 클라우드에 안 보내고 쓸 수 있을까?”</div>
-        <div class="step"><b>핵심 개념</b>대화·기억·파일 처리가 전부 로컬에 저장되고, 필요할 때만 외부 모델 API로 확장하는 구조</div>
-        <div class="step"><b>실제 활용 사례</b>로컬 파일 정리를 맡겨보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 데이터 주권 보장 / 단점: 고급 모델을 쓰려면 결국 외부 API 비용이 발생할 수 있음</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>완전히 오프라인으로만 쓰는 도구가 아니라 "로컬 우선"이라는 절충적 설계라는 점</div>
-        <div class="step"><b>마무리 메시지</b>프라이버시와 AI 편의를 동시에 추구하는 흐름이 데스크톱 에이전트까지 번지고 있다는 메시지</div>
+        <div class="step"><b>도입 훅</b>“발표 슬라이드, 이제 AI 코딩 에이전트가 코드로 만들어준다고?”</div>
+        <div class="step"><b>핵심 개념</b>슬라이드를 고정 템플릿이 아니라 리액트 컴포넌트로 다뤄, AI 에이전트가 코드 작성 능력을 그대로 활용하는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>간단한 발표 주제를 설명해 에이전트가 슬라이드를 만들어내는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 핫리로드·발표 모드 등 개발자 친화적 기능 / 단점: 디자인 감각보다는 코드 구조에 익숙해야 다루기 쉬움</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>파워포인트 같은 "틀"이 아니라 "코드로 그리는 슬라이드"라는 완전히 다른 접근이라는 점</div>
+        <div class="step"><b>마무리 메시지</b>발표 자료 제작까지 AI 코딩 에이전트의 영역으로 들어오고 있다는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>5. Files.md</span><span class="card-repo">노트앱 · 하</span></summary>
+      <summary><span>5. Colibri</span><span class="card-repo">로컬AI · 상</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“옵시디언이 너무 커지고 복잡해졌다고 느낀 적 있나요?”</div>
-        <div class="step"><b>핵심 개념</b>Go 서버 하나와 웹 UI만으로 동작하는, 플러그인 없이도 "충분한" 미니멀 마크다운 노트 구조</div>
-        <div class="step"><b>실제 활용 사례</b>간단한 노트를 작성·검색해보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 설치 없이 가볍게 시작 / 단점: 옵시디언의 방대한 플러그인 생태계는 아직 없음</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>"기능이 적은 것"이 아니라 "의도적으로 작게 유지하는" 설계 철학이라는 점</div>
-        <div class="step"><b>마무리 메시지</b>노트 앱도 커지는 것만이 정답은 아니라는 메시지</div>
+        <div class="step"><b>도입 훅</b>“그래픽카드 없이 초대형 AI 모델을 돌릴 수 있을까?”</div>
+        <div class="step"><b>핵심 개념</b>MoE 모델의 전문가 가중치를 전부 메모리에 올리지 않고 디스크에서 필요한 만큼만 스트리밍하는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>본인 노트북에서 모델을 실행해 속도·메모리 사용량을 체크하는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 일반 하드웨어로 초대형 모델 실행 가능 / 단점: 디스크 속도가 느리면 응답 속도도 느려짐</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>모델을 "압축"한 것이 아니라 "필요한 부분만 그때그때 불러오는" 방식이라는 차이</div>
+        <div class="step"><b>마무리 메시지</b>로컬 AI의 진입장벽이 하드웨어보다 소프트웨어 설계로 낮아지고 있다는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>6. Chartbrew</span><span class="card-repo">데이터대시보드 · 중</span></summary>
+      <summary><span>6. JustHireMe</span><span class="card-repo">구직도구 · 중</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“서비스 데이터, 엑셀 말고 제대로 된 대시보드로 보고 싶지 않으셨나요?”</div>
-        <div class="step"><b>핵심 개념</b>여러 데이터 소스를 커넥터로 묶어 하나의 라이브 대시보드로 보여주는 구조</div>
-        <div class="step"><b>실제 활용 사례</b>샘플 API를 연결해 차트 하나를 만들어보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: AI 어시스턴트로 차트 생성 보조 / 단점: 라이선스가 표준 오픈소스 라이선스가 아닌 FSL 계열이라 사용 범위 확인이 필요</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>완전한 오픈소스 라이선스가 아니라 일정 기간 뒤 오픈소스로 전환되는 FSL 방식이라는 점</div>
-        <div class="step"><b>마무리 메시지</b>작은 팀도 전문적인 데이터 리포팅을 무료로 시작할 수 있다는 결론</div>
+        <div class="step"><b>도입 훅</b>“구직 활동, AI한테 맡기되 이력서 데이터는 뺏기고 싶지 않다면?”</div>
+        <div class="step"><b>핵심 개념</b>채용 공고 수집→적합도 평가→맞춤 지원서 생성까지 전 과정이 로컬에서 처리되는 파이프라인</div>
+        <div class="step"><b>실제 활용 사례</b>본인 이력서를 입력해 공고 적합도 순위를 받아보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 데이터가 외부로 나가지 않음 / 단점: 아직 알파 단계라 모든 채용 사이트를 지원하지는 않음</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>로컬 LLM뿐 아니라 클로드 같은 외부 API도 선택적으로 연결할 수 있다는 점</div>
+        <div class="step"><b>마무리 메시지</b>구직 자동화도 프라이버시를 지키며 할 수 있다는 메시지</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>7. Lifeforge</span><span class="card-repo">생산성 · 중~상</span></summary>
+      <summary><span>7. Sure</span><span class="card-repo">재테크 · 중</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“할 일 앱, 메모 앱, 독서 기록 앱... 다 따로 쓰고 있지 않나요?”</div>
-        <div class="step"><b>핵심 개념</b>대시보드·태스크·프로젝트·플래시카드 등을 모듈 단위로 켜고 끄며 조합하는 셀프호스팅 구조</div>
-        <div class="step"><b>실제 활용 사례</b>필요한 모듈만 켜서 나만의 대시보드를 구성해보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 여러 앱을 하나로 통합 / 단점: 설정이 다소 복잡해 기술적 이해가 필요</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>비영리 라이선스(CC BY-NC-SA 4.0)라 개인 용도는 자유롭지만 상업적 재배포는 제한된다는 점</div>
-        <div class="step"><b>마무리 메시지</b>생산성 도구도 "내 서버에 맞춰 조립"하는 시대가 왔다는 메시지</div>
+        <div class="step"><b>도입 훅</b>“쓰던 자산관리 서비스가 문을 닫았는데, 그대로 끝일까?”</div>
+        <div class="step"><b>핵심 개념</b>종료된 원작 서비스의 오픈소스 코드를 커뮤니티가 이어받아 유지보수하는 포크 거버넌스 구조</div>
+        <div class="step"><b>실제 활용 사례</b>셀프호스팅으로 설치해 계좌·투자 내역을 입력해보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 서비스 종료 리스크 없이 계속 쓸 수 있음 / 단점: 공식 지원이 아니라 커뮤니티 유지보수라 업데이트 속도가 들쑥날쑥</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>"Sure"라는 이름이 상표가 아니라 커뮤니티가 자체적으로 붙인 이름이라는 점</div>
+        <div class="step"><b>마무리 메시지</b>오픈소스 라이선스가 서비스 종료로부터 사용자를 지켜주는 사례라는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>8. octo-agent</span><span class="card-repo">셀프호스팅 · 중</span></summary>
+      <summary><span>8. Zimi</span><span class="card-repo">셀프호스팅 · 중</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“AI 에이전트 셀프호스팅, 설정이 복잡해서 포기하셨나요?”</div>
-        <div class="step"><b>핵심 개념</b>단일 바이너리 배포로 설치 과정을 극단적으로 단순화한 셀프호스팅 AI 에이전트 구조</div>
-        <div class="step"><b>실제 활용 사례</b>바이너리 하나를 내려받아 바로 실행해보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 설치가 매우 간단 / 단점: 아직 생태계·문서가 크지 않은 초기 프로젝트</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>"단일 바이너리"라고 해서 기능이 적다는 뜻은 아니라는 점</div>
-        <div class="step"><b>마무리 메시지</b>셀프호스팅 AI 에이전트의 진입장벽이 계속 낮아지고 있다는 결론</div>
+        <div class="step"><b>도입 훅</b>“인터넷이 끊겨도 위키백과를 통째로 쓸 수 있다면?”</div>
+        <div class="step"><b>핵심 개념</b>위키·책·영상 등을 ZIM이라는 압축 아카이브 포맷으로 저장해 완전 오프라인 상태에서 검색·열람하는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>위키백과 ZIM 파일을 받아 오프라인 모드로 검색해보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 비행기·오지에서도 방대한 지식 접근 가능 / 단점: ZIM 파일 자체 용량이 커서 저장 공간이 필요</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>일반 웹사이트 미러링이 아니라 "ZIM"이라는 전용 포맷을 쓴다는 점</div>
+        <div class="step"><b>마무리 메시지</b>AI 에이전트에게도 "오프라인 지식 베이스"가 필요한 시대가 왔다는 메시지</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>9. t3code</span><span class="card-repo">개발방법론 · 중</span></summary>
+      <summary><span>9. Artifact Keeper</span><span class="card-repo">DevOps · 중~상</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“AI 코딩 에이전트마다 규칙을 따로 설정하고 있지 않나요?”</div>
-        <div class="step"><b>핵심 개념</b>하나의 설정으로 Claude Code·Codex·Copilot 등 여러 에이전트에 동일한 코딩 규칙을 동시에 심어주는 구조</div>
-        <div class="step"><b>실제 활용 사례</b>설정 적용 전/후로 같은 기능을 구현한 결과를 비교</div>
-        <div class="step"><b>장단점</b>장점: 여러 에이전트 간 품질 일관성 확보 / 단점: 프로젝트 성격에 따라 규칙을 다시 조정해야 할 수 있음</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>이 도구가 "코드를 짜주는 것"이 아니라 "규칙만 심어주는 것"이라는 역할 범위</div>
-        <div class="step"><b>마무리 메시지</b>바이브코딩 품질도 결국 "일관된 규칙"에서 나온다는 결론</div>
+        <div class="step"><b>도입 훅</b>“회사에서 쓰는 비싼 패키지 레지스트리, 무료로 바꿀 수 있을까?”</div>
+        <div class="step"><b>핵심 개념</b>Maven·npm·Docker 등 다양한 패키지 포맷을 하나의 Rust 기반 서버로 통합 관리하는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>간단한 npm 패키지를 셀프호스팅 레지스트리에 올려보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 엔터프라이즈 기능을 무료로 사용 / 단점: 아직 초기 프로젝트라 프로덕션 안정성 검증이 더 필요</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>Artifactory·Nexus의 "드롭인 대체"를 표방하지만 마이그레이션 도구 지원 범위는 포맷마다 다르다는 점</div>
+        <div class="step"><b>마무리 메시지</b>DevOps 인프라도 셀프호스팅 오픈소스로 비용을 크게 줄일 수 있다는 결론</div>
       </div>
     </details>
 
     <details class="blogstruct">
-      <summary><span>10. Vizro</span><span class="card-repo">데이터시각화 · 중</span></summary>
+      <summary><span>10. Kurrier</span><span class="card-repo">셀프호스팅 · 중~상</span></summary>
       <div class="blogstruct-body">
-        <div class="step"><b>도입 훅</b>“맥킨지가 만든 무료 데이터 시각화 도구가 있다고?”</div>
-        <div class="step"><b>핵심 개념</b>Plotly 기반으로 선언형 파이썬 코드만으로 대시보드를 구성하는 로우코드 구조</div>
-        <div class="step"><b>실제 활용 사례</b>샘플 데이터셋으로 간단한 차트 대시보드 하나를 만들어보는 과정을 캡처</div>
-        <div class="step"><b>장단점</b>장점: 적은 코드로 전문적인 시각화 완성 / 단점: 매우 세밀한 커스터마이징은 Plotly를 직접 다루는 것보다 제약이 있을 수 있음</div>
-        <div class="step"><b>초보자가 헷갈릴 부분</b>Vizro-AI를 쓰면 자연어 질문도 차트로 바꿀 수 있지만 이는 별도 확장 기능이라는 점</div>
-        <div class="step"><b>마무리 메시지</b>데이터 시각화의 진입장벽이 "코드 몇 줄" 수준까지 낮아지고 있다는 결론</div>
+        <div class="step"><b>도입 훅</b>“이메일도 일정도, 구글 없이 내 서버로 옮길 수 있을까?”</div>
+        <div class="step"><b>핵심 개념</b>IMAP/SMTP·CalDAV·CardDAV라는 표준 프로토콜로 메일·캘린더·연락처를 하나의 워크스페이스로 묶는 구조</div>
+        <div class="step"><b>실제 활용 사례</b>셀프호스팅 서버를 설치하고 휴대폰 기본 메일 앱과 동기화해보는 과정을 캡처</div>
+        <div class="step"><b>장단점</b>장점: 구글·마이크로소프트 종속에서 벗어남 / 단점: 메일 서버 운영에는 스팸 필터링 등 추가 관리가 필요</div>
+        <div class="step"><b>초보자가 헷갈릴 부분</b>CalDAV·CardDAV는 "구글 캘린더 전용"이 아니라 어떤 클라이언트에도 연결되는 표준 프로토콜이라는 점</div>
+        <div class="step"><b>마무리 메시지</b>개인 데이터 주권을 되찾는 흐름이 메일함까지 번지고 있다는 결론</div>
       </div>
     </details>
   </section>
@@ -543,25 +543,25 @@
       <div class="finalbox">
         <h3>지금 바로 쓰기 좋은 주제 3개</h3>
         <ol>
-          <li>Files.md — 설치 없이 바로 체험, 비교 콘텐츠 완성</li>
-          <li>Safari MCP — 맥에서 설치 후 바로 사용기 작성 가능</li>
-          <li>Vizro — 샘플 데이터로 바로 시각화 결과 캡처</li>
+          <li>Lightpanda — 크롬과 비교 캡처만으로 완성도 있는 콘텐츠</li>
+          <li>open-slide — 간단한 슬라이드 하나로 데모 콘텐츠 완성</li>
+          <li>JustHireMe — 본인 이력서로 바로 적합도 테스트</li>
         </ol>
       </div>
       <div class="finalbox">
         <h3>조회수보다 신뢰를 쌓기 좋은 주제 3개</h3>
         <ol>
-          <li>CORE — AI 비서 위임 워크플로를 깊이 다루는 콘텐츠</li>
-          <li>tui-use — AI 에이전트의 한계와 해법을 짚는 전문적 콘텐츠</li>
-          <li>t3code — 코딩 에이전트 표준화를 분석하는 심층 콘텐츠</li>
+          <li>Kronos — 금융 AI 모델의 구조를 깊이 분석하는 콘텐츠</li>
+          <li>Artifact Keeper — 엔터프라이즈 인프라 대체를 다루는 전문적 콘텐츠</li>
+          <li>Sure — 오픈소스 거버넌스와 서비스 종료 리스크를 짚는 콘텐츠</li>
         </ol>
       </div>
       <div class="finalbox">
         <h3>시리즈물로 확장하기 좋은 주제 3개</h3>
         <ol>
-          <li>tui-use × Safari MCP — "AI 에이전트가 화면을 직접 조작하는 시대" 연재</li>
-          <li>CORE × OpenYak — "셀프호스팅 AI 비서 비교" 시리즈</li>
-          <li>Lifeforge — "생산성 앱 하나로 통합하기" 진행형 연재</li>
+          <li>GitClaw × Lightpanda — "서버 없이 돌리는 AI 에이전트 인프라" 연재</li>
+          <li>Zimi — "오프라인 셀프호스팅 지식 베이스 구축기" 진행형 연재</li>
+          <li>Kurrier × Sure — "구글 없이 사는 셀프호스팅 라이프" 시리즈</li>
         </ol>
       </div>
     </div>
@@ -570,12 +570,12 @@
   <section>
     <h2>글쓰기 팁</h2>
     <div class="tips">
-      <div class="tipbox"><b>경험담처럼 쓰기 쉬운 포인트</b> — Files.md·Safari MCP·Vizro·octo-agent는 설치·연결만으로 결과를 바로 캡처할 수 있어 "제가 직접 써봤습니다" 톤이 자연스럽습니다. CORE·tui-use·t3code는 비교·과정을 보여주는 "직접 테스트해봤습니다" 톤이 더 설득력 있습니다.</div>
-      <div class="tipbox"><b>"저장할 만하다" 문장 방향</b> — "설치 명령어 + 자주 막히는 지점 + 해결법"을 표로 정리하면 스크랩을 유도하기 좋습니다. CORE·OpenYak처럼 서버 자원(RAM·CPU)이 필요한 도구는 "이 정도 사양이면 충분합니다"라는 구체적인 문장이 효과적입니다.</div>
-      <div class="tipbox"><b>주의</b> — Chartbrew는 완전한 오픈소스 라이선스가 아닌 FSL(Functional Source License) 계열이고, Lifeforge는 비영리 라이선스(CC BY-NC-SA 4.0)이므로 글에서 "무료=상업적 이용 가능"으로 오해하지 않도록 라이선스 범위를 명확히 밝히는 것을 권장합니다.</div>
+      <div class="tipbox"><b>경험담처럼 쓰기 쉬운 포인트</b> — Lightpanda·open-slide·JustHireMe·Colibri는 설치·실행만으로 결과를 바로 캡처할 수 있어 "제가 직접 써봤습니다" 톤이 자연스럽습니다. Kronos·GitClaw·Artifact Keeper는 비교·구조 분석을 보여주는 "직접 테스트해봤습니다" 톤이 더 설득력 있습니다.</div>
+      <div class="tipbox"><b>"저장할 만하다" 문장 방향</b> — "설치 명령어 + 자주 막히는 지점 + 해결법"을 표로 정리하면 스크랩을 유도하기 좋습니다. Kurrier·Artifact Keeper처럼 서버 운영 지식이 필요한 도구는 "이 부분에서 막혔는데 이렇게 해결했습니다"라는 구체적 문장이 효과적입니다.</div>
+      <div class="tipbox"><b>주의</b> — Kronos는 투자 자문이 아닌 연구·분석용 모델이라는 점, GitClaw는 퍼블릭 저장소에서 대화가 공개된다는 점을 글에 명확히 밝히는 것을 권장합니다.</div>
     </div>
   </section>
 
-  <div class="prevweek">직전까지 다룬 프로젝트(최근 10주 이상, 100개 내외): Strix·Bumblebee·Grok Build·OfficeCLI·ppt-master·OpenMontage·Cherry Studio·memos·Orca·herdr·Natively·airi·nanochat·MediaCrawler·Jan·superpowers·Cloudflare OS·Open Code Review·TencentDB Agent Memory·QwenPaw·OpenClaw·BrowserOS·open-design·pyVideoTrans·Reactive Resume·Firefly III·Aegis·ToolJet·skola·OpenDataLoader PDF·Generative AI for Beginners·AI Agents for Beginners·ACE-Step 1.5·Harper·Valetudo·Tasmota·Mealie·ShareX·Spree·openCook·DeepSeek Harness·MoneyPrinterTurbo·VoiceStudio·Graphify·OmniRoute·skills·Vaultwarden·openGym·Splito·news-aggregator·OpenCut·TradingAgents·Stirling PDF·Omarchy·Unsloth·opendraft·Plausible Analytics·LibreLingo·Nebula·Insights·Open Notebook·OpenMAIC·Ponytail·Archify·browser-use·i-have-adhd·AFFiNE·Qwen-Image·Baserow·Mathesar·Universal Modder·claude-mem·OpenNutriTracker·PageIndex·Workout.cool·Tandoor Recipes·Grocy·Agent-Reach·Impeccable·rea·PhotoCraft·WordCraft·AnyPS5·Anatomy·Aurelio-finance·HyperFrames·Open WebUI·agent-skills·ReClip·Talivia·codebase-memory-mcp·magpie·super-agent-party·blinko·CADAM·Vvveb·Secrover·gonkey·Skip·Uno Platform·CORE·tui-use·Safari MCP·OpenYak·Files.md·Chartbrew·Lifeforge·octo-agent·t3code·Vizro</div>
+  <div class="prevweek">직전까지 다룬 프로젝트(최근 11주 이상, 110개 내외): Strix·Bumblebee·Grok Build·OfficeCLI·ppt-master·OpenMontage·Cherry Studio·memos·Orca·herdr·Natively·airi·nanochat·MediaCrawler·Jan·superpowers·Cloudflare OS·Open Code Review·TencentDB Agent Memory·QwenPaw·OpenClaw·BrowserOS·open-design·pyVideoTrans·Reactive Resume·Firefly III·Aegis·ToolJet·skola·OpenDataLoader PDF·Generative AI for Beginners·AI Agents for Beginners·ACE-Step 1.5·Harper·Valetudo·Tasmota·Mealie·ShareX·Spree·openCook·DeepSeek Harness·MoneyPrinterTurbo·VoiceStudio·Graphify·OmniRoute·skills·Vaultwarden·openGym·Splito·news-aggregator·OpenCut·TradingAgents·Stirling PDF·Omarchy·Unsloth·opendraft·Plausible Analytics·LibreLingo·Nebula·Insights·Open Notebook·OpenMAIC·Ponytail·Archify·browser-use·i-have-adhd·AFFiNE·Qwen-Image·Baserow·Mathesar·Universal Modder·claude-mem·OpenNutriTracker·PageIndex·Workout.cool·Tandoor Recipes·Grocy·Agent-Reach·Impeccable·rea·PhotoCraft·WordCraft·AnyPS5·Anatomy·Aurelio-finance·HyperFrames·Open WebUI·agent-skills·ReClip·Talivia·codebase-memory-mcp·magpie·super-agent-party·blinko·CADAM·Vvveb·Secrover·gonkey·Skip·Uno Platform·CORE·tui-use·Safari MCP·OpenYak·Files.md·Chartbrew·Lifeforge·octo-agent·t3code·Vizro·Lightpanda·GitClaw·Kronos·open-slide·Colibri·JustHireMe·Sure·Zimi·Artifact Keeper·Kurrier</div>
   <footer>매주 토요일 오전 자동 갱신 · WebSearch 기반 리서치, 확인되지 않은 수치는 "보고됨/확인 필요"로 표기</footer>
 </div>
