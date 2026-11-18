@@ -1,0 +1,119 @@
+[
+ {
+  "mutation": "M1 외부 CSS 주입",
+  "expect_any_of": [
+   "S1",
+   "S2"
+  ],
+  "failed_codes": [
+   "O2",
+   "O3",
+   "O4",
+   "S1",
+   "S2"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M2 본문 글자 90px(넘침)",
+  "expect_any_of": [
+   "L3"
+  ],
+  "failed_codes": [
+   "L1",
+   "L3",
+   "L4"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M3 쪽번호 14px(작은 글자)",
+  "expect_any_of": [
+   "T4"
+  ],
+  "failed_codes": [
+   "T4"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M4 막대 data-value 변조",
+  "expect_any_of": [
+   "D3"
+  ],
+  "failed_codes": [
+   "D3"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M5 렌더 숫자 35%→53%",
+  "expect_any_of": [
+   "D3",
+   "D5"
+  ],
+  "failed_codes": [
+   "D3",
+   "D5"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M6 퀴즈 정답 인덱스 변조",
+  "expect_any_of": [
+   "N13"
+  ],
+  "failed_codes": [
+   "N13"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M7 낮은 명암비 글자",
+  "expect_any_of": [
+   "T5"
+  ],
+  "failed_codes": [
+   "T5"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M8 스테이지 높이 1000px",
+  "expect_any_of": [
+   "A1",
+   "A2"
+  ],
+  "failed_codes": [
+   "A1",
+   "A2",
+   "L3",
+   "L4"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M9 발표자 노트 변조",
+  "expect_any_of": [
+   "D1",
+   "N8",
+   "N9"
+  ],
+  "failed_codes": [
+   "D1"
+  ],
+  "caught": true
+ },
+ {
+  "mutation": "M10 요소 겹침(절대위치)",
+  "expect_any_of": [
+   "L1",
+   "L4"
+  ],
+  "failed_codes": [
+   "L4"
+  ],
+  "caught": true,
+  "note": "1차(-120px)는 실제 겹침이 생기지 않아 미포착, -330px로 강화 후 재실행"
+ }
+]

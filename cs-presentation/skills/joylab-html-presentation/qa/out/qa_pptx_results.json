@@ -1,0 +1,219 @@
+{
+ "summary": {
+  "PASS": 27,
+  "FAIL": 0,
+  "UNVERIFIED": 3
+ },
+ "results": [
+  {
+   "theme": "executive",
+   "code": "PX1",
+   "name": "재로드 성공·장수 = JSON·16:9",
+   "status": "PASS",
+   "detail": "15 1.7777"
+  },
+  {
+   "theme": "executive",
+   "code": "PX2",
+   "name": "슬라이드 제목 = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "PX3",
+   "name": "발표자 노트 = JSON(퀴즈는 정답·해설 추가)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "PX4",
+   "name": "모든 도형이 슬라이드 안",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "PX5",
+   "name": "최소 글자: 제목 ≥28pt, 나머지 ≥12pt",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "PX6",
+   "name": "텍스트 적합 추정(글자 폭·줄 수 휴리스틱)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "PX7",
+   "name": "텍스트 박스 간 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "PX8",
+   "name": "외부 링크/원격 리소스 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "executive",
+   "code": "PX9",
+   "name": "LibreOffice PDF 변환 쪽수 = 슬라이드 수",
+   "status": "PASS",
+   "detail": "pages=15"
+  },
+  {
+   "theme": "executive",
+   "code": "PX10",
+   "name": "PowerPoint 실제 렌더·폰트 대체 표시",
+   "status": "UNVERIFIED",
+   "detail": "이 환경에는 PowerPoint 가 없음. LibreOffice 렌더만 확인. Pretendard 미설치 PC 에서는 대체 폰트로 표시됨"
+  },
+  {
+   "theme": "learning",
+   "code": "PX1",
+   "name": "재로드 성공·장수 = JSON·16:9",
+   "status": "PASS",
+   "detail": "15 1.7777"
+  },
+  {
+   "theme": "learning",
+   "code": "PX2",
+   "name": "슬라이드 제목 = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "PX3",
+   "name": "발표자 노트 = JSON(퀴즈는 정답·해설 추가)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "PX4",
+   "name": "모든 도형이 슬라이드 안",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "PX5",
+   "name": "최소 글자: 제목 ≥28pt, 나머지 ≥12pt",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "PX6",
+   "name": "텍스트 적합 추정(글자 폭·줄 수 휴리스틱)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "PX7",
+   "name": "텍스트 박스 간 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "PX8",
+   "name": "외부 링크/원격 리소스 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "learning",
+   "code": "PX9",
+   "name": "LibreOffice PDF 변환 쪽수 = 슬라이드 수",
+   "status": "PASS",
+   "detail": "pages=15"
+  },
+  {
+   "theme": "learning",
+   "code": "PX10",
+   "name": "PowerPoint 실제 렌더·폰트 대체 표시",
+   "status": "UNVERIFIED",
+   "detail": "이 환경에는 PowerPoint 가 없음. LibreOffice 렌더만 확인. Pretendard 미설치 PC 에서는 대체 폰트로 표시됨"
+  },
+  {
+   "theme": "research",
+   "code": "PX1",
+   "name": "재로드 성공·장수 = JSON·16:9",
+   "status": "PASS",
+   "detail": "15 1.7777"
+  },
+  {
+   "theme": "research",
+   "code": "PX2",
+   "name": "슬라이드 제목 = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "PX3",
+   "name": "발표자 노트 = JSON(퀴즈는 정답·해설 추가)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "PX4",
+   "name": "모든 도형이 슬라이드 안",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "PX5",
+   "name": "최소 글자: 제목 ≥28pt, 나머지 ≥12pt",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "PX6",
+   "name": "텍스트 적합 추정(글자 폭·줄 수 휴리스틱)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "PX7",
+   "name": "텍스트 박스 간 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "PX8",
+   "name": "외부 링크/원격 리소스 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "research",
+   "code": "PX9",
+   "name": "LibreOffice PDF 변환 쪽수 = 슬라이드 수",
+   "status": "PASS",
+   "detail": "pages=15"
+  },
+  {
+   "theme": "research",
+   "code": "PX10",
+   "name": "PowerPoint 실제 렌더·폰트 대체 표시",
+   "status": "UNVERIFIED",
+   "detail": "이 환경에는 PowerPoint 가 없음. LibreOffice 렌더만 확인. Pretendard 미설치 PC 에서는 대체 폰트로 표시됨"
+  }
+ ]
+}

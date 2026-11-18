@@ -1,0 +1,20 @@
+/* Theme 1 — Executive Strategy (경영진 보고형)
+   WHY: 결론이 가장 먼저/가장 크게. 크림 바탕 + 잉크 + 앰버. 하단 '결론 바'가 시그니처. */
+:root{
+  --bg:#FAFAF7;--bg2:#F0EDE4;--ink:#1A1A1A;--ink2:#57564F;--line:#DDD8CB;
+  --accent:#C17F24;--accent-ink:#1A1A1A;--accent-text:#8A5510;--accent2:#2D7D6F;--accent2-text:#2D7D6F;
+  --card:#FFFFFF;--card-line:#E3DED1;--r:10px;--shadow:0 1px 4px rgba(0,0,0,.08);
+  --kicker:#8A5510;--title-size:62px;--title-weight:800;
+  --chip-bg:#ECE7DA;--chip-ink:#1A1A1A;--bad:#B3322F;--bad-bg:#FBEDEC;--good:#1F6B5E;--good-bg:#E4F1EE;
+  --good-ink:#FFFFFF;--bad-ink:#FFFFFF;--bubble-coach:#F1ECDD;--chart-bar:#9C978A;--th-bg:#1A1A1A;--th-ink:#FAFAF7;
+  --cover-bg:#1A1A1A;--cover-ink:#FAFAF7;--cover-ink2:#CFC9BA;--cover-kicker:#E0A040;--cover-line:#4A4943;--letterbox:#0d1514;
+}
+.s-head::before{content:'';display:block;width:96px;height:8px;background:var(--accent);margin-bottom:6px}
+.s-foot{background:var(--ink);color:#FAFAF7;border-radius:10px;padding:10px 26px;min-height:60px}
+.sowhat::before{content:'결론';display:inline-block;margin-right:16px;padding:4px 12px;border-radius:6px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:22px}
+.s-foot .src,.s-foot .pg{color:#D9D4C6}
+.badge{background:#3A3934;color:#F3EFE3}
+.rail{display:none}
+.cv-deco{background:linear-gradient(90deg,#C17F24 0 14px,transparent 14px)}
+.cv-deco::after{content:'';position:absolute;right:120px;bottom:210px;width:260px;height:260px;border:10px solid #C17F24;border-radius:6px;transform:rotate(8deg);opacity:.9}
+.s-cover .s-foot{display:none}

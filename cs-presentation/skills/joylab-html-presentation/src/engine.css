@@ -1,0 +1,76 @@
+/* JoyLab HTML Presentation Engine V1.0 — engine.css
+   역할: 1920x1080 스테이지 스케일링, 내비게이션 UI, 애니메이션 토글, 인쇄(PDF) 규칙.
+   색·서체는 themes/*.css 의 CSS 변수만 사용한다. 외부 리소스 참조 없음. */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--letterbox,#0d1514)}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans CJK KR','Noto Sans KR',sans-serif;
+  color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-synthesis:none}
+button{font:inherit;color:inherit}
+#viewport{position:fixed;inset:0;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;
+  transform:translate(-50%,-50%) scale(var(--s,1));transform-origin:center center;background:var(--bg);overflow:hidden}
+.slide{position:absolute;inset:0;padding:64px 96px 44px;display:none;grid-template-rows:auto 1fr auto;row-gap:28px;
+  background:var(--bg);color:var(--ink);overflow:hidden}
+.slide.active{display:grid}
+.notes{display:none}
+
+/* ---- 슬라이드 공통 뼈대 ---- */
+.s-head{display:grid;row-gap:10px;align-content:start}
+.kicker{margin:0;font-size:24px;font-weight:700;letter-spacing:.04em;color:var(--kicker)}
+.title{margin:0;font-size:var(--title-size,60px);line-height:1.2;font-weight:var(--title-weight,800);letter-spacing:-.02em;color:var(--ink);word-break:keep-all;text-wrap:balance}
+.s-body{min-height:0;position:relative}
+.s-foot{display:grid;grid-template-columns:1fr auto auto;column-gap:28px;align-items:center;min-height:52px}
+.sowhat{font-size:24px;font-weight:600;line-height:1.3;word-break:keep-all}
+.src{font-size:22px;font-weight:400;line-height:1.3;color:var(--ink2);display:flex;align-items:center;gap:12px;max-width:760px}
+.badge{display:inline-block;font-size:22px;font-weight:700;line-height:1;padding:7px 14px;border-radius:999px;white-space:nowrap}
+.pg{font-size:22px;font-weight:500;color:var(--ink2);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---- 진입 애니메이션 (html.no-anim 이면 전부 정지) ---- */
+@keyframes jl-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes jl-fade{from{opacity:0}to{opacity:1}}
+.slide.active .rise{animation:jl-rise .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--d,0)*70ms + 60ms)}
+.slide.active .fade{animation:jl-fade .5s ease both;animation-delay:calc(var(--d,0)*70ms)}
+html.no-anim *,html.no-anim *::before,html.no-anim *::after{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){html:not(.force-anim) *{animation:none!important;transition:none!important}}
+
+/* ---- HUD / 목차 / 노트 (스테이지 밖, 스케일 영향 없음) ---- */
+#progress{position:fixed;left:0;top:0;height:6px;width:100%;background:rgba(127,127,127,.25);z-index:50}
+#progress i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s ease}
+#hud{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;gap:6px;align-items:center;
+  padding:8px 10px;border-radius:14px;background:rgba(15,22,21,.88);color:#f4f1e8;box-shadow:0 6px 24px rgba(0,0,0,.35);
+  opacity:0;pointer-events:none;transition:opacity .25s ease;font-size:15px}
+body.hud-on #hud,#hud:focus-within{opacity:1;pointer-events:auto}
+#hud button{background:transparent;border:1px solid transparent;border-radius:9px;padding:7px 11px;cursor:pointer;line-height:1.1;font-size:15px}
+#hud button:hover{background:rgba(255,255,255,.14)}
+#hud button[aria-pressed="true"]{background:#C17F24;color:#111}
+#hud button:focus-visible,.toc-item:focus-visible,.opt:focus-visible,.timer button:focus-visible{outline:3px solid #ffd27a;outline-offset:2px}
+#hud .ctr{min-width:70px;text-align:center;font-variant-numeric:tabular-nums}
+#toc{position:fixed;left:0;top:0;bottom:0;width:380px;max-width:86vw;z-index:70;background:rgba(14,21,20,.97);color:#f4f1e8;
+  transform:translateX(-102%);transition:transform .25s ease;padding:22px 18px;overflow:auto}
+body.toc-on #toc{transform:none}
+#toc h3{margin:0 0 14px;font-size:16px;letter-spacing:.06em;color:#e0a040}
+.toc-item{display:grid;grid-template-columns:32px 1fr auto;gap:8px;width:100%;text-align:left;background:none;border:0;
+  color:inherit;padding:9px 8px;border-radius:9px;cursor:pointer;font-size:15px;line-height:1.35}
+.toc-item:hover{background:rgba(255,255,255,.1)}
+.toc-item.cur{background:rgba(224,160,64,.22)}
+.toc-item small{opacity:.7}
+#notes-panel{position:fixed;left:0;right:0;bottom:0;z-index:55;max-height:38vh;overflow:auto;background:rgba(15,22,21,.96);color:#f4f1e8;
+  padding:16px 28px 22px;border-top:3px solid #C17F24;transform:translateY(102%);transition:transform .25s ease;font-size:18px;line-height:1.6}
+body.notes-on #notes-panel{transform:none}
+#notes-panel h4{margin:0 0 6px;font-size:14px;letter-spacing:.06em;color:#e0a040;font-weight:700}
+#notes-panel p{margin:0;max-width:1200px;white-space:pre-line}
+#help{position:fixed;right:16px;top:16px;z-index:60;font-size:14px;background:rgba(15,22,21,.88);color:#f4f1e8;padding:10px 14px;border-radius:10px;display:none;line-height:1.7}
+body.help-on #help{display:block}
+
+/* ---- 인쇄 / PDF: 슬라이드 1장 = 1페이지(1920x1080), 노트·HUD 제외 ---- */
+@page{size:1920px 1080px;margin:0}
+@media print{
+  html,body{overflow:visible;height:auto;background:#fff}
+  #hud,#toc,#notes-panel,#progress,#help{display:none!important}
+  #viewport{position:static;overflow:visible}
+  #stage{position:static;transform:none;width:1920px;height:auto;overflow:visible}
+  .slide{display:grid!important;position:relative;inset:auto;width:1920px;height:1080px;break-after:page;page-break-after:always;break-inside:avoid}
+  .slide:last-child{break-after:auto;page-break-after:auto}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;animation:none!important;transition:none!important}
+  .rise,.fade{opacity:1!important;transform:none!important}
+}

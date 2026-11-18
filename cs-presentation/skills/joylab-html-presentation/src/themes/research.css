@@ -1,0 +1,26 @@
+/* Theme 3 — Research Intelligence (리서치 분석형)
+   WHY: 읽는 사람이 '이 주장의 근거와 신뢰 등급'을 바로 확인해야 함. 하단 근거 줄 + 사실/추론/제안/가정 배지가 시그니처. 심청록 다크. */
+:root{
+  --bg:#12201E;--bg2:#1B2E2B;--ink:#F2EFE6;--ink2:#B7C6C0;--line:#33504B;
+  --accent:#E0A040;--accent-ink:#14201E;--accent-text:#EDB65C;--accent2:#5FBFAE;--accent2-text:#7AD3C2;
+  --card:#1B2E2B;--card-line:#2F4743;--r:6px;--shadow:none;
+  --kicker:#7AD3C2;--title-size:56px;--title-weight:700;
+  --chip-bg:#26413D;--chip-ink:#DDEBE6;--bad:#FF9C93;--bad-bg:#3A2423;--good:#7AD3C2;--good-bg:#1D3A35;
+  --good-ink:#12201E;--bad-ink:#2A1210;--bubble-coach:#24403B;--chart-bar:#4E8077;--th-bg:#26413D;--th-ink:#F2EFE6;
+  --cover-bg:#0E1918;--cover-ink:#F2EFE6;--cover-ink2:#B7C6C0;--cover-kicker:#7AD3C2;--cover-line:#33504B;--letterbox:#050909;
+}
+.title{letter-spacing:-.01em}
+.kicker{font-weight:600;letter-spacing:.1em;text-transform:none}
+.kicker::before{content:'◆ ';color:var(--accent)}
+.s-foot{border-top:1px solid var(--line);padding-top:14px}
+.sowhat{font-weight:500}
+.src::before{content:'근거';font-size:22px;font-weight:700;color:var(--accent-text);margin-right:2px}
+.badge{background:transparent;border:2px solid currentColor}
+.badge.b-fact{color:#7AD3C2}.badge.b-inference{color:#EDB65C}.badge.b-proposal{color:#9DB8F5}.badge.b-assumption{color:#FF9C93}
+.rail{display:none}
+.ag-row .m,.pr-step .tm,.sm-t .n,.ch-svg .val{font-variant-numeric:tabular-nums}
+.cv-deco{background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:120px 120px;opacity:.5;
+  -webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 100%);mask-image:linear-gradient(90deg,transparent 30%,#000 100%)}
+.cv-deco::after{content:'';position:absolute;right:240px;top:300px;width:18px;height:18px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 14px rgba(224,160,64,.2),0 0 0 36px rgba(224,160,64,.1)}
+.s-cover .s-foot,.s-cover .rail{display:none}
+.timer button{border-color:var(--ink2)}

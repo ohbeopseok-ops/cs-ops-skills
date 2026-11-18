@@ -1,0 +1,948 @@
+{
+ "browser": "",
+ "summary": {
+  "PASS": 134,
+  "FAIL": 0,
+  "UNVERIFIED": 0
+ },
+ "results": [
+  {
+   "theme": "executive",
+   "code": "S1",
+   "name": "외부 URL 문자열 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "executive",
+   "code": "S2",
+   "name": "외부 <link>/@import/src/url() 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "executive",
+   "code": "S3",
+   "name": "슬라이드 수 = JSON",
+   "status": "PASS",
+   "detail": "15 vs 15"
+  },
+  {
+   "theme": "executive",
+   "code": "O1",
+   "name": "오프라인 컨텍스트에서 로드·초기화",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "O2",
+   "name": "http(s)/ws 요청 0건 (오프라인 컨텍스트)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "executive",
+   "code": "T1",
+   "name": "내장 Pretendard 폰트 loaded",
+   "status": "PASS",
+   "detail": "['Pretendard:loaded']"
+  },
+  {
+   "theme": "executive",
+   "code": "T2",
+   "name": "사용 글자 전부 내장 폰트 글리프 보유(노트 포함)",
+   "status": "PASS",
+   "detail": "미보유 0자: "
+  },
+  {
+   "theme": "executive",
+   "code": "T3",
+   "name": "본문 font-family 첫 순위 Pretendard",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "L1",
+   "name": "요소가 슬라이드 안전영역 밖으로 나가지 않음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "L2",
+   "name": "자식이 부모 박스를 벗어나지 않음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "L3",
+   "name": "텍스트·이미지 잘림/넘침 없음(scroll>client)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "L4",
+   "name": "콘텐츠 요소 간 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "L5",
+   "name": "표지 장식 ↔ 텍스트 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "T4",
+   "name": "모든 텍스트 ≥ 22px (1920 기준)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "T5",
+   "name": "명암비 WCAG(큰 글자 3:1 / 일반 4.5:1)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "T6",
+   "name": "제목 2줄 이하",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N1",
+   "name": "방향키·PageUp/Down·Space·Enter·Home/End·경계",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N2",
+   "name": "15장 순차 이동: 항상 활성 슬라이드 1장·순서 일치",
+   "status": "PASS",
+   "detail": "['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', 's10', 's11', 's12', 's13', 's14', 's15']"
+  },
+  {
+   "theme": "executive",
+   "code": "N3",
+   "name": "진행률 바 = 현재/전체",
+   "status": "PASS",
+   "detail": "100%"
+  },
+  {
+   "theme": "executive",
+   "code": "N4",
+   "name": "진행률·카운터·해시 동기화(7장)",
+   "status": "PASS",
+   "detail": "['46.6667%', '7 / 15', '#7']"
+  },
+  {
+   "theme": "executive",
+   "code": "N5",
+   "name": "URL 해시(#9)로 직접 진입",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N6",
+   "name": "목차 열기(T)·항목 클릭 이동(9장)·자동 닫힘",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N7",
+   "name": "목차 항목 수·제목 = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N8",
+   "name": "발표자 노트 패널(N) 내용 = JSON 노트(5장)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N9",
+   "name": "슬라이드 전환 시 노트 갱신",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N10",
+   "name": "애니메이션 ON/OFF 토글(A)",
+   "status": "PASS",
+   "detail": "before_noanim=True after_noanim=False"
+  },
+  {
+   "theme": "executive",
+   "code": "N11",
+   "name": "ON: animation 적용 / OFF: animation none",
+   "status": "PASS",
+   "detail": "on=jl-rise off=none"
+  },
+  {
+   "theme": "executive",
+   "code": "N12",
+   "name": "전체화면 진입(F)/해제",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N13",
+   "name": "퀴즈 14항목(정답·오답·잠금·초기화·답 표시 후 레이아웃)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "N14",
+   "name": "실습 타이머 시작/정지/초기화",
+   "status": "PASS",
+   "detail": "03:00->02:58->02:58->03:00"
+  },
+  {
+   "theme": "executive",
+   "code": "A1",
+   "name": "스테이지 16:9(±0.006) & 뷰포트 내부: 1920x1080·1366x768·1280x720·2560x1080·1080x1920·1024x768",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "A2",
+   "name": "논리 캔버스 1920x1080",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "A3",
+   "name": "1280x720에서 모든 요소 위치가 1920 기준과 ±2px 이내(스케일만 적용, 재배치 없음)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "executive",
+   "code": "D1",
+   "name": "슬라이드 id·제목·시간·노트·결론·출처·표기 = JSON(15장)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "D2",
+   "name": "시간 합계: 슬라이드 합 = 총 시간 = 목차 합",
+   "status": "PASS",
+   "detail": "slides=60 meta=60 agenda=60"
+  },
+  {
+   "theme": "executive",
+   "code": "D3",
+   "name": "차트 막대 값·라벨·높이 비례 = JSON",
+   "status": "PASS",
+   "detail": "[[35, '결과 통보형', 171.5], [48, '지시형', 235.2], [62, '질문형', 303.8], [81, '4단계형', 396.9]] ['35%', '48%', '62%', '81%']"
+  },
+  {
+   "theme": "executive",
+   "code": "D4",
+   "name": "컴포넌트 본문(단계·비교·표·대사·퀴즈 선택지·루브릭·사례) = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "D5",
+   "name": "화면에 렌더된 모든 숫자가 JSON 원본에 존재(창작 수치 탐지)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "D6",
+   "name": "[확인 필요]/[가상] 표기가 렌더에서 유지됨",
+   "status": "PASS",
+   "detail": "json=6 dom_visible=6"
+  },
+  {
+   "theme": "executive",
+   "code": "O3",
+   "name": "콘솔 오류·페이지 예외 0건",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive",
+   "code": "O4",
+   "name": "전 과정 종료 후 http(s) 요청 누계 0건 / 실패 요청 0건",
+   "status": "PASS",
+   "detail": "[] []"
+  },
+  {
+   "theme": "executive",
+   "code": "P1",
+   "name": "PDF 쪽수 = 슬라이드 수",
+   "status": "PASS",
+   "detail": "pages=15"
+  },
+  {
+   "theme": "executive",
+   "code": "P2",
+   "name": "PDF 쪽 크기 1920x1080px(=1440x810pt)",
+   "status": "PASS",
+   "detail": "1440.0x810.0pt"
+  },
+  {
+   "theme": "executive",
+   "code": "P3",
+   "name": "PDF: 모든 슬라이드 제목 포함 · 발표자 노트/HUD 미출력",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "S1",
+   "name": "외부 URL 문자열 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "learning",
+   "code": "S2",
+   "name": "외부 <link>/@import/src/url() 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "learning",
+   "code": "S3",
+   "name": "슬라이드 수 = JSON",
+   "status": "PASS",
+   "detail": "15 vs 15"
+  },
+  {
+   "theme": "learning",
+   "code": "O1",
+   "name": "오프라인 컨텍스트에서 로드·초기화",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "O2",
+   "name": "http(s)/ws 요청 0건 (오프라인 컨텍스트)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "learning",
+   "code": "T1",
+   "name": "내장 Pretendard 폰트 loaded",
+   "status": "PASS",
+   "detail": "['Pretendard:loaded']"
+  },
+  {
+   "theme": "learning",
+   "code": "T2",
+   "name": "사용 글자 전부 내장 폰트 글리프 보유(노트 포함)",
+   "status": "PASS",
+   "detail": "미보유 0자: "
+  },
+  {
+   "theme": "learning",
+   "code": "T3",
+   "name": "본문 font-family 첫 순위 Pretendard",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "L1",
+   "name": "요소가 슬라이드 안전영역 밖으로 나가지 않음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "L2",
+   "name": "자식이 부모 박스를 벗어나지 않음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "L3",
+   "name": "텍스트·이미지 잘림/넘침 없음(scroll>client)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "L4",
+   "name": "콘텐츠 요소 간 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "L5",
+   "name": "표지 장식 ↔ 텍스트 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "T4",
+   "name": "모든 텍스트 ≥ 22px (1920 기준)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "T5",
+   "name": "명암비 WCAG(큰 글자 3:1 / 일반 4.5:1)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "T6",
+   "name": "제목 2줄 이하",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N1",
+   "name": "방향키·PageUp/Down·Space·Enter·Home/End·경계",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N2",
+   "name": "15장 순차 이동: 항상 활성 슬라이드 1장·순서 일치",
+   "status": "PASS",
+   "detail": "['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', 's10', 's11', 's12', 's13', 's14', 's15']"
+  },
+  {
+   "theme": "learning",
+   "code": "N3",
+   "name": "진행률 바 = 현재/전체",
+   "status": "PASS",
+   "detail": "100%"
+  },
+  {
+   "theme": "learning",
+   "code": "N4",
+   "name": "진행률·카운터·해시 동기화(7장)",
+   "status": "PASS",
+   "detail": "['46.6667%', '7 / 15', '#7']"
+  },
+  {
+   "theme": "learning",
+   "code": "N5",
+   "name": "URL 해시(#9)로 직접 진입",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N6",
+   "name": "목차 열기(T)·항목 클릭 이동(9장)·자동 닫힘",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N7",
+   "name": "목차 항목 수·제목 = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N8",
+   "name": "발표자 노트 패널(N) 내용 = JSON 노트(5장)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N9",
+   "name": "슬라이드 전환 시 노트 갱신",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N10",
+   "name": "애니메이션 ON/OFF 토글(A)",
+   "status": "PASS",
+   "detail": "before_noanim=True after_noanim=False"
+  },
+  {
+   "theme": "learning",
+   "code": "N11",
+   "name": "ON: animation 적용 / OFF: animation none",
+   "status": "PASS",
+   "detail": "on=jl-rise off=none"
+  },
+  {
+   "theme": "learning",
+   "code": "N12",
+   "name": "전체화면 진입(F)/해제",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N13",
+   "name": "퀴즈 14항목(정답·오답·잠금·초기화·답 표시 후 레이아웃)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "N14",
+   "name": "실습 타이머 시작/정지/초기화",
+   "status": "PASS",
+   "detail": "03:00->02:58->02:58->03:00"
+  },
+  {
+   "theme": "learning",
+   "code": "A1",
+   "name": "스테이지 16:9(±0.006) & 뷰포트 내부: 1920x1080·1366x768·1280x720·2560x1080·1080x1920·1024x768",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "A2",
+   "name": "논리 캔버스 1920x1080",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "A3",
+   "name": "1280x720에서 모든 요소 위치가 1920 기준과 ±2px 이내(스케일만 적용, 재배치 없음)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "learning",
+   "code": "D1",
+   "name": "슬라이드 id·제목·시간·노트·결론·출처·표기 = JSON(15장)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "D2",
+   "name": "시간 합계: 슬라이드 합 = 총 시간 = 목차 합",
+   "status": "PASS",
+   "detail": "slides=60 meta=60 agenda=60"
+  },
+  {
+   "theme": "learning",
+   "code": "D3",
+   "name": "차트 막대 값·라벨·높이 비례 = JSON",
+   "status": "PASS",
+   "detail": "[[35, '결과 통보형', 171.5], [48, '지시형', 235.2], [62, '질문형', 303.8], [81, '4단계형', 396.9]] ['35%', '48%', '62%', '81%']"
+  },
+  {
+   "theme": "learning",
+   "code": "D4",
+   "name": "컴포넌트 본문(단계·비교·표·대사·퀴즈 선택지·루브릭·사례) = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "D5",
+   "name": "화면에 렌더된 모든 숫자가 JSON 원본에 존재(창작 수치 탐지)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "D6",
+   "name": "[확인 필요]/[가상] 표기가 렌더에서 유지됨",
+   "status": "PASS",
+   "detail": "json=6 dom_visible=6"
+  },
+  {
+   "theme": "learning",
+   "code": "O3",
+   "name": "콘솔 오류·페이지 예외 0건",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "learning",
+   "code": "O4",
+   "name": "전 과정 종료 후 http(s) 요청 누계 0건 / 실패 요청 0건",
+   "status": "PASS",
+   "detail": "[] []"
+  },
+  {
+   "theme": "learning",
+   "code": "P1",
+   "name": "PDF 쪽수 = 슬라이드 수",
+   "status": "PASS",
+   "detail": "pages=15"
+  },
+  {
+   "theme": "learning",
+   "code": "P2",
+   "name": "PDF 쪽 크기 1920x1080px(=1440x810pt)",
+   "status": "PASS",
+   "detail": "1440.0x810.0pt"
+  },
+  {
+   "theme": "learning",
+   "code": "P3",
+   "name": "PDF: 모든 슬라이드 제목 포함 · 발표자 노트/HUD 미출력",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "S1",
+   "name": "외부 URL 문자열 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "research",
+   "code": "S2",
+   "name": "외부 <link>/@import/src/url() 0건",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "research",
+   "code": "S3",
+   "name": "슬라이드 수 = JSON",
+   "status": "PASS",
+   "detail": "15 vs 15"
+  },
+  {
+   "theme": "research",
+   "code": "O1",
+   "name": "오프라인 컨텍스트에서 로드·초기화",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "O2",
+   "name": "http(s)/ws 요청 0건 (오프라인 컨텍스트)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "research",
+   "code": "T1",
+   "name": "내장 Pretendard 폰트 loaded",
+   "status": "PASS",
+   "detail": "['Pretendard:loaded']"
+  },
+  {
+   "theme": "research",
+   "code": "T2",
+   "name": "사용 글자 전부 내장 폰트 글리프 보유(노트 포함)",
+   "status": "PASS",
+   "detail": "미보유 0자: "
+  },
+  {
+   "theme": "research",
+   "code": "T3",
+   "name": "본문 font-family 첫 순위 Pretendard",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "L1",
+   "name": "요소가 슬라이드 안전영역 밖으로 나가지 않음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "L2",
+   "name": "자식이 부모 박스를 벗어나지 않음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "L3",
+   "name": "텍스트·이미지 잘림/넘침 없음(scroll>client)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "L4",
+   "name": "콘텐츠 요소 간 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "L5",
+   "name": "표지 장식 ↔ 텍스트 겹침 없음",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "T4",
+   "name": "모든 텍스트 ≥ 22px (1920 기준)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "T5",
+   "name": "명암비 WCAG(큰 글자 3:1 / 일반 4.5:1)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "T6",
+   "name": "제목 2줄 이하",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N1",
+   "name": "방향키·PageUp/Down·Space·Enter·Home/End·경계",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N2",
+   "name": "15장 순차 이동: 항상 활성 슬라이드 1장·순서 일치",
+   "status": "PASS",
+   "detail": "['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', 's10', 's11', 's12', 's13', 's14', 's15']"
+  },
+  {
+   "theme": "research",
+   "code": "N3",
+   "name": "진행률 바 = 현재/전체",
+   "status": "PASS",
+   "detail": "100%"
+  },
+  {
+   "theme": "research",
+   "code": "N4",
+   "name": "진행률·카운터·해시 동기화(7장)",
+   "status": "PASS",
+   "detail": "['46.6667%', '7 / 15', '#7']"
+  },
+  {
+   "theme": "research",
+   "code": "N5",
+   "name": "URL 해시(#9)로 직접 진입",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N6",
+   "name": "목차 열기(T)·항목 클릭 이동(9장)·자동 닫힘",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N7",
+   "name": "목차 항목 수·제목 = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N8",
+   "name": "발표자 노트 패널(N) 내용 = JSON 노트(5장)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N9",
+   "name": "슬라이드 전환 시 노트 갱신",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N10",
+   "name": "애니메이션 ON/OFF 토글(A)",
+   "status": "PASS",
+   "detail": "before_noanim=True after_noanim=False"
+  },
+  {
+   "theme": "research",
+   "code": "N11",
+   "name": "ON: animation 적용 / OFF: animation none",
+   "status": "PASS",
+   "detail": "on=jl-rise off=none"
+  },
+  {
+   "theme": "research",
+   "code": "N12",
+   "name": "전체화면 진입(F)/해제",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N13",
+   "name": "퀴즈 14항목(정답·오답·잠금·초기화·답 표시 후 레이아웃)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "N14",
+   "name": "실습 타이머 시작/정지/초기화",
+   "status": "PASS",
+   "detail": "03:00->02:58->02:58->03:00"
+  },
+  {
+   "theme": "research",
+   "code": "A1",
+   "name": "스테이지 16:9(±0.006) & 뷰포트 내부: 1920x1080·1366x768·1280x720·2560x1080·1080x1920·1024x768",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "A2",
+   "name": "논리 캔버스 1920x1080",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "A3",
+   "name": "1280x720에서 모든 요소 위치가 1920 기준과 ±2px 이내(스케일만 적용, 재배치 없음)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "theme": "research",
+   "code": "D1",
+   "name": "슬라이드 id·제목·시간·노트·결론·출처·표기 = JSON(15장)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "D2",
+   "name": "시간 합계: 슬라이드 합 = 총 시간 = 목차 합",
+   "status": "PASS",
+   "detail": "slides=60 meta=60 agenda=60"
+  },
+  {
+   "theme": "research",
+   "code": "D3",
+   "name": "차트 막대 값·라벨·높이 비례 = JSON",
+   "status": "PASS",
+   "detail": "[[35, '결과 통보형', 171.5], [48, '지시형', 235.2], [62, '질문형', 303.8], [81, '4단계형', 396.9]] ['35%', '48%', '62%', '81%']"
+  },
+  {
+   "theme": "research",
+   "code": "D4",
+   "name": "컴포넌트 본문(단계·비교·표·대사·퀴즈 선택지·루브릭·사례) = JSON",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "D5",
+   "name": "화면에 렌더된 모든 숫자가 JSON 원본에 존재(창작 수치 탐지)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "D6",
+   "name": "[확인 필요]/[가상] 표기가 렌더에서 유지됨",
+   "status": "PASS",
+   "detail": "json=6 dom_visible=6"
+  },
+  {
+   "theme": "research",
+   "code": "O3",
+   "name": "콘솔 오류·페이지 예외 0건",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "research",
+   "code": "O4",
+   "name": "전 과정 종료 후 http(s) 요청 누계 0건 / 실패 요청 0건",
+   "status": "PASS",
+   "detail": "[] []"
+  },
+  {
+   "theme": "research",
+   "code": "P1",
+   "name": "PDF 쪽수 = 슬라이드 수",
+   "status": "PASS",
+   "detail": "pages=15"
+  },
+  {
+   "theme": "research",
+   "code": "P2",
+   "name": "PDF 쪽 크기 1920x1080px(=1440x810pt)",
+   "status": "PASS",
+   "detail": "1440.0x810.0pt"
+  },
+  {
+   "theme": "research",
+   "code": "P3",
+   "name": "PDF: 모든 슬라이드 제목 포함 · 발표자 노트/HUD 미출력",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive~learning",
+   "code": "X1",
+   "name": "두 테마의 제목·노트·본문 텍스트 동일(단일 원본)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "theme": "executive~research",
+   "code": "X1",
+   "name": "두 테마의 제목·노트·본문 텍스트 동일(단일 원본)",
+   "status": "PASS",
+   "detail": ""
+  }
+ ]
+}

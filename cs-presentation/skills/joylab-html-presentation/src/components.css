@@ -1,0 +1,158 @@
+/* JoyLab Slide Components V1.0 — 테마 변수(--*)만 참조. 14종 컴포넌트.
+   규칙: 본문 글자 >= 24px(캡션 22px), 한 슬라이드 = 한 메시지, 콘텐츠 블록에는 data-box 부여(QA 겹침 검사 대상). */
+.card{background:var(--card);border:1px solid var(--card-line);border-radius:var(--r);box-shadow:var(--shadow);padding:34px 38px}
+.pill{display:inline-block;font-size:22px;font-weight:700;line-height:1;padding:8px 16px;border-radius:999px;background:var(--chip-bg);color:var(--chip-ink);white-space:nowrap}
+.pill.am{background:var(--accent);color:var(--accent-ink)}
+strong{font-weight:800}
+
+/* cover */
+.slide.s-cover{grid-template-rows:1fr auto;row-gap:0;padding:0;background:var(--cover-bg);color:var(--cover-ink)}
+.cv-deco{position:absolute;inset:0;pointer-events:none}
+.cv-main{position:relative;align-self:center;padding:0 120px;max-width:1600px;display:grid;row-gap:26px}
+.s-cover .kicker{color:var(--cover-kicker);font-size:26px}
+.s-cover .title{color:var(--cover-ink);font-size:92px;line-height:1.14;font-weight:900;max-width:1560px}
+.cv-sub{margin:0;font-size:34px;line-height:1.4;color:var(--cover-ink2);font-weight:500}
+.cv-meta{position:relative;display:grid;grid-template-columns:repeat(4,auto);justify-content:start;column-gap:72px;margin:0;padding:34px 120px 56px;border-top:1px solid var(--cover-line)}
+.cv-meta div{display:grid;row-gap:6px}
+.cv-meta dt{font-size:22px;font-weight:600;color:var(--cover-ink2);letter-spacing:.04em}
+.cv-meta dd{margin:0;font-size:28px;font-weight:700;color:var(--cover-ink)}
+.cv-disc{position:absolute;right:120px;top:64px;font-size:22px;color:var(--cover-ink2);text-align:right;max-width:560px;line-height:1.45}
+
+/* agenda */
+.agenda{display:grid;row-gap:14px;align-content:start}
+.ag-row{display:grid;grid-template-columns:400px 1fr 210px 130px;column-gap:28px;align-items:center;min-height:92px;padding:0 34px;
+  background:var(--card);border:1px solid var(--card-line);border-radius:var(--r)}
+.ag-row .t{font-size:30px;font-weight:600;line-height:1.3}
+.ag-row .sl{font-size:26px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.ag-row .m{font-size:40px;font-weight:800;text-align:right;color:var(--accent-text);font-variant-numeric:tabular-nums}
+.ag-row .m small{font-size:24px;font-weight:600;margin-left:4px;color:var(--ink2)}
+.ag-sum{display:flex;justify-content:flex-end;gap:16px;align-items:baseline;font-size:26px;color:var(--ink2);margin-top:10px;padding-right:34px}
+.ag-sum b{font-size:34px;color:var(--ink)}
+
+/* statement */
+.statement{display:grid;grid-template-rows:1fr auto;row-gap:34px;height:100%}
+.st-text{align-self:center;margin:0;font-size:68px;line-height:1.36;font-weight:700;letter-spacing:-.02em;max-width:1560px;word-break:keep-all}
+.st-text strong{color:var(--accent-text);font-weight:900}
+.st-qs{display:grid;grid-template-columns:repeat(3,1fr);column-gap:30px}
+.st-q{font-size:28px;font-weight:600;line-height:1.4;padding:28px 32px;word-break:keep-all}
+
+/* cards (학습목표) */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);column-gap:36px;height:100%}
+.cards .card{display:grid;grid-template-rows:auto auto 1fr auto;row-gap:18px;padding:40px}
+.cards .big{font-size:132px;line-height:1.16;font-weight:900;letter-spacing:-.04em;color:var(--accent-text)}
+.cards h3{margin:0;font-size:46px;line-height:1.25;font-weight:800;word-break:keep-all}
+.cards p{margin:0;font-size:35px;line-height:1.5;word-break:keep-all}
+.cards .chg{font-size:28px;line-height:1.45;color:var(--ink2);border-top:1px solid var(--line);padding-top:18px;word-break:keep-all}
+
+/* flow (4단계) */
+.flow{display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr 56px 1fr;height:100%}
+.fl-arrow{display:grid;place-items:center}
+.fl-arrow i{width:30px;height:30px;border-top:6px solid var(--accent);border-right:6px solid var(--accent);transform:rotate(45deg);margin-left:-12px}
+.fl-step{position:relative;display:grid;grid-template-rows:auto auto auto 1fr;row-gap:16px;padding:36px 34px}
+.fl-idx{width:62px;height:62px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:32px;font-weight:900}
+.fl-name{margin:0;font-size:46px;font-weight:800;line-height:1.2}
+.fl-desc{margin:0;font-size:28px;line-height:1.45;font-weight:500;word-break:keep-all}
+.fl-ex{margin:0;align-self:stretch;display:grid;align-content:center;font-size:30px;line-height:1.5;font-weight:500;padding:24px 26px;border-radius:calc(var(--r)*.6);background:var(--bg2);color:var(--ink);word-break:keep-all}
+
+/* compare */
+.compare{display:grid;grid-template-columns:300px 1fr 1fr;grid-auto-rows:minmax(0,1fr);gap:12px 16px;height:100%}
+.cp-h{display:grid;align-items:center;padding:0 30px;font-size:36px;font-weight:800;border-radius:var(--r)}
+.cp-h.l{background:var(--bad-bg);color:var(--bad)} .cp-h.r{background:var(--good-bg);color:var(--good)}
+.cp-k{display:grid;align-items:center;font-size:28px;font-weight:700;color:var(--ink2)}
+.cp-c{display:grid;align-items:center;padding:0 30px;font-size:34px;font-weight:600;background:var(--card);border:1px solid var(--card-line);border-radius:var(--r)}
+.cp-c.r{border-color:var(--good);box-shadow:inset 6px 0 0 var(--good)}
+
+/* case */
+.case{display:grid;grid-template-rows:auto 1fr;row-gap:26px;height:100%}
+.cs-sit{font-size:28px;line-height:1.5;padding:22px 30px;background:var(--bg2);border-radius:var(--r);word-break:keep-all}
+.cs-cols{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+.cs-card{display:grid;grid-template-rows:auto 1fr auto;row-gap:20px;padding:36px 40px}
+.cs-card.bad{border-color:var(--bad);box-shadow:inset 0 8px 0 var(--bad)} .cs-card.good{border-color:var(--good);box-shadow:inset 0 8px 0 var(--good)}
+.cs-card .pill{justify-self:start}
+.cs-card.bad .pill{background:var(--bad-bg);color:var(--bad)} .cs-card.good .pill{background:var(--good-bg);color:var(--good)}
+.cs-q{margin:0;font-size:36px;line-height:1.5;font-weight:600;word-break:keep-all;align-self:center}
+.cs-why{margin:0;font-size:26px;line-height:1.45;color:var(--ink2);border-top:1px solid var(--line);padding-top:16px;word-break:keep-all}
+
+/* dialogue */
+.dialogue{display:grid;grid-auto-rows:minmax(0,1fr);row-gap:14px;height:100%}
+.dl-row{display:grid;grid-template-columns:130px 1fr 230px;column-gap:24px;align-items:center}
+.dl-who{font-size:26px;font-weight:700;color:var(--ink2);text-align:right}
+.dl-bub{padding:16px 28px;font-size:30px;line-height:1.42;font-weight:500;background:var(--card);border:1px solid var(--card-line);border-radius:var(--r);word-break:keep-all}
+.dl-row.coach .dl-bub{background:var(--bubble-coach);border-color:transparent}
+.dl-step{justify-self:start}
+
+/* chart */
+.chartwrap{display:grid;grid-template-columns:1180px 1fr;column-gap:44px;height:100%}
+.ch-main{display:grid;grid-template-rows:auto 1fr;row-gap:10px}
+.ch-title{margin:0;font-size:30px;font-weight:700}
+.ch-svg{width:100%;height:100%;display:block}
+.ch-svg text{font-family:inherit;fill:var(--ink)}
+.ch-svg .ax{fill:var(--ink2);font-size:24px}
+.ch-svg .val{font-size:34px;font-weight:800}
+.ch-svg .lab{font-size:28px;font-weight:600}
+.ch-svg .grid{stroke:var(--line);stroke-width:1.5}
+.ch-svg .bar{fill:var(--chart-bar)} .ch-svg .bar.hi{fill:var(--accent)}
+.ch-asks{display:grid;grid-auto-rows:1fr;row-gap:18px;align-content:stretch}
+.ch-ask{display:grid;row-gap:10px;align-content:center;padding:22px 28px}
+.ch-ask .q{font-size:28px;font-weight:700;line-height:1.35;word-break:keep-all}
+
+/* grid (8 checks) */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:26px;height:100%}
+.g-tile{display:grid;align-content:center;row-gap:14px;padding:26px 30px}
+.g-tile .k{font-size:38px;font-weight:800;line-height:1.2;word-break:keep-all}
+.g-tile .q{font-size:27px;line-height:1.42;color:var(--ink2);word-break:keep-all}
+.g-tile .k::before{content:'';display:block;width:44px;height:6px;border-radius:3px;background:var(--accent);margin-bottom:16px}
+
+/* practice */
+.practice{display:grid;grid-template-columns:1fr 650px;column-gap:40px;height:100%}
+.pr-steps{display:grid;grid-auto-rows:1fr;row-gap:16px}
+.pr-step{display:grid;grid-template-columns:120px 1fr;column-gap:26px;align-items:center;padding:0 32px}
+.pr-step .tm{font-size:46px;font-weight:900;color:var(--accent-text);font-variant-numeric:tabular-nums}
+.pr-step .s{font-size:32px;font-weight:600;line-height:1.35;word-break:keep-all}
+.pr-side{display:grid;grid-template-rows:auto 1fr auto;row-gap:20px}
+.timer{display:grid;grid-template-columns:1fr auto;column-gap:20px;align-items:center;padding:20px 30px}
+.timer output{font-size:92px;font-weight:900;font-variant-numeric:tabular-nums;line-height:1.2}
+.timer.run output{color:var(--accent-text)} .timer.done output{color:var(--bad)}
+.timer .bt{display:grid;row-gap:8px}
+.timer button{font-size:24px;font-weight:700;padding:8px 20px;border-radius:10px;border:2px solid var(--ink);background:transparent;cursor:pointer}
+.timer button:hover{background:var(--ink);color:var(--bg)}
+.rubric{margin:0;padding:24px 30px;list-style:none;display:grid;row-gap:12px;align-content:center}
+.rubric li{font-size:27px;font-weight:600;display:grid;grid-template-columns:34px 1fr;column-gap:14px;align-items:start;line-height:1.35}
+.rubric li::before{content:'';width:26px;height:26px;margin-top:3px;border:3px solid var(--accent2);border-radius:6px}
+.rubric-h{font-size:24px;font-weight:800;color:var(--ink2);letter-spacing:.04em;padding:0 0 6px}
+.pr-del{font-size:26px;font-weight:700;padding:16px 28px;background:var(--accent);color:var(--accent-ink);border-radius:var(--r)}
+
+/* quiz */
+.quiz{display:grid;grid-template-rows:auto 1fr auto;row-gap:26px;height:100%}
+.q{margin:0;font-size:46px;font-weight:800;line-height:1.3;word-break:keep-all}
+.opts{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:22px}
+.opt{display:grid;grid-template-columns:56px 1fr;column-gap:18px;align-items:center;text-align:left;cursor:pointer;
+  padding:20px 30px;font-size:30px;font-weight:600;line-height:1.38;background:var(--card);border:3px solid var(--card-line);border-radius:var(--r);word-break:keep-all}
+.opt .mk{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:28px;font-weight:800;background:var(--chip-bg);color:var(--chip-ink)}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt:disabled{cursor:default;color:inherit;opacity:1}
+.opt.correct{border-color:var(--good);background:var(--good-bg)} .opt.correct .mk{background:var(--good);color:var(--good-ink)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)} .opt.wrong .mk{background:var(--bad);color:var(--bad-ink)}
+.explain{min-height:112px;padding:20px 30px;font-size:27px;line-height:1.5;border-radius:var(--r);background:var(--bg2);opacity:0;word-break:keep-all}
+.quiz.answered .explain{opacity:1}
+.explain .verdict{display:block;font-size:28px;font-weight:800;margin-bottom:4px}
+.quiz[data-result="correct"] .verdict{color:var(--good)} .quiz[data-result="wrong"] .verdict{color:var(--bad)}
+
+/* table */
+.tbl{display:grid;grid-template-columns:2.3fr 1.1fr 1.4fr 1.4fr;grid-template-rows:auto repeat(3,1fr);gap:0;height:100%;border-radius:var(--r);overflow:hidden;border:1px solid var(--card-line);background:var(--card)}
+.tbl>div{display:grid;align-items:center;padding:16px 28px;font-size:29px;line-height:1.4;border-bottom:1px solid var(--line);word-break:keep-all}
+.tbl>.h{font-size:26px;font-weight:800;background:var(--th-bg);color:var(--th-ink);border-bottom:0}
+.tbl>.ph{color:var(--bad);font-weight:700}
+
+/* summary */
+.summary{display:grid;grid-template-columns:1fr 760px;column-gap:40px;height:100%}
+.sm-take{display:grid;grid-auto-rows:1fr;row-gap:20px}
+.sm-t{display:grid;grid-template-columns:78px 1fr;column-gap:24px;align-items:center;padding:0 34px}
+.sm-t .n{font-size:56px;font-weight:900;color:var(--accent-text)}
+.sm-t h3{margin:0 0 4px;font-size:40px;font-weight:800}
+.sm-t p{margin:0;font-size:28px;line-height:1.4;color:var(--ink2);word-break:keep-all}
+.sm-plan{display:grid;grid-template-rows:auto 1fr;row-gap:20px;padding:34px 38px;background:var(--bg2)}
+.sm-plan h3{margin:0;font-size:34px;font-weight:800}
+.sm-pl{display:grid;grid-auto-rows:1fr;row-gap:16px}
+.sm-pl div{display:grid;grid-template-columns:100px 1fr;column-gap:18px;align-items:center;font-size:28px;line-height:1.4;word-break:keep-all}
+.sm-pl b{font-size:26px;font-weight:800;color:var(--accent2-text)}

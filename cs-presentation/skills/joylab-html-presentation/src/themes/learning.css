@@ -1,0 +1,26 @@
+/* Theme 2 — Learning Experience (교육·워크숍형)
+   WHY: 학습자가 지금 '교육 흐름의 어디'에 있는지가 가장 중요. 상단 학습 흐름 레일이 시그니처. 둥근 형태, 틸 중심. */
+:root{
+  --bg:#FAFAF7;--bg2:#E9F2EF;--ink:#1D2B28;--ink2:#4B5E59;--line:#D6E3DF;
+  --accent:#C17F24;--accent-ink:#1A1A1A;--accent-text:#8A5510;--accent2:#2D7D6F;--accent2-text:#256A5E;
+  --card:#FFFFFF;--card-line:#DCE8E4;--r:28px;--shadow:0 2px 10px rgba(45,125,111,.10);
+  --kicker:#256A5E;--title-size:60px;--title-weight:800;
+  --chip-bg:#DDEEE9;--chip-ink:#164A41;--bad:#B3322F;--bad-bg:#FBEBE9;--good:#1F6B5E;--good-bg:#DFF1EC;
+  --good-ink:#FFFFFF;--bad-ink:#FFFFFF;--bubble-coach:#E4F1ED;--chart-bar:#7FB5A9;--th-bg:#2D7D6F;--th-ink:#FFFFFF;
+  --cover-bg:#256A5E;--cover-ink:#FFFFFF;--cover-ink2:#EAF6F2;--cover-kicker:#FFE2AE;--cover-line:#5FA396;--letterbox:#0d1514;
+}
+.slide{padding-top:40px}
+.rail{display:flex;gap:10px;align-items:center;height:36px}
+.rail i{display:block;width:16px;height:16px;border-radius:50%;background:var(--line)}
+.rail i.done{background:var(--accent2)}
+.rail i.cur{width:auto;height:36px;border-radius:999px;padding:0 18px;background:var(--accent);color:var(--accent-ink);font-style:normal;font-size:22px;font-weight:800;display:grid;align-items:center}
+.s-head{row-gap:12px}
+.s-foot{border-top:3px dotted var(--accent2);padding-top:12px}
+.sowhat{color:var(--ink);font-size:26px}
+.sowhat::before{content:'기억할 한 줄';display:inline-block;margin-right:16px;padding:6px 14px;border-radius:999px;background:var(--chip-bg);color:var(--chip-ink);font-size:22px;font-weight:800}
+.badge{background:var(--chip-bg);color:var(--chip-ink)}
+.cards .card:nth-child(1){background:#EAF4F1}.cards .card:nth-child(2){background:#FBF1DF}.cards .card:nth-child(3){background:#E7EEF7}
+.cv-deco::before{content:'';position:absolute;right:-160px;top:-160px;width:760px;height:760px;border-radius:50%;background:rgba(255,255,255,.12)}
+.cv-deco::after{content:'';position:absolute;right:210px;bottom:230px;width:230px;height:230px;border-radius:50%;background:#C17F24;opacity:.95}
+.s-cover .s-foot,.s-cover .rail{display:none}
+.kicker.dup{display:none}
